@@ -15,6 +15,7 @@
 		904A70DD269C540A006F960B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 904A70DB269C540A006F960B /* LaunchScreen.storyboard */; };
 		904A70E7269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */; };
 		904A70E8269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */; };
+		904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70E9269C5BD8006F960B /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		904A70DE269C540A006F960B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Bold.otf; sourceTree = "<group>"; };
 		904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Regular.otf; sourceTree = "<group>"; };
+		904A70E9269C5BD8006F960B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 			children = (
 				904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */,
 				904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */,
+				904A70E9269C5BD8006F960B /* UIColor+Extension.swift */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 				904A70D5269C5409006F960B /* ViewController.swift in Sources */,
 				904A70D1269C5409006F960B /* AppDelegate.swift in Sources */,
 				904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */,
+				904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
