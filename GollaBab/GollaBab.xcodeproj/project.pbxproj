@@ -13,6 +13,8 @@
 		904A70D8269C5409006F960B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 904A70D6269C5409006F960B /* Main.storyboard */; };
 		904A70DA269C540A006F960B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 904A70D9269C540A006F960B /* Assets.xcassets */; };
 		904A70DD269C540A006F960B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 904A70DB269C540A006F960B /* LaunchScreen.storyboard */; };
+		904A70E7269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */; };
+		904A70E8269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		904A70D9269C540A006F960B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		904A70DC269C540A006F960B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		904A70DE269C540A006F960B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Bold.otf; sourceTree = "<group>"; };
+		904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Regular.otf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		904A70CF269C5409006F960B /* GollaBab */ = {
 			isa = PBXGroup;
 			children = (
+				904A70E4269C58B5006F960B /* Font */,
 				904A70D0269C5409006F960B /* AppDelegate.swift */,
 				904A70D2269C5409006F960B /* SceneDelegate.swift */,
 				904A70D4269C5409006F960B /* ViewController.swift */,
@@ -65,6 +70,15 @@
 				904A70DE269C540A006F960B /* Info.plist */,
 			);
 			path = GollaBab;
+			sourceTree = "<group>";
+		};
+		904A70E4269C58B5006F960B /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */,
+				904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +140,9 @@
 			files = (
 				904A70DD269C540A006F960B /* LaunchScreen.storyboard in Resources */,
 				904A70DA269C540A006F960B /* Assets.xcassets in Resources */,
+				904A70E8269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf in Resources */,
 				904A70D8269C5409006F960B /* Main.storyboard in Resources */,
+				904A70E7269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,7 +232,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -271,7 +287,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
