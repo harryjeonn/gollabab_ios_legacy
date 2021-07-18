@@ -42,7 +42,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="골라밥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc4-Dq-4Im">
-                                <rect key="frame" x="155" y="208" width="104" height="47"/>
+                                <rect key="frame" x="152.5" y="208" width="109.5" height="58"/>
                                 <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF-Bd" family="Elice DigitalBaeum OTF" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -51,7 +51,7 @@
                                 <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JCQ-wy-Ixa" secondAttribute="height" multiplier="1.618:1" id="FkC-c3-T43"/>
-                                    <constraint firstAttribute="width" constant="140" id="W48-xK-kDw"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="W48-xK-kDw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                 <state key="normal" title="Button"/>
@@ -59,7 +59,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16P-eb-UhV">
                                 <rect key="frame" x="137" y="657" width="140" height="86.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="140" id="Zem-99-bRy"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Zem-99-bRy"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                 <state key="normal" title="Button"/>
@@ -96,12 +96,20 @@
                     <view key="view" contentMode="scaleToFill" id="Wyo-v0-U5A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEv-3c-7nP">
+                                <rect key="frame" x="20" y="136" width="336" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="iW7-Hb-slj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="-17" y="848"/>
+            <point key="canvasLocation" x="-17.39130434782609" y="847.76785714285711"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="uy3-3X-Ib2">

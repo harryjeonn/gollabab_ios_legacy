@@ -28,7 +28,6 @@ class MainViewController: BaseViewController {
     }
     
     private func setUI() {
-        self.view.backgroundColor = .bgColor
         lblTitle.textColor = .textColor
         
         btnStart.backgroundColor = .lightGray
