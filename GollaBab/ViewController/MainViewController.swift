@@ -6,11 +6,15 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 class MainViewController: UIViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnStart: UIButton!
     @IBOutlet weak var btnHistory: UIButton!
+    
+    private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +22,11 @@ class MainViewController: UIViewController {
         
         setUI()
         setTapEvent()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
     }
     
     private func setUI() {
@@ -36,7 +45,17 @@ class MainViewController: UIViewController {
     }
 
     private func setTapEvent() {
+        btnStart.rx.tap
+            .bind {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "InsertViewController") as? InsertViewController else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
         
+        btnHistory.rx.tap
+            .bind {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as? HistoryViewController else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
     }
     
 }

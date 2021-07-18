@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,8 @@
 		904A70E7269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */; };
 		904A70E8269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */; };
 		904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70E9269C5BD8006F960B /* UIColor+Extension.swift */; };
+		BD8D90D826A420C50016EDCA /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90D726A420C50016EDCA /* InsertViewController.swift */; };
+		BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Bold.otf; sourceTree = "<group>"; };
 		904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Regular.otf; sourceTree = "<group>"; };
 		904A70E9269C5BD8006F960B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		BD8D90D726A420C50016EDCA /* InsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
+		BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,10 +73,10 @@
 		904A70CF269C5409006F960B /* GollaBab */ = {
 			isa = PBXGroup;
 			children = (
-				904A70E4269C58B5006F960B /* Font */,
+				BD8D90D926A4228E0016EDCA /* Common */,
+				BD8D90D626A420100016EDCA /* ViewController */,
 				904A70D0269C5409006F960B /* AppDelegate.swift */,
 				904A70D2269C5409006F960B /* SceneDelegate.swift */,
-				904A70D4269C5409006F960B /* MainViewController.swift */,
 				904A70D6269C5409006F960B /* Main.storyboard */,
 				904A70D9269C540A006F960B /* Assets.xcassets */,
 				904A70DB269C540A006F960B /* LaunchScreen.storyboard */,
@@ -99,13 +103,30 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD8D90D626A420100016EDCA /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				904A70D4269C5409006F960B /* MainViewController.swift */,
+				BD8D90D726A420C50016EDCA /* InsertViewController.swift */,
+				BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		BD8D90D926A4228E0016EDCA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				904A70E4269C58B5006F960B /* Font */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 		F55F41241681654DA9189AFC /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				549FD464DE5D0AE907B01D38 /* Pods-GollaBab.debug.xcconfig */,
 				7DC1B9FC77ECCA572D83A567 /* Pods-GollaBab.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -228,6 +249,8 @@
 				904A70D5269C5409006F960B /* MainViewController.swift in Sources */,
 				904A70D1269C5409006F960B /* AppDelegate.swift in Sources */,
 				904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */,
+				BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */,
+				BD8D90D826A420C50016EDCA /* InsertViewController.swift in Sources */,
 				904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

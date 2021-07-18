@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uLf-UC-qGr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -12,8 +12,27 @@
         <array key="EliceDigitalBaeumOTF_Bold.otf">
             <string>EliceDigitalBaeumOTF-Bd</string>
         </array>
+        <array key="EliceDigitalBaeumOTF_Regular.otf">
+            <string>EliceDigitalBaeumOTF</string>
+        </array>
     </customFonts>
     <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Qh4-03-0xQ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gia-lx-vkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="uLf-UC-qGr" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="sRI-59-0eQ">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eeG-4y-fo5"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="-797" y="115"/>
+        </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -23,24 +42,26 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="골라밥" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hc4-Dq-4Im">
-                                <rect key="frame" x="152" y="164" width="110" height="58"/>
+                                <rect key="frame" x="155" y="208" width="104" height="47"/>
                                 <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF-Bd" family="Elice DigitalBaeum OTF" pointSize="40"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-wy-Ixa">
-                                <rect key="frame" x="127" y="743" width="160" height="99"/>
+                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JCQ-wy-Ixa" secondAttribute="height" multiplier="1.618:1" id="FkC-c3-T43"/>
-                                    <constraint firstAttribute="width" constant="160" id="W48-xK-kDw"/>
+                                    <constraint firstAttribute="width" constant="140" id="W48-xK-kDw"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16P-eb-UhV">
-                                <rect key="frame" x="127" y="632" width="160" height="99"/>
+                                <rect key="frame" x="137" y="657" width="140" height="86.5"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="160" id="Zem-99-bRy"/>
+                                    <constraint firstAttribute="width" constant="140" id="Zem-99-bRy"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                 <state key="normal" title="Button"/>
                             </button>
                         </subviews>
@@ -56,6 +77,7 @@
                             <constraint firstItem="16P-eb-UhV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kZj-Vy-CZz"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Zyb-wS-XrA"/>
                     <connections>
                         <outlet property="btnHistory" destination="JCQ-wy-Ixa" id="De9-hn-dRe"/>
                         <outlet property="btnStart" destination="16P-eb-UhV" id="uVz-tO-tA8"/>
@@ -65,6 +87,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="114.50892857142857"/>
+        </scene>
+        <!--Insert View Controller-->
+        <scene sceneID="T12-Y6-ARm">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="56c-sw-UJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="InsertViewController" id="FIC-ry-xUc" customClass="InsertViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Wyo-v0-U5A">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="iW7-Hb-slj"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="-17" y="848"/>
+        </scene>
+        <!--History View Controller-->
+        <scene sceneID="uy3-3X-Ib2">
+            <objects>
+                <viewController storyboardIdentifier="HistoryViewController" id="Xvh-pD-YBm" customClass="HistoryViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="e2V-hQ-y1h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6s6-Vh-32H"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oAP-pe-2b2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="1568"/>
         </scene>
     </scenes>
     <resources>
