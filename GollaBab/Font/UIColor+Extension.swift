@@ -13,10 +13,10 @@ extension UIColor {
     }
     
     static var textColor: UIColor {
-        return UIColor(red: 161/255, green: 152/255, blue: 130/255, alpha: 1.0)
+        return UIColor(red: 93/255, green: 83/255, blue: 74/255, alpha: 1.0)
     }
     
     static var lightTextColor: UIColor {
-        return UIColor(red: 194/255, green: 184/255, blue: 163/255, alpha: 1.0)
+        return UIColor(red: 214/255, green: 210/255, blue: 196/255, alpha: 1.0)
     }
 }
