@@ -9,7 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 
-class MainViewController: UIViewController {
+class MainViewController: BaseViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnStart: UIButton!
     @IBOutlet weak var btnHistory: UIButton!
@@ -17,9 +17,7 @@ class MainViewController: UIViewController {
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
+        super.viewDidLoad()        
         setUI()
         setTapEvent()
     }
