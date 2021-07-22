@@ -28,16 +28,16 @@ class MainViewController: BaseViewController {
     }
     
     private func setUI() {
-        lblTitle.textColor = .textColor
+        lblTitle.textColor = .themeColor
         
-        btnStart.backgroundColor = .lightGray
+        btnStart.backgroundColor = .themeColor
         btnStart.setTitle("시작", for: .normal)
-        btnStart.setTitleColor(.white, for: .normal)
+        btnStart.setTitleColor(.whiteColor, for: .normal)
         btnStart.layer.cornerRadius = 10
         
-        btnHistory.backgroundColor = .lightGray
+        btnHistory.backgroundColor = .themeColor
         btnHistory.setTitle("지난 투표", for: .normal)
-        btnHistory.setTitleColor(.white, for: .normal)
+        btnHistory.setTitleColor(.whiteColor, for: .normal)
         btnHistory.layer.cornerRadius = 10
     }
 

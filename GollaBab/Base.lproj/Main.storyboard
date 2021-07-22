@@ -20,7 +20,6 @@
         <!--Navigation Controller-->
         <scene sceneID="Qh4-03-0xQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gia-lx-vkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="uLf-UC-qGr" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="sRI-59-0eQ">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -30,6 +29,7 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="eeG-4y-fo5"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gia-lx-vkK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-797" y="115"/>
         </scene>
@@ -91,23 +91,78 @@
         <!--Insert View Controller-->
         <scene sceneID="T12-Y6-ARm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="56c-sw-UJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="InsertViewController" id="FIC-ry-xUc" customClass="InsertViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Wyo-v0-U5A">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEv-3c-7nP">
-                                <rect key="frame" x="20" y="136" width="336" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="항목을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEv-3c-7nP">
+                                <rect key="frame" x="20" y="64" width="326" height="40"/>
+                                <color key="backgroundColor" red="0.99215686274509807" green="0.98039215686274506" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="7rt-aT-Xfv"/>
+                                </constraints>
+                                <color key="textColor" red="0.99215686274509807" green="0.98039215686274506" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H3F-KU-f0S">
+                                <rect key="frame" x="354" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="H3F-KU-f0S" secondAttribute="height" id="YGi-fc-TEL"/>
+                                    <constraint firstAttribute="height" constant="40" id="y4L-M5-xUh"/>
+                                </constraints>
+                                <state key="normal" image="btn_plus"/>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tmX-V6-61L">
+                                <rect key="frame" x="20" y="124" width="374" height="611.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="OaJ-dx-1Ik">
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OaJ-dx-1Ik" id="7rd-7I-tCB">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdc-YJ-Spn">
+                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Wdc-YJ-Spn" secondAttribute="height" multiplier="1.618:1" id="4Iy-iN-GKJ"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Tqd-6m-hV4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="iW7-Hb-slj"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Wdc-YJ-Spn" firstAttribute="centerX" secondItem="Wyo-v0-U5A" secondAttribute="centerX" id="274-NS-EYz"/>
+                            <constraint firstItem="Wdc-YJ-Spn" firstAttribute="top" secondItem="tmX-V6-61L" secondAttribute="bottom" constant="20" id="NBg-zc-1Gh"/>
+                            <constraint firstItem="iW7-Hb-slj" firstAttribute="trailing" secondItem="tmX-V6-61L" secondAttribute="trailing" constant="20" id="Qhf-qE-lXY"/>
+                            <constraint firstItem="iW7-Hb-slj" firstAttribute="bottom" secondItem="Wdc-YJ-Spn" secondAttribute="bottom" constant="20" id="RJL-xP-SvK"/>
+                            <constraint firstItem="tmX-V6-61L" firstAttribute="leading" secondItem="iW7-Hb-slj" secondAttribute="leading" constant="20" id="X5Z-Zf-Q61"/>
+                            <constraint firstItem="iW7-Hb-slj" firstAttribute="trailing" secondItem="H3F-KU-f0S" secondAttribute="trailing" constant="20" id="Yt8-g0-eHj"/>
+                            <constraint firstItem="H3F-KU-f0S" firstAttribute="leading" secondItem="BEv-3c-7nP" secondAttribute="trailing" constant="8" symbolic="YES" id="ahk-cT-pXv"/>
+                            <constraint firstItem="BEv-3c-7nP" firstAttribute="top" secondItem="iW7-Hb-slj" secondAttribute="top" constant="20" id="e66-yb-fLm"/>
+                            <constraint firstItem="BEv-3c-7nP" firstAttribute="leading" secondItem="iW7-Hb-slj" secondAttribute="leading" constant="20" id="ejM-q6-3IG"/>
+                            <constraint firstItem="H3F-KU-f0S" firstAttribute="top" secondItem="iW7-Hb-slj" secondAttribute="top" constant="20" id="ooQ-A5-ElF"/>
+                            <constraint firstItem="tmX-V6-61L" firstAttribute="top" secondItem="BEv-3c-7nP" secondAttribute="bottom" constant="20" id="ryB-ri-iob"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnPlus" destination="H3F-KU-f0S" id="Xgm-4f-baM"/>
+                        <outlet property="btnStart" destination="Wdc-YJ-Spn" id="ajG-o6-pJc"/>
+                        <outlet property="tableView" destination="tmX-V6-61L" id="GZy-6X-L32"/>
+                        <outlet property="textField" destination="BEv-3c-7nP" id="n3Z-tu-gGe"/>
+                    </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="56c-sw-UJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="847.76785714285711"/>
         </scene>
@@ -128,6 +183,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_plus" width="24" height="24"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

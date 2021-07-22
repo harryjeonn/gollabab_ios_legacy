@@ -22,10 +22,14 @@ class BaseViewController: UIViewController {
     
     private func setupNaviBar() {
         self.navigationController?.navigationBar.barTintColor = .bgColor
-        self.navigationController?.navigationBar.tintColor = .textColor
+        self.navigationController?.navigationBar.tintColor = .themeColor
     }
     
     private func setupBackgroundColor() {
         self.view.backgroundColor = .bgColor
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
 }
