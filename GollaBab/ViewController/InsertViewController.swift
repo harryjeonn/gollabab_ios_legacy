@@ -17,24 +17,61 @@ class InsertViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
     
+    private var items = [String]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUI()
         setupTextField()
+        setupTableView()
         setupTapEvent()
+        ItemViewModel.shared.rxInit()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.title = "입력"
+    }
+    
+    private func setupTableView() {
+        // TODO: Cell font 변경
+        let nib = UINib(nibName: "InsertCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "InsertCell")
+        tableView.rowHeight = 40
+        ItemViewModel.shared.eventItems.accept(items)
+        
+        ItemViewModel.shared.eventItems
+            .bind(to: tableView.rx.items) { tableView, row, item in
+                let cell = tableView.dequeueReusableCell(withIdentifier: "InsertCell") as! InsertCell
+                cell.lblItem.text = item
+                cell.lblItem.textColor = .themeColor
+                cell.backgroundColor = .clear
+                return cell
+            }.disposed(by: disposeBag)
+        
+        tableView.rx
+            .itemDeleted
+            .subscribe(onNext: { item in
+                self.items.remove(at: item.row)
+                ItemViewModel.shared.items.onNext(self.items)
+            }).disposed(by: disposeBag)
     }
     
     private func setupTextField() {
-        textField.rx.text
-            .orEmpty
-            .distinctUntilChanged()
-            .subscribe(onNext: { text in
+        textField.rx
+            .controlEvent([.editingDidEndOnExit])
+            .subscribe(onNext: { _ in
                 self.addItem()
             }).disposed(by: disposeBag)
     }
     
     private func addItem() {
-        
+        if textField.text != "" {
+            guard let text = self.textField.text else { return }
+            items.insert(text, at: 0)
+            ItemViewModel.shared.items.onNext(items)
+        }
+        self.textField.text = nil
     }
     
     private func setupTapEvent() {
@@ -43,12 +80,14 @@ class InsertViewController: BaseViewController {
         
         btnPlus.rx.tap
             .bind {
-                print("Tap plus")
+                self.addItem()
             }.disposed(by: disposeBag)
         
         btnStart.rx.tap
             .bind {
                 print("Tap start")
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? ResultViewController else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
     }
     

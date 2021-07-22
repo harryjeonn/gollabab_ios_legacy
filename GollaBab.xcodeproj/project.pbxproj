@@ -17,9 +17,13 @@
 		904A70E7269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */; };
 		904A70E8269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */; };
 		904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70E9269C5BD8006F960B /* UIColor+Extension.swift */; };
+		BD54CA2A26B53EB8001696B5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54CA2926B53EB8001696B5 /* ResultViewController.swift */; };
+		BD779E4226A99D8F00DBA126 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD779E4126A99D8F00DBA126 /* ItemViewModel.swift */; };
 		BD8D90D826A420C50016EDCA /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90D726A420C50016EDCA /* InsertViewController.swift */; };
 		BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */; };
 		BD8D90DD26A425410016EDCA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90DC26A425410016EDCA /* BaseViewController.swift */; };
+		BDC3312D26B8332500FE8293 /* InsertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3312B26B8332500FE8293 /* InsertCell.swift */; };
+		BDC3312E26B8332500FE8293 /* InsertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC3312C26B8332500FE8293 /* InsertCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,9 +41,13 @@
 		904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Bold.otf; sourceTree = "<group>"; };
 		904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Regular.otf; sourceTree = "<group>"; };
 		904A70E9269C5BD8006F960B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
+		BD54CA2926B53EB8001696B5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		BD779E4126A99D8F00DBA126 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		BD8D90D726A420C50016EDCA /* InsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 		BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		BD8D90DC26A425410016EDCA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BDC3312B26B8332500FE8293 /* InsertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertCell.swift; sourceTree = "<group>"; };
+		BDC3312C26B8332500FE8293 /* InsertCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsertCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +83,9 @@
 		904A70CF269C5409006F960B /* GollaBab */ = {
 			isa = PBXGroup;
 			children = (
+				BDC3312A26B8331600FE8293 /* CustomCell */,
 				BD8D90D926A4228E0016EDCA /* Common */,
+				BD779E4026A99D7800DBA126 /* ViewModel */,
 				BD8D90D626A420100016EDCA /* ViewController */,
 				904A70D0269C5409006F960B /* AppDelegate.swift */,
 				904A70D2269C5409006F960B /* SceneDelegate.swift */,
@@ -105,12 +115,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD779E4026A99D7800DBA126 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				BD779E4126A99D8F00DBA126 /* ItemViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		BD8D90D626A420100016EDCA /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				904A70D4269C5409006F960B /* MainViewController.swift */,
 				BD8D90D726A420C50016EDCA /* InsertViewController.swift */,
 				BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */,
+				BD54CA2926B53EB8001696B5 /* ResultViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -122,6 +141,15 @@
 				BD8D90DC26A425410016EDCA /* BaseViewController.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		BDC3312A26B8331600FE8293 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				BDC3312B26B8332500FE8293 /* InsertCell.swift */,
+				BDC3312C26B8332500FE8293 /* InsertCell.xib */,
+			);
+			path = CustomCell;
 			sourceTree = "<group>";
 		};
 		F55F41241681654DA9189AFC /* Pods */ = {
@@ -194,6 +222,7 @@
 			files = (
 				904A70DD269C540A006F960B /* LaunchScreen.storyboard in Resources */,
 				904A70DA269C540A006F960B /* Assets.xcassets in Resources */,
+				BDC3312E26B8332500FE8293 /* InsertCell.xib in Resources */,
 				904A70E8269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf in Resources */,
 				904A70D8269C5409006F960B /* Main.storyboard in Resources */,
 				904A70E7269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf in Resources */,
@@ -249,13 +278,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDC3312D26B8332500FE8293 /* InsertCell.swift in Sources */,
 				904A70D5269C5409006F960B /* MainViewController.swift in Sources */,
+				BD779E4226A99D8F00DBA126 /* ItemViewModel.swift in Sources */,
 				904A70D1269C5409006F960B /* AppDelegate.swift in Sources */,
 				904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */,
 				BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */,
 				BD8D90D826A420C50016EDCA /* InsertViewController.swift in Sources */,
 				BD8D90DD26A425410016EDCA /* BaseViewController.swift in Sources */,
 				904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */,
+				BD54CA2A26B53EB8001696B5 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
