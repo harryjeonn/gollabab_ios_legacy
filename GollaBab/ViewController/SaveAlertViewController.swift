@@ -14,6 +14,7 @@ class SaveAlertViewController: UIViewController {
     @IBOutlet weak var alertViewWidth: NSLayoutConstraint!
     @IBOutlet weak var alertViewHeight: NSLayoutConstraint!
     
+    @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var textField: UITextField!
     
     @IBOutlet weak var stackView: UIStackView!
@@ -21,10 +22,44 @@ class SaveAlertViewController: UIViewController {
     @IBOutlet weak var btnConfirm: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     
+    private let disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
-        // Do any additional setup after loading the view.
+        setupTapEvent()
+        setupTextField()
+    }
+    
+    private func setupTextField() {
+        textField.rx
+            .controlEvent(.editingDidEndOnExit)
+            .subscribe { _ in
+                
+            }.disposed(by: disposeBag)
+    }
+    
+    private func setupTapEvent() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        btnSave.rx
+            .tap
+            .bind {
+                self.dismissKeyboard()
+            }.disposed(by: disposeBag)
+        
+        btnCancel.rx
+            .tap
+            .bind {
+                self.dismiss(animated: true, completion: nil)
+            }.disposed(by: disposeBag)
+        
+        btnConfirm.rx
+            .tap
+            .bind {
+                self.dismiss(animated: true, completion: nil)
+            }.disposed(by: disposeBag)
     }
     
     private func setupUI() {
@@ -40,16 +75,12 @@ class SaveAlertViewController: UIViewController {
         }
         
         btnConfirm.isHidden = true
+        
+        lblTitle.textColor = .themeColor
+        btnCancel.backgroundColor = .lightTextColor
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
     }
-    */
-
 }

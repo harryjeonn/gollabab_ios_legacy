@@ -328,6 +328,7 @@
                         <outlet property="btnCancel" destination="dSw-3n-jmL" id="p4k-A2-cUJ"/>
                         <outlet property="btnConfirm" destination="Pnv-7D-HH1" id="n8N-jb-dQ3"/>
                         <outlet property="btnSave" destination="EUs-gV-Z0u" id="wBO-bR-cCW"/>
+                        <outlet property="lblTitle" destination="za8-wU-GnB" id="Ru8-kc-G8n"/>
                         <outlet property="stackView" destination="IwU-RE-o0c" id="Xy6-HP-u7n"/>
                         <outlet property="textField" destination="HtX-8n-Dom" id="T92-bX-aOO"/>
                     </connections>
