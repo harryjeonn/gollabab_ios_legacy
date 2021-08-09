@@ -98,7 +98,7 @@
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="항목을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEv-3c-7nP">
                                 <rect key="frame" x="20" y="64" width="326" height="40"/>
-                                <color key="backgroundColor" red="0.99215686274509807" green="0.98039215686274506" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.99322372670000003" green="0.98344236610000002" blue="0.96852892639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="7rt-aT-Xfv"/>
                                 </constraints>
@@ -174,21 +174,167 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Result" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caE-Js-gWM">
-                                <rect key="frame" x="186" y="438" width="48" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="caE-Js-gWM">
+                                <rect key="frame" x="20" y="144" width="374" height="40"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="vyi-zf-TeU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y16-fz-ZD0">
+                                <rect key="frame" x="137" y="436" width="140" height="406"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyC-X4-qDK">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="86.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="yyC-X4-qDK" secondAttribute="height" multiplier="1.618:1" id="5JJ-JV-e2V"/>
+                                            <constraint firstAttribute="width" constant="140" id="WO2-vY-x9C"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                        <state key="normal" title="홈"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj7-uo-Omv">
+                                        <rect key="frame" x="0.0" y="106.5" width="140" height="86.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Pj7-uo-Omv" secondAttribute="height" multiplier="1.618:1" id="Xjl-mP-6Jz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                        <state key="normal" title="중지"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbr-Ic-5dl">
+                                        <rect key="frame" x="0.0" y="213" width="140" height="86.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="Qbr-Ic-5dl" secondAttribute="height" multiplier="1.618:1" id="Fmj-WY-ttx"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                        <state key="normal" title="저장"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-25-Glx">
+                                        <rect key="frame" x="0.0" y="319.5" width="140" height="86.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="BTU-25-Glx" secondAttribute="height" multiplier="1.618:1" id="iFd-xI-pkz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                        <state key="normal" title="다시하기"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Qbr-Ic-5dl" firstAttribute="width" secondItem="Qbr-Ic-5dl" secondAttribute="height" multiplier="1.618:1" id="PMl-6X-PwA"/>
+                                    <constraint firstAttribute="width" constant="140" id="tx3-3p-feb"/>
+                                    <constraint firstItem="BTU-25-Glx" firstAttribute="width" secondItem="BTU-25-Glx" secondAttribute="height" multiplier="1.618:1" id="wZP-go-vgh"/>
+                                    <constraint firstItem="yyC-X4-qDK" firstAttribute="width" secondItem="yyC-X4-qDK" secondAttribute="height" multiplier="1.618:1" id="z6Z-qU-UI0"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cdA-mX-72b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y16-fz-ZD0" firstAttribute="centerX" secondItem="tcq-nI-kQu" secondAttribute="centerX" id="E7v-By-MP7"/>
+                            <constraint firstItem="cdA-mX-72b" firstAttribute="bottom" secondItem="y16-fz-ZD0" secondAttribute="bottom" constant="20" id="Pyv-hi-rQE"/>
+                            <constraint firstItem="caE-Js-gWM" firstAttribute="leading" secondItem="cdA-mX-72b" secondAttribute="leading" constant="20" id="WOZ-Rs-YFz"/>
+                            <constraint firstItem="caE-Js-gWM" firstAttribute="top" secondItem="cdA-mX-72b" secondAttribute="top" constant="100" id="XwD-ZC-7hd"/>
+                            <constraint firstItem="cdA-mX-72b" firstAttribute="trailing" secondItem="caE-Js-gWM" secondAttribute="trailing" constant="20" id="pp7-Vf-fpS"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnGoHome" destination="yyC-X4-qDK" id="xp9-VT-upp"/>
+                        <outlet property="btnRetry" destination="BTU-25-Glx" id="F4v-YK-92C"/>
+                        <outlet property="btnSave" destination="Qbr-Ic-5dl" id="0jX-iA-ERg"/>
+                        <outlet property="btnStop" destination="Pj7-uo-Omv" id="exf-nK-vOd"/>
+                        <outlet property="lblResult" destination="caE-Js-gWM" id="BnE-FT-kg3"/>
+                        <outlet property="stackView" destination="y16-fz-ZD0" id="l4W-QX-nx8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUR-PE-Oxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="788" y="848"/>
+            <point key="canvasLocation" x="786.95652173913049" y="847.76785714285711"/>
+        </scene>
+        <!--Save Alert View Controller-->
+        <scene sceneID="ZAb-O2-Gku">
+            <objects>
+                <viewController storyboardIdentifier="SaveAlertViewController" id="IB9-cr-5XG" customClass="SaveAlertViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Xy-IP-Ffm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YjG-O6-q3n">
+                                <rect key="frame" x="87" y="348" width="240" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표 이름" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="za8-wU-GnB">
+                                        <rect key="frame" x="81.5" y="25" width="77.5" height="29"/>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF-Bd" family="Elice DigitalBaeum OTF" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="이름을 입력해주세요." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HtX-8n-Dom">
+                                        <rect key="frame" x="8" y="84" width="224" height="34"/>
+                                        <color key="backgroundColor" red="0.99322372670000003" green="0.98344236610000002" blue="0.96852892639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IwU-RE-o0c">
+                                        <rect key="frame" x="8" y="143" width="224" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dSw-3n-jmL">
+                                                <rect key="frame" x="0.0" y="0.0" width="61.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="취소"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pnv-7D-HH1">
+                                                <rect key="frame" x="81.5" y="0.0" width="61" height="45"/>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="확인"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EUs-gV-Z0u">
+                                                <rect key="frame" x="162.5" y="0.0" width="61.5" height="45"/>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="저장"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="qOX-Qx-fqc"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="HtX-8n-Dom" firstAttribute="top" secondItem="za8-wU-GnB" secondAttribute="bottom" constant="30" id="6mK-s5-Kfr"/>
+                                    <constraint firstAttribute="width" constant="240" id="FPQ-jX-U1I"/>
+                                    <constraint firstAttribute="bottom" secondItem="IwU-RE-o0c" secondAttribute="bottom" constant="12" id="HYI-D6-kNj"/>
+                                    <constraint firstItem="za8-wU-GnB" firstAttribute="centerX" secondItem="YjG-O6-q3n" secondAttribute="centerX" id="HxX-ev-p7b"/>
+                                    <constraint firstAttribute="trailing" secondItem="IwU-RE-o0c" secondAttribute="trailing" constant="8" id="Q5u-y8-jFF"/>
+                                    <constraint firstAttribute="height" constant="200" id="YLD-qd-13N"/>
+                                    <constraint firstItem="za8-wU-GnB" firstAttribute="top" secondItem="YjG-O6-q3n" secondAttribute="top" constant="25" id="gYJ-AF-5Vu"/>
+                                    <constraint firstItem="HtX-8n-Dom" firstAttribute="leading" secondItem="YjG-O6-q3n" secondAttribute="leading" constant="8" id="gcX-RY-I8x"/>
+                                    <constraint firstItem="IwU-RE-o0c" firstAttribute="leading" secondItem="YjG-O6-q3n" secondAttribute="leading" constant="8" id="kxP-76-8F1"/>
+                                    <constraint firstAttribute="trailing" secondItem="HtX-8n-Dom" secondAttribute="trailing" constant="8" id="leu-9t-RzE"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GGM-l2-chh"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YjG-O6-q3n" firstAttribute="centerX" secondItem="8Xy-IP-Ffm" secondAttribute="centerX" id="5q9-yu-jf5"/>
+                            <constraint firstItem="YjG-O6-q3n" firstAttribute="centerY" secondItem="8Xy-IP-Ffm" secondAttribute="centerY" id="iPP-qR-Vit"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="YjG-O6-q3n" id="JuD-wJ-CCP"/>
+                        <outlet property="alertViewHeight" destination="YLD-qd-13N" id="81y-4j-YhX"/>
+                        <outlet property="alertViewWidth" destination="FPQ-jX-U1I" id="RtG-tR-bbu"/>
+                        <outlet property="btnCancel" destination="dSw-3n-jmL" id="p4k-A2-cUJ"/>
+                        <outlet property="btnConfirm" destination="Pnv-7D-HH1" id="n8N-jb-dQ3"/>
+                        <outlet property="btnSave" destination="EUs-gV-Z0u" id="wBO-bR-cCW"/>
+                        <outlet property="stackView" destination="IwU-RE-o0c" id="Xy6-HP-u7n"/>
+                        <outlet property="textField" destination="HtX-8n-Dom" id="T92-bX-aOO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tgP-b6-hWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1544.9275362318842" y="847.76785714285711"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="uy3-3X-Ib2">
@@ -208,6 +354,9 @@
     </scenes>
     <resources>
         <image name="btn_plus" width="24" height="24"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

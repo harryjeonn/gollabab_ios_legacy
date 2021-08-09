@@ -18,6 +18,7 @@
 		904A70E8269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */; };
 		904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70E9269C5BD8006F960B /* UIColor+Extension.swift */; };
 		BD54CA2A26B53EB8001696B5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54CA2926B53EB8001696B5 /* ResultViewController.swift */; };
+		BD60271126C16437004F32B7 /* SaveAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60271026C16437004F32B7 /* SaveAlertViewController.swift */; };
 		BD779E4226A99D8F00DBA126 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD779E4126A99D8F00DBA126 /* ItemViewModel.swift */; };
 		BD8D90D826A420C50016EDCA /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90D726A420C50016EDCA /* InsertViewController.swift */; };
 		BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */; };
@@ -42,6 +43,7 @@
 		904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Regular.otf; sourceTree = "<group>"; };
 		904A70E9269C5BD8006F960B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		BD54CA2926B53EB8001696B5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
+		BD60271026C16437004F32B7 /* SaveAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAlertViewController.swift; sourceTree = "<group>"; };
 		BD779E4126A99D8F00DBA126 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
 		BD8D90D726A420C50016EDCA /* InsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 		BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				BD8D90D726A420C50016EDCA /* InsertViewController.swift */,
 				BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */,
 				BD54CA2926B53EB8001696B5 /* ResultViewController.swift */,
+				BD60271026C16437004F32B7 /* SaveAlertViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */,
 				BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */,
 				BD8D90D826A420C50016EDCA /* InsertViewController.swift in Sources */,
+				BD60271126C16437004F32B7 /* SaveAlertViewController.swift in Sources */,
 				BD8D90DD26A425410016EDCA /* BaseViewController.swift in Sources */,
 				904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */,
 				BD54CA2A26B53EB8001696B5 /* ResultViewController.swift in Sources */,
