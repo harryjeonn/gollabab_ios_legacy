@@ -50,7 +50,6 @@ class ResultViewController: BaseViewController {
             btn.backgroundColor = .themeColor
             btn.layer.cornerRadius = 10
             btn.setTitleColor(.whiteColor, for: .normal)
-            btn.titleLabel?.font = UIFont(name: "EliceDigitalBaeumOTF_Regular.otf", size: 15)
         }
     }
     
@@ -91,6 +90,8 @@ class ResultViewController: BaseViewController {
         
         btnSave.rx.tap
             .bind {
+                HistoryData.shared.result = self.lblResult.text
+                
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SaveAlertViewController") as? SaveAlertViewController  else { return }
                 let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
                 alert.setValue(vc, forKey: "contentViewController")

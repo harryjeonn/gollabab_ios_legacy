@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		06CDA6F6CA4743ED599FC079 /* Pods_GollaBab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8B005F9535FBEE63684028A1 /* Pods_GollaBab.framework */; };
+		82721F1A26CBD6A9005AD346 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82721F1826CBD6A9005AD346 /* History.xcdatamodeld */; };
+		82721F2026CBD754005AD346 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F1F26CBD754005AD346 /* CoreDataManager.swift */; };
+		82721F2426CBE123005AD346 /* HistoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F2326CBE123005AD346 /* HistoryData.swift */; };
+		82721F2D26CBE795005AD346 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F2B26CBE794005AD346 /* History+CoreDataProperties.swift */; };
+		82721F2E26CBE795005AD346 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F2C26CBE794005AD346 /* History+CoreDataClass.swift */; };
 		904A70D1269C5409006F960B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D0269C5409006F960B /* AppDelegate.swift */; };
 		904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D2269C5409006F960B /* SceneDelegate.swift */; };
 		904A70D5269C5409006F960B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D4269C5409006F960B /* MainViewController.swift */; };
@@ -30,6 +35,11 @@
 /* Begin PBXFileReference section */
 		549FD464DE5D0AE907B01D38 /* Pods-GollaBab.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GollaBab.debug.xcconfig"; path = "Target Support Files/Pods-GollaBab/Pods-GollaBab.debug.xcconfig"; sourceTree = "<group>"; };
 		7DC1B9FC77ECCA572D83A567 /* Pods-GollaBab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GollaBab.release.xcconfig"; path = "Target Support Files/Pods-GollaBab/Pods-GollaBab.release.xcconfig"; sourceTree = "<group>"; };
+		82721F1926CBD6A9005AD346 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
+		82721F1F26CBD754005AD346 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		82721F2326CBE123005AD346 /* HistoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryData.swift; sourceTree = "<group>"; };
+		82721F2B26CBE794005AD346 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "History+CoreDataProperties.swift"; path = "/Users/jeonhyeonseong/development/GollaBab_iOS/GollaBab/Common/CoreData/History+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
+		82721F2C26CBE794005AD346 /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "History+CoreDataClass.swift"; path = "/Users/jeonhyeonseong/development/GollaBab_iOS/GollaBab/Common/CoreData/History+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		8B005F9535FBEE63684028A1 /* Pods_GollaBab.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GollaBab.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		904A70CD269C5409006F960B /* GollaBab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GollaBab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		904A70D0269C5409006F960B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +74,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		82721F1726CBD69B005AD346 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				82721F2C26CBE794005AD346 /* History+CoreDataClass.swift */,
+				82721F2B26CBE794005AD346 /* History+CoreDataProperties.swift */,
+				82721F2326CBE123005AD346 /* HistoryData.swift */,
+				82721F1826CBD6A9005AD346 /* History.xcdatamodeld */,
+				82721F1F26CBD754005AD346 /* CoreDataManager.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
 		904A70C4269C5409006F960B = {
 			isa = PBXGroup;
 			children = (
@@ -140,6 +162,7 @@
 		BD8D90D926A4228E0016EDCA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				82721F1726CBD69B005AD346 /* CoreData */,
 				904A70E4269C58B5006F960B /* Font */,
 				BD8D90DC26A425410016EDCA /* BaseViewController.swift */,
 			);
@@ -281,9 +304,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82721F2426CBE123005AD346 /* HistoryData.swift in Sources */,
 				BDC3312D26B8332500FE8293 /* InsertCell.swift in Sources */,
 				904A70D5269C5409006F960B /* MainViewController.swift in Sources */,
 				BD779E4226A99D8F00DBA126 /* ItemViewModel.swift in Sources */,
+				82721F2026CBD754005AD346 /* CoreDataManager.swift in Sources */,
 				904A70D1269C5409006F960B /* AppDelegate.swift in Sources */,
 				904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */,
 				BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */,
@@ -291,7 +316,10 @@
 				BD60271126C16437004F32B7 /* SaveAlertViewController.swift in Sources */,
 				BD8D90DD26A425410016EDCA /* BaseViewController.swift in Sources */,
 				904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */,
+				82721F2E26CBE795005AD346 /* History+CoreDataClass.swift in Sources */,
+				82721F1A26CBD6A9005AD346 /* History.xcdatamodeld in Sources */,
 				BD54CA2A26B53EB8001696B5 /* ResultViewController.swift in Sources */,
+				82721F2D26CBE795005AD346 /* History+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -495,6 +523,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		82721F1826CBD6A9005AD346 /* History.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				82721F1926CBD6A9005AD346 /* History.xcdatamodel */,
+			);
+			currentVersion = 82721F1926CBD6A9005AD346 /* History.xcdatamodel */;
+			path = History.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 904A70C5269C5409006F960B /* Project object */;
 }

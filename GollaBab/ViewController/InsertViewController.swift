@@ -86,6 +86,7 @@ class InsertViewController: BaseViewController {
         btnStart.rx.tap
             .bind {
                 print("Tap start")
+                HistoryData.shared.items = self.items
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? ResultViewController else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
