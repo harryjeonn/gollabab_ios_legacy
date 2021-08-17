@@ -34,7 +34,6 @@ class InsertViewController: BaseViewController {
     }
     
     private func setupTableView() {
-        // TODO: Cell font 변경
         let nib = UINib(nibName: "InsertCell", bundle: nil)
         tableView.register(nib, forCellReuseIdentifier: "InsertCell")
         tableView.rowHeight = 40
@@ -85,10 +84,12 @@ class InsertViewController: BaseViewController {
         
         btnStart.rx.tap
             .bind {
-                print("Tap start")
-                HistoryData.shared.items = self.items
-                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? ResultViewController else { return }
-                self.navigationController?.pushViewController(vc, animated: true)
+                if !self.items.isEmpty {
+                    print("Tap start")
+                    HistoryData.shared.items = self.items
+                    guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? ResultViewController else { return }
+                    self.navigationController?.pushViewController(vc, animated: true)
+                }
             }.disposed(by: disposeBag)
     }
     
