@@ -344,13 +344,54 @@
                     <view key="view" contentMode="scaleToFill" id="e2V-hQ-y1h">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tFi-vd-8Xq">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7kZ-Gr-1jc" customClass="HistoryCell" customModule="GollaBab" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7kZ-Gr-1jc" id="hB6-1f-yGp">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6s6-Vh-32H"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tFi-vd-8Xq" firstAttribute="leading" secondItem="6s6-Vh-32H" secondAttribute="leading" id="3PA-Ub-NMM"/>
+                            <constraint firstItem="6s6-Vh-32H" firstAttribute="trailing" secondItem="tFi-vd-8Xq" secondAttribute="trailing" id="5yL-WU-r5x"/>
+                            <constraint firstItem="6s6-Vh-32H" firstAttribute="bottom" secondItem="tFi-vd-8Xq" secondAttribute="bottom" id="Pab-fo-1wr"/>
+                            <constraint firstItem="tFi-vd-8Xq" firstAttribute="top" secondItem="6s6-Vh-32H" secondAttribute="top" id="mgb-RQ-Wyr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="tFi-vd-8Xq" id="b9j-8u-0ot"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAP-pe-2b2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17" y="1568"/>
+        </scene>
+        <!--History Detail View Controller-->
+        <scene sceneID="oDl-cb-C5i">
+            <objects>
+                <viewController storyboardIdentifier="HistoryDetailViewController" id="331-dX-ihh" customClass="HistoryDetailViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HvQ-dO-wYy">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="jRi-sY-AJP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GOh-ae-agv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="758" y="1568"/>
         </scene>
     </scenes>
     <resources>

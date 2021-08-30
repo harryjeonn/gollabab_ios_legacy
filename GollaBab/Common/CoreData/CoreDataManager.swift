@@ -25,7 +25,7 @@ class CoreDataManager {
         dateFormatter.dateFormat = "yyyy-MM-dd HH:mm"
         let date = dateFormatter.string(from: now)
         
-        let historyData = HistoryData.shared
+        let historyData = HistoryViewModel.shared
         
         guard let context = context else { return }
         let history: History = NSEntityDescription.insertNewObject(forEntityName: modelName, into: context) as! History
@@ -51,7 +51,16 @@ class CoreDataManager {
         }
     }
     
-    func loadHistory() {
+    func loadHistory() -> [History] {
+        var history = [History]()
+        do {
+            let res = try context?.fetch(History.fetchRequest()) as! [History]
+            history = res
+            print("load loginInfo")
+        } catch {
+            print(error.localizedDescription)
+        }
         
+        return history
     }
 }

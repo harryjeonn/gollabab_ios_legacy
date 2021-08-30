@@ -73,7 +73,7 @@ class SaveAlertViewController: UIViewController {
     private func saveCoreData() {
         dismissKeyboard()
         if textField.text != "" {
-            HistoryData.shared.title = textField.text
+            HistoryViewModel.shared.title = textField.text
             CoreDataManager.shared.saveHistory()
             isInput = true
             lblTitle.text = "저장 중"
