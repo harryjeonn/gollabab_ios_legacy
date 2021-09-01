@@ -18,16 +18,22 @@ class BaseViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.themeColor]
     }
     
     private func setupNaviBar() {
-        self.navigationController?.navigationBar.barTintColor = .bgColor
-        self.navigationController?.navigationBar.tintColor = .themeColor
+        navigationController?.navigationBar.barTintColor = .themeColor
+        navigationController?.navigationBar.tintColor = .whiteColor
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.whiteColor]
+        navigationItem.backButtonTitle = ""
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "btn_home"), style: .plain, target: self, action: #selector(goHome))
     }
     
     private func setupBackgroundColor() {
-        self.view.backgroundColor = .bgColor
+        view.backgroundColor = .bgColor
+    }
+    
+    @objc func goHome() {
+        navigationController?.popToRootViewController(animated: true)
     }
     
     @objc func dismissKeyboard() {
