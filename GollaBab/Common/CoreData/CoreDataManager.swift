@@ -15,9 +15,15 @@ class CoreDataManager {
     let appDelegate: AppDelegate? = UIApplication.shared.delegate as? AppDelegate
     lazy var context = appDelegate?.persistentContainer.viewContext
     
+    private let disposeBag = DisposeBag()
+    
     let modelName = "History"
     
     var isSuccess = BehaviorSubject<Bool>(value: false)
+    var deleteRow = PublishSubject<Int>()
+    var selectRow = PublishSubject<Int>()
+    var selectItem = BehaviorSubject<[String]>(value: [])
+    var selectResult = BehaviorSubject<String>(value: "")
     
     func saveHistory() {
         let now = Date()
@@ -62,5 +68,23 @@ class CoreDataManager {
         }
         
         return history
+    }
+    
+    func showDetail() {
+        selectRow.subscribe(onNext: { row in
+            do {
+                let res = try self.context?.fetch(History.fetchRequest()) as! [History]
+                let reversedRes = res.reversed()
+                reversedRes.enumerated().forEach { index, his in
+                    if index == row {
+                        guard let result = his.result else { return }
+                        self.selectResult.onNext(result)
+                        self.selectItem.onNext(his.items)
+                    }
+                }
+            } catch {
+                print(error.localizedDescription)
+            }
+        }).disposed(by: disposeBag)
     }
 }

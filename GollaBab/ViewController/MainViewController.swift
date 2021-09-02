@@ -20,6 +20,7 @@ class MainViewController: BaseViewController {
         super.viewDidLoad()        
         setUI()
         setTapEvent()
+        CoreDataManager.shared.showDetail()
     }
     
     override func viewWillAppear(_ animated: Bool) {

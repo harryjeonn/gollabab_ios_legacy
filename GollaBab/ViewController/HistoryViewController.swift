@@ -59,6 +59,7 @@ class HistoryViewController: BaseViewController {
         tableView.rx
             .itemSelected
             .subscribe(onNext: { index in
+                CoreDataManager.shared.selectRow.onNext(index.section)
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "HistoryDetailViewController") as? HistoryDetailViewController else { return }
                 self.name.subscribe(onNext: { name in
                     vc.navTitle = name

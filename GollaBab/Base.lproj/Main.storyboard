@@ -385,13 +385,51 @@
                     <view key="view" contentMode="scaleToFill" id="HvQ-dO-wYy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7o7-jG-YpJ">
+                                <rect key="frame" x="20" y="64" width="374" height="671.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pei-nn-KSI" customClass="HistoryDetailCell" customModule="GollaBab" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pei-nn-KSI" id="UDK-OE-840">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kaw-Ki-PGU">
+                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="F3I-5L-tEG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="jRi-sY-AJP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="jRi-sY-AJP" firstAttribute="trailing" secondItem="7o7-jG-YpJ" secondAttribute="trailing" constant="20" id="71y-tg-LSV"/>
+                            <constraint firstItem="7o7-jG-YpJ" firstAttribute="leading" secondItem="jRi-sY-AJP" secondAttribute="leading" constant="20" id="PTM-Pe-X3H"/>
+                            <constraint firstItem="jRi-sY-AJP" firstAttribute="bottom" secondItem="Kaw-Ki-PGU" secondAttribute="bottom" constant="20" id="YfH-le-7gH"/>
+                            <constraint firstItem="Kaw-Ki-PGU" firstAttribute="top" secondItem="7o7-jG-YpJ" secondAttribute="bottom" constant="20" id="aRr-18-eAq"/>
+                            <constraint firstItem="7o7-jG-YpJ" firstAttribute="top" secondItem="jRi-sY-AJP" secondAttribute="top" constant="20" id="jNb-Pf-Qp3"/>
+                            <constraint firstItem="Kaw-Ki-PGU" firstAttribute="width" secondItem="Kaw-Ki-PGU" secondAttribute="height" multiplier="1.618:1" id="lIr-QS-pFQ"/>
+                            <constraint firstItem="Kaw-Ki-PGU" firstAttribute="centerX" secondItem="HvQ-dO-wYy" secondAttribute="centerX" id="ts7-G5-g8E"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnRetry" destination="Kaw-Ki-PGU" id="U9z-lp-dRL"/>
+                        <outlet property="tableView" destination="7o7-jG-YpJ" id="3bS-4e-vOL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOh-ae-agv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="1568"/>
+            <point key="canvasLocation" x="757.97101449275374" y="1567.6339285714284"/>
         </scene>
     </scenes>
     <resources>
