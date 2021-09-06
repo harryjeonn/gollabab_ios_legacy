@@ -13,12 +13,14 @@ import RxDataSources
 class HistoryDetailViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnRetry: UIButton!
+    @IBOutlet weak var btnDelete: UIButton!
     
     private let disposeBag = DisposeBag()
     private var dataSource: RxTableViewSectionedReloadDataSource<SectionOfHistoryDetailData>!
     
     private var items = [String]()
     var navTitle = ""
+    var itemSection = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,6 +74,15 @@ class HistoryDetailViewController: BaseViewController {
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "InsertViewController") as? InsertViewController else { return }
                 vc.items = self.items
                 self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
+        
+        btnDelete.rx.tap
+            .bind {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "DeleteAlertViewController") as? DeleteAlertViewController  else { return }
+                vc.section = self.itemSection
+                let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
+                alert.setValue(vc, forKey: "contentViewController")
+                self.present(alert, animated: true)
             }.disposed(by: disposeBag)
     }
 }

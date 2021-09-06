@@ -62,12 +62,25 @@ class CoreDataManager {
         do {
             let res = try context?.fetch(History.fetchRequest()) as! [History]
             history = res
-            print("load loginInfo")
+            print("load history")
         } catch {
             print(error.localizedDescription)
         }
         
         return history
+    }
+    
+    func deleteHistory(_ section: Int) {
+        let history = loadHistory().reversed()[section] as NSManagedObject
+        context?.delete(history)
+        do {
+            try context?.save()
+            let convertedData = HistoryViewModel.shared.convertHistory(CoreDataManager.shared.loadHistory())
+            HistoryViewModel.shared.history.accept(convertedData)
+            print("delete history")
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func showDetail() {

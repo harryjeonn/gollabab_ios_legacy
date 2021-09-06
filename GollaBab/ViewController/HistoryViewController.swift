@@ -61,6 +61,7 @@ class HistoryViewController: BaseViewController {
             .subscribe(onNext: { index in
                 CoreDataManager.shared.selectRow.onNext(index.section)
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "HistoryDetailViewController") as? HistoryDetailViewController else { return }
+                vc.itemSection = index.section
                 self.name.subscribe(onNext: { name in
                     vc.navTitle = name
                 }).disposed(by: self.disposeBag)

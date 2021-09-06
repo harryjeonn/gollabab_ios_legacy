@@ -409,6 +409,15 @@
                                 <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3C7-wE-zu7">
+                                <rect key="frame" x="354" y="64" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="cLQ-S3-blT"/>
+                                    <constraint firstAttribute="height" constant="40" id="ftS-qm-Q4l"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemRedColor"/>
+                                <state key="normal" image="trash" catalog="system"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="jRi-sY-AJP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -417,12 +426,15 @@
                             <constraint firstItem="7o7-jG-YpJ" firstAttribute="leading" secondItem="jRi-sY-AJP" secondAttribute="leading" constant="20" id="PTM-Pe-X3H"/>
                             <constraint firstItem="jRi-sY-AJP" firstAttribute="bottom" secondItem="Kaw-Ki-PGU" secondAttribute="bottom" constant="20" id="YfH-le-7gH"/>
                             <constraint firstItem="Kaw-Ki-PGU" firstAttribute="top" secondItem="7o7-jG-YpJ" secondAttribute="bottom" constant="20" id="aRr-18-eAq"/>
+                            <constraint firstItem="3C7-wE-zu7" firstAttribute="top" secondItem="7o7-jG-YpJ" secondAttribute="top" id="ehW-q6-x5G"/>
                             <constraint firstItem="7o7-jG-YpJ" firstAttribute="top" secondItem="jRi-sY-AJP" secondAttribute="top" constant="20" id="jNb-Pf-Qp3"/>
                             <constraint firstItem="Kaw-Ki-PGU" firstAttribute="width" secondItem="Kaw-Ki-PGU" secondAttribute="height" multiplier="1.618:1" id="lIr-QS-pFQ"/>
+                            <constraint firstItem="7o7-jG-YpJ" firstAttribute="trailing" secondItem="3C7-wE-zu7" secondAttribute="trailing" id="r9d-tk-qCF"/>
                             <constraint firstItem="Kaw-Ki-PGU" firstAttribute="centerX" secondItem="HvQ-dO-wYy" secondAttribute="centerX" id="ts7-G5-g8E"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="btnDelete" destination="3C7-wE-zu7" id="nIS-MH-rFZ"/>
                         <outlet property="btnRetry" destination="Kaw-Ki-PGU" id="U9z-lp-dRL"/>
                         <outlet property="tableView" destination="7o7-jG-YpJ" id="3bS-4e-vOL"/>
                     </connections>
@@ -431,14 +443,86 @@
             </objects>
             <point key="canvasLocation" x="757.97101449275374" y="1567.6339285714284"/>
         </scene>
+        <!--Delete Alert View Controller-->
+        <scene sceneID="sbP-QR-eta">
+            <objects>
+                <viewController storyboardIdentifier="DeleteAlertViewController" id="qvY-o1-HBF" customClass="DeleteAlertViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zyl-BQ-fHM">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3yP-TS-QDK">
+                                <rect key="frame" x="87" y="348" width="240" height="200"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="투표기록을 삭제하시겠습니까?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oMW-go-nwX">
+                                        <rect key="frame" x="18.5" y="68.5" width="203.5" height="23.5"/>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="16"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="5bW-Fc-5f4">
+                                        <rect key="frame" x="8" y="143" width="224" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDu-HQ-I1M">
+                                                <rect key="frame" x="0.0" y="0.0" width="102" height="45"/>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="취소"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeh-pR-D5L">
+                                                <rect key="frame" x="122" y="0.0" width="102" height="45"/>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="삭제"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="2cP-6D-cvY"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="5bW-Fc-5f4" secondAttribute="trailing" constant="8" id="02C-XM-Tjk"/>
+                                    <constraint firstAttribute="height" constant="200" id="6gC-xe-BMd"/>
+                                    <constraint firstItem="5bW-Fc-5f4" firstAttribute="leading" secondItem="3yP-TS-QDK" secondAttribute="leading" constant="8" id="Mfc-AE-FYk"/>
+                                    <constraint firstItem="oMW-go-nwX" firstAttribute="centerY" secondItem="3yP-TS-QDK" secondAttribute="centerY" constant="-20" id="dXj-8s-UR5"/>
+                                    <constraint firstAttribute="width" constant="240" id="pE5-Ib-h8e"/>
+                                    <constraint firstAttribute="bottom" secondItem="5bW-Fc-5f4" secondAttribute="bottom" constant="12" id="wOn-rh-8k6"/>
+                                    <constraint firstItem="oMW-go-nwX" firstAttribute="centerX" secondItem="3yP-TS-QDK" secondAttribute="centerX" id="xQg-FU-9Lf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="EMR-Gf-MKT"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3yP-TS-QDK" firstAttribute="centerX" secondItem="zyl-BQ-fHM" secondAttribute="centerX" id="K7c-Yv-h67"/>
+                            <constraint firstItem="3yP-TS-QDK" firstAttribute="centerY" secondItem="zyl-BQ-fHM" secondAttribute="centerY" id="bxj-Om-0Z1"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alertView" destination="3yP-TS-QDK" id="IfP-0e-UpH"/>
+                        <outlet property="alertViewHeight" destination="6gC-xe-BMd" id="5h0-HJ-L31"/>
+                        <outlet property="alertViewWidth" destination="pE5-Ib-h8e" id="Qoc-tZ-lOb"/>
+                        <outlet property="btnCancel" destination="JDu-HQ-I1M" id="9Sn-Y2-qut"/>
+                        <outlet property="btnDelete" destination="yeh-pR-D5L" id="9dA-nj-fRF"/>
+                        <outlet property="stackView" destination="5bW-Fc-5f4" id="gl9-Gs-DQt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lbh-99-PYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1545" y="1568"/>
+        </scene>
     </scenes>
     <resources>
         <image name="btn_plus" width="24" height="24"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
