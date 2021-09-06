@@ -17,7 +17,7 @@ class InsertViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
     
-    private var items = [String]()
+    var items = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()

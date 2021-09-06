@@ -17,12 +17,14 @@ class HistoryDetailViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     private var dataSource: RxTableViewSectionedReloadDataSource<SectionOfHistoryDetailData>!
     
+    private var items = [String]()
     var navTitle = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupTableView()
+        setupTapEvent()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,13 +55,24 @@ class HistoryDetailViewController: BaseViewController {
             cell.selectionStyle = .none
             cell.lblTitle.text = item
             cell.lblTitle.textColor = .themeColor
-            
+            if indexPath.section != 0 {
+                self.items.append(item)
+            }
             return cell
         }
         
         HistoryDetailViewModel.shared.historyDetailData
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
+    }
+    
+    private func setupTapEvent() {
+        btnRetry.rx.tap
+            .bind {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "InsertViewController") as? InsertViewController else { return }
+                vc.items = self.items
+                self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
     }
 }
 
