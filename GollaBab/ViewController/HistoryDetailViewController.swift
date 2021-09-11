@@ -78,10 +78,16 @@ class HistoryDetailViewController: BaseViewController {
         
         btnDelete.rx.tap
             .bind {
-                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "DeleteAlertViewController") as? DeleteAlertViewController  else { return }
-                vc.section = self.itemSection
-                let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
-                alert.setValue(vc, forKey: "contentViewController")
+                let alert = UIAlertController(title: nil, message: "삭제하시겠습니까?", preferredStyle: .alert)
+                let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+                let deleteAction = UIAlertAction(title: "삭제", style: .destructive, handler: {(alert: UIAlertAction!) in
+                    CoreDataManager.shared.deleteHistory(self.itemSection)
+                    self.navigationController?.popViewController(animated: true)
+                })
+                
+                alert.addAction(cancelAction)
+                alert.addAction(deleteAction)
+                
                 self.present(alert, animated: true)
             }.disposed(by: disposeBag)
     }
