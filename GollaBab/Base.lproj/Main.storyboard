@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-wy-Ixa">
-                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
+                                <rect key="frame" x="137" y="657" width="140" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="JCQ-wy-Ixa" secondAttribute="height" multiplier="1.618:1" id="FkC-c3-T43"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="W48-xK-kDw"/>
@@ -57,9 +57,17 @@
                                 <state key="normal" title="Button"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16P-eb-UhV">
-                                <rect key="frame" x="137" y="657" width="140" height="86.5"/>
+                                <rect key="frame" x="137" y="558.5" width="140" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Zem-99-bRy"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4f-ZN-mWw">
+                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="bG9-Km-FAU"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                 <state key="normal" title="Button"/>
@@ -71,15 +79,19 @@
                             <constraint firstItem="hc4-Dq-4Im" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5vB-S5-eeY"/>
                             <constraint firstItem="JCQ-wy-Ixa" firstAttribute="top" secondItem="16P-eb-UhV" secondAttribute="bottom" constant="12" id="8Ua-qF-5Ff"/>
                             <constraint firstItem="JCQ-wy-Ixa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FGs-vY-tel"/>
+                            <constraint firstItem="M4f-ZN-mWw" firstAttribute="top" secondItem="JCQ-wy-Ixa" secondAttribute="bottom" constant="12" id="K7c-9b-svG"/>
                             <constraint firstItem="hc4-Dq-4Im" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="Vgl-Th-Uhv"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="JCQ-wy-Ixa" secondAttribute="bottom" constant="20" id="WsI-0S-ntF"/>
                             <constraint firstItem="16P-eb-UhV" firstAttribute="width" secondItem="16P-eb-UhV" secondAttribute="height" multiplier="1.618:1" id="glq-iD-Yed"/>
                             <constraint firstItem="16P-eb-UhV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kZj-Vy-CZz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M4f-ZN-mWw" secondAttribute="bottom" constant="20" id="u0x-KE-V0r"/>
+                            <constraint firstItem="M4f-ZN-mWw" firstAttribute="width" secondItem="M4f-ZN-mWw" secondAttribute="height" multiplier="1.618:1" id="yXY-EY-AzL"/>
+                            <constraint firstItem="M4f-ZN-mWw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zvh-oq-GU9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zyb-wS-XrA"/>
                     <connections>
                         <outlet property="btnHistory" destination="JCQ-wy-Ixa" id="De9-hn-dRe"/>
+                        <outlet property="btnRandomPlace" destination="M4f-ZN-mWw" id="B1p-ba-qL6"/>
                         <outlet property="btnStart" destination="16P-eb-UhV" id="uVz-tO-tA8"/>
                         <outlet property="lblTitle" destination="hc4-Dq-4Im" id="ZA4-yU-EhP"/>
                     </connections>
@@ -185,7 +197,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y16-fz-ZD0">
-                                <rect key="frame" x="137" y="436" width="140" height="406"/>
+                                <rect key="frame" x="137" y="329.5" width="140" height="512.5"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyC-X4-qDK">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="86.5"/>
@@ -212,8 +224,13 @@
                                         <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                         <state key="normal" title="저장"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-25-Glx">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQc-IY-Om4">
                                         <rect key="frame" x="0.0" y="319.5" width="140" height="86.5"/>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                        <state key="normal" title="주변 식당"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-25-Glx">
+                                        <rect key="frame" x="0.0" y="426" width="140" height="86.5"/>
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="BTU-25-Glx" secondAttribute="height" multiplier="1.618:1" id="iFd-xI-pkz"/>
                                         </constraints>
@@ -243,6 +260,7 @@
                         <outlet property="btnGoHome" destination="yyC-X4-qDK" id="xp9-VT-upp"/>
                         <outlet property="btnRetry" destination="BTU-25-Glx" id="F4v-YK-92C"/>
                         <outlet property="btnSave" destination="Qbr-Ic-5dl" id="0jX-iA-ERg"/>
+                        <outlet property="btnShowPlace" destination="OQc-IY-Om4" id="tGf-dY-iEV"/>
                         <outlet property="btnStop" destination="Pj7-uo-Omv" id="exf-nK-vOd"/>
                         <outlet property="lblResult" destination="caE-Js-gWM" id="BnE-FT-kg3"/>
                         <outlet property="stackView" destination="y16-fz-ZD0" id="l4W-QX-nx8"/>
@@ -377,6 +395,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAP-pe-2b2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17" y="1568"/>
+        </scene>
+        <!--Map View Controller-->
+        <scene sceneID="OBU-8C-RoP">
+            <objects>
+                <viewController storyboardIdentifier="MapViewController" id="Vnd-kx-LMV" customClass="MapViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XO8-jh-A87">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhC-Qc-t0t">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vma-tR-iMY">
+                                        <rect key="frame" x="344" y="50" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="7x2-D6-d6t"/>
+                                            <constraint firstAttribute="width" secondItem="vma-tR-iMY" secondAttribute="height" multiplier="1:1" id="ROI-wi-bF5"/>
+                                        </constraints>
+                                        <state key="normal" image="btn_my_location"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="vma-tR-iMY" firstAttribute="top" secondItem="qhC-Qc-t0t" secondAttribute="top" constant="50" id="Mpc-RY-js2"/>
+                                    <constraint firstAttribute="trailing" secondItem="vma-tR-iMY" secondAttribute="trailing" constant="30" id="yH3-wN-2g3"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rzn-dx-h2J"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qhC-Qc-t0t" firstAttribute="top" secondItem="rzn-dx-h2J" secondAttribute="top" id="Ar8-o2-bNp"/>
+                            <constraint firstItem="rzn-dx-h2J" firstAttribute="trailing" secondItem="qhC-Qc-t0t" secondAttribute="trailing" id="eq6-BK-uEt"/>
+                            <constraint firstItem="qhC-Qc-t0t" firstAttribute="leading" secondItem="rzn-dx-h2J" secondAttribute="leading" id="n7p-ev-gyQ"/>
+                            <constraint firstItem="rzn-dx-h2J" firstAttribute="bottom" secondItem="qhC-Qc-t0t" secondAttribute="bottom" id="v6t-cv-fx3"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnMoveMyLocation" destination="vma-tR-iMY" id="Lfs-2w-eKS"/>
+                        <outlet property="contentsView" destination="qhC-Qc-t0t" id="ZQo-O7-2kP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j7N-nw-PXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="2223"/>
         </scene>
         <!--History Detail View Controller-->
         <scene sceneID="oDl-cb-C5i">
@@ -513,6 +576,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="btn_my_location" width="24" height="24"/>
         <image name="btn_plus" width="24" height="24"/>
         <image name="trash" catalog="system" width="121" height="128"/>
         <systemColor name="opaqueSeparatorColor">

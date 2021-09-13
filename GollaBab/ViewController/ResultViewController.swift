@@ -13,6 +13,7 @@ enum ButtonShowType {
     case animation
     case result
     case retry
+    case random
 }
 
 class ResultViewController: BaseViewController {
@@ -22,6 +23,7 @@ class ResultViewController: BaseViewController {
     @IBOutlet weak var btnStop: UIButton!
     @IBOutlet weak var btnSave: UIButton!
     @IBOutlet weak var btnRetry: UIButton!
+    @IBOutlet var btnShowPlace: UIButton!
     
     private let disposeBag = DisposeBag()
     private var items = [String]()
@@ -67,11 +69,19 @@ class ResultViewController: BaseViewController {
             btnSave.isHidden = true
             btnRetry.isHidden = true
             btnGoHome.isHidden = true
+            btnShowPlace.isHidden = true
         case .result:
             btnStop.isHidden = true
             btnSave.isHidden = false
             btnRetry.isHidden = false
             btnGoHome.isHidden = false
+            btnShowPlace.isHidden = false
+        case .random:
+            btnStop.isHidden = true
+            btnSave.isHidden = false
+            btnRetry.isHidden = false
+            btnGoHome.isHidden = false
+            btnShowPlace.isHidden = true
         }
     }
     
@@ -103,6 +113,13 @@ class ResultViewController: BaseViewController {
                 self.items.removeAll(where: { $0 == self.lblResult.text })
                 self.startAnimation()
                 self.changeButton(.animation)
+            }.disposed(by: disposeBag)
+        
+        btnShowPlace.rx.tap
+            .bind {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else { return }
+                vc.query = self.lblResult.text
+                self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
     }
     

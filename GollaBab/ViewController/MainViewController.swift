@@ -13,6 +13,7 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnStart: UIButton!
     @IBOutlet weak var btnHistory: UIButton!
+    @IBOutlet var btnRandomPlace: UIButton!
     
     private let disposeBag = DisposeBag()
     
@@ -40,6 +41,11 @@ class MainViewController: BaseViewController {
         btnHistory.setTitle("지난 투표", for: .normal)
         btnHistory.setTitleColor(.whiteColor, for: .normal)
         btnHistory.layer.cornerRadius = 10
+        
+        btnRandomPlace.backgroundColor = .themeColor
+        btnRandomPlace.setTitle("랜덤", for: .normal)
+        btnRandomPlace.setTitleColor(.whiteColor, for: .normal)
+        btnRandomPlace.layer.cornerRadius = 10
     }
 
     private func setTapEvent() {
@@ -53,6 +59,11 @@ class MainViewController: BaseViewController {
             .bind {
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as? HistoryViewController else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
+        
+        btnRandomPlace.rx.tap
+            .bind {
+                // 주변 식당 리스트 가져와서 뽑기
             }.disposed(by: disposeBag)
     }
     

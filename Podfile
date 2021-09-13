@@ -8,6 +8,8 @@ target 'GollaBab' do
     pod 'RxCocoa'
     pod 'RxDataSources', '~> 4.0'
     
+    pod 'SwiftyJSON', '~> 4.0'
+    
     pod 'Alamofire', '~> 5.4'
     pod 'RxAlamofire'
 
