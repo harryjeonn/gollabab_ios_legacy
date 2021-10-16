@@ -80,6 +80,7 @@ class MapViewController: BaseViewController {
         setLayout()
         showBottomSheet(atState: .mini)
         panGesture()
+        checkPlaceCount()
     }
     
     // MARK: - Layout
@@ -189,6 +190,15 @@ class MapViewController: BaseViewController {
             mapView.setMapCenter(coord, animated: true)
             
             self.contentsView.insertSubview(mapView, at: 0)
+        }
+    }
+    
+    private func checkPlaceCount() {
+        if arrPin.count == 1 {
+            let pin = self.arrPin[0]
+            self.mapView?.select(pin, animated: true)
+            self.mapView?.setMapCenter(pin.mapPoint, animated: true)
+            self.showBottomSheet(atState: .mini)
         }
     }
     
