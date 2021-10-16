@@ -28,6 +28,7 @@ class ResultViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     private var items = [String]()
     private var timer: Timer!
+    var isRandom: Bool?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,7 +56,7 @@ class ResultViewController: BaseViewController {
         }
     }
     
-    private func setupItems() {
+    func setupItems() {
         ItemViewModel.shared.eventItems
             .subscribe(onNext: { items in
                 self.items = items
@@ -71,6 +72,9 @@ class ResultViewController: BaseViewController {
             btnGoHome.isHidden = true
             btnShowPlace.isHidden = true
         case .result:
+            if isRandom ?? false {
+                btnShowPlace.setTitle("위치", for: .normal)
+            }
             btnStop.isHidden = true
             btnSave.isHidden = false
             btnRetry.isHidden = false

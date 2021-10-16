@@ -16,12 +16,14 @@ class MainViewController: BaseViewController {
     @IBOutlet var btnRandomPlace: UIButton!
     
     private let disposeBag = DisposeBag()
-    
+    private var placeItems = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()        
         setUI()
         setTapEvent()
         CoreDataManager.shared.showDetail()
+        LocationManager.shared.getLocation()
+        getPlaceList()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -63,8 +65,27 @@ class MainViewController: BaseViewController {
         
         btnRandomPlace.rx.tap
             .bind {
-                // 주변 식당 리스트 가져와서 뽑기
+                ItemViewModel.shared.eventItems.accept(self.placeItems)
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? ResultViewController else { return }
+                vc.isRandom = true
+                vc.setupItems()
+                self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
+    }
+    
+    private func getPlaceList() {
+        if let coord = LocationManager.shared.myLocation {
+            let query = "식당"
+            KakaoMapManager.shared.rxGetPlace(query: query, lat: "\(coord.latitude)", lon: "\(coord.longitude)")
+                .map({ (items) -> [Place] in
+                    return items!.sorted(by: { $0.distance < $1.distance })
+                })
+                .subscribe(onNext: { data in
+                    data.forEach { data in
+                        self.placeItems.append(data.placeName)
+                    }
+                }).disposed(by: disposeBag)
+        }
     }
     
 }

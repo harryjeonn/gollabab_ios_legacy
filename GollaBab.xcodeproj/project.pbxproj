@@ -289,6 +289,7 @@
 		820109B526FCAD2800739119 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8201077A26EF888400739119 /* libsqlite3.tbd */; };
 		820109B626FCAD5D00739119 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8201077926EF887700739119 /* libxml2.tbd */; };
 		820109B726FCAD6400739119 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8201077826EF886D00739119 /* libc++.tbd */; };
+		820109BA271A9E2700739119 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820109B9271A9E2700739119 /* LocationManager.swift */; };
 		82693C5626DD1BC7006334B6 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82693C5426DD1BC7006334B6 /* HistoryCell.swift */; };
 		82693C5726DD1BC7006334B6 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82693C5526DD1BC7006334B6 /* HistoryCell.xib */; };
 		826AE2DE26DFD548008833A9 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826AE2DD26DFD548008833A9 /* HistoryDetailViewController.swift */; };
@@ -616,6 +617,7 @@
 		820109AF26EF8D8400739119 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		820109B126FCA71A00739119 /* KakaoMapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoMapManager.swift; sourceTree = "<group>"; };
 		820109B326FCA7A800739119 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		820109B9271A9E2700739119 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		82693C5426DD1BC7006334B6 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		82693C5526DD1BC7006334B6 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		826AE2DD26DFD548008833A9 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
@@ -1023,6 +1025,14 @@
 			path = KakaoMap;
 			sourceTree = "<group>";
 		};
+		820109B8271A9E1900739119 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				820109B9271A9E2700739119 /* LocationManager.swift */,
+			);
+			path = Location;
+			sourceTree = "<group>";
+		};
 		8270D4DF26E122FB00C45A85 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
@@ -1132,6 +1142,7 @@
 		BD8D90D926A4228E0016EDCA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				820109B8271A9E1900739119 /* Location */,
 				82721F1726CBD69B005AD346 /* CoreData */,
 				904A70E4269C58B5006F960B /* Font */,
 				BD8D90DC26A425410016EDCA /* BaseViewController.swift */,
@@ -1556,6 +1567,7 @@
 			files = (
 				82721F2426CBE123005AD346 /* HistoryViewModel.swift in Sources */,
 				820109B226FCA71A00739119 /* KakaoMapManager.swift in Sources */,
+				820109BA271A9E2700739119 /* LocationManager.swift in Sources */,
 				BDC3312D26B8332500FE8293 /* InsertCell.swift in Sources */,
 				904A70D5269C5409006F960B /* MainViewController.swift in Sources */,
 				BD779E4226A99D8F00DBA126 /* ItemViewModel.swift in Sources */,

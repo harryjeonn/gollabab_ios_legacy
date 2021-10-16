@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import CoreLocation
 import RxSwift
 import RxCocoa
 import RxDataSources
@@ -20,9 +19,6 @@ class MapViewController: BaseViewController {
     private var mapView: MTMapView?
     private var arrPin = [MTMapPOIItem]()
     private var arrPlace = [Place]()
-    private var locationManager = CLLocationManager()
-    
-    private var myLocation: MTMapPointGeo?
     var query: String?
     
     private lazy var bottomSheetPanStartingTopConstant: CGFloat = bottomSheetPanMinTopConstant
@@ -58,13 +54,13 @@ class MapViewController: BaseViewController {
         super.viewDidLoad()
         self.title = "주변 식당"
         setBtn()
-        getLocation()
+        LocationManager.shared.getLocation()
         getPlaceList()
         rxTableView()
     }
     
     private func getPlaceList() {
-        if let coord = myLocation,
+        if let coord = LocationManager.shared.myLocation,
            let query = query {
             KakaoMapManager.shared.rxGetPlace(query: query, lat: "\(coord.latitude)", lon: "\(coord.longitude)")
                 .map({ (items) -> [Place] in
@@ -152,12 +148,13 @@ class MapViewController: BaseViewController {
     
     //MARK: - Map
     private func setBtn() {
+        guard let myLocation = LocationManager.shared.myLocation else { return }
         btnMoveMyLocation.layer.cornerRadius = btnMoveMyLocation.frame.width / 2
         btnMoveMyLocation.backgroundColor = .themeColor
         
         btnMoveMyLocation.rx.tap
             .bind {
-                let coord = MTMapPointGeo(latitude: self.myLocation!.latitude, longitude: self.myLocation!.longitude)
+                let coord = MTMapPointGeo(latitude: myLocation.latitude, longitude: myLocation.longitude)
                 let point = MTMapPoint(geoCoord: coord)
                 self.mapView!.setMapCenter(point, animated: true)
             }.disposed(by: disposeBag)
@@ -181,7 +178,7 @@ class MapViewController: BaseViewController {
         mapView = MTMapView(frame: self.view.bounds)
         
         if let mapView = mapView,
-           let myLocation = myLocation {
+           let myLocation = LocationManager.shared.myLocation {
             mapView.delegate = self
             mapView.baseMapType = .standard
             mapView.showCurrentLocationMarker = true
@@ -192,22 +189,6 @@ class MapViewController: BaseViewController {
             mapView.setMapCenter(coord, animated: true)
             
             self.contentsView.insertSubview(mapView, at: 0)
-        }
-    }
-    
-    private func getLocation() {
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        
-        if CLLocationManager.locationServicesEnabled() {
-            locationManager.startUpdatingLocation()
-        } else {
-            print("위치서비스 꺼져 있음")
-        }
-        
-        if let coor = locationManager.location?.coordinate {
-            myLocation = MTMapPointGeo(latitude: coor.latitude, longitude: coor.longitude)
         }
     }
     
@@ -305,16 +286,6 @@ extension MapViewController: MTMapViewDelegate {
     }
     
     func mapView(_ mapView: MTMapView?, updateDeviceHeading headingAngle: MTMapRotationAngle) {
-        
-    }
-}
-
-extension MapViewController: CLLocationManagerDelegate {
-    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        
-    }
-    
-    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         
     }
 }
