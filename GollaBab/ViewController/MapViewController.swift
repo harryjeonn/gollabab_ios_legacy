@@ -64,7 +64,11 @@ class MapViewController: BaseViewController {
            let query = query {
             KakaoMapManager.shared.rxGetPlace(query: query, lat: "\(coord.latitude)", lon: "\(coord.longitude)")
                 .map({ (items) -> [Place] in
-                    return items!.sorted(by: { $0.distance < $1.distance })
+                    var place = [Place]()
+                    if let sortedItems = items?.sorted(by: { $0.distance < $1.distance }) {
+                        place = sortedItems
+                    }
+                    return place
                 })
                 .subscribe(onNext: { data in
                     self.arrPlace = data
