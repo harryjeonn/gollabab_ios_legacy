@@ -21,9 +21,12 @@ class BaseViewController: UIViewController {
     }
     
     private func setupNaviBar() {
-        navigationController?.navigationBar.barTintColor = .themeColor
-        navigationController?.navigationBar.tintColor = .whiteColor
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.whiteColor]
+        guard let titleFont: UIFont = UIFont(name: "EliceDigitalBaeumOTF-Bd", size: 15) else { return }
+        navigationController?.navigationBar.tintColor = .themeColor
+        navigationController?.navigationBar.titleTextAttributes = [
+            NSAttributedString.Key.font : titleFont,
+            NSAttributedString.Key.foregroundColor : UIColor.themeColor
+        ]
         navigationItem.backButtonTitle = ""
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "btn_home"), style: .plain, target: self, action: #selector(goHome))
     }
