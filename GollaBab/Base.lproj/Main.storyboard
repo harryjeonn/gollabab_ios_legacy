@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uLf-UC-qGr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uLf-UC-qGr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -47,51 +47,44 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-wy-Ixa">
-                                <rect key="frame" x="137" y="657" width="140" height="86.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XjQ-vc-9if">
+                                <rect key="frame" x="137" y="657" width="140" height="185"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16P-eb-UhV">
+                                        <rect key="frame" x="0.0" y="0.0" width="140" height="86.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Zem-99-bRy"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCQ-wy-Ixa">
+                                        <rect key="frame" x="0.0" y="98.5" width="140" height="86.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="JCQ-wy-Ixa" secondAttribute="height" multiplier="1.618:1" id="FkC-c3-T43"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="W48-xK-kDw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                        <state key="normal" title="Button"/>
+                                    </button>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="JCQ-wy-Ixa" secondAttribute="height" multiplier="1.618:1" id="FkC-c3-T43"/>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="W48-xK-kDw"/>
+                                    <constraint firstItem="16P-eb-UhV" firstAttribute="width" secondItem="16P-eb-UhV" secondAttribute="height" multiplier="1.618:1" id="fGk-13-tTv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16P-eb-UhV">
-                                <rect key="frame" x="137" y="558.5" width="140" height="86.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Zem-99-bRy"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4f-ZN-mWw">
-                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="bG9-Km-FAU"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
-                                <state key="normal" title="Button"/>
-                            </button>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="XjQ-vc-9if" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0np-zM-13i"/>
                             <constraint firstItem="hc4-Dq-4Im" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5vB-S5-eeY"/>
-                            <constraint firstItem="JCQ-wy-Ixa" firstAttribute="top" secondItem="16P-eb-UhV" secondAttribute="bottom" constant="12" id="8Ua-qF-5Ff"/>
-                            <constraint firstItem="JCQ-wy-Ixa" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FGs-vY-tel"/>
-                            <constraint firstItem="M4f-ZN-mWw" firstAttribute="top" secondItem="JCQ-wy-Ixa" secondAttribute="bottom" constant="12" id="K7c-9b-svG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XjQ-vc-9if" secondAttribute="bottom" constant="20" id="A1B-O9-HVy"/>
                             <constraint firstItem="hc4-Dq-4Im" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="Vgl-Th-Uhv"/>
-                            <constraint firstItem="16P-eb-UhV" firstAttribute="width" secondItem="16P-eb-UhV" secondAttribute="height" multiplier="1.618:1" id="glq-iD-Yed"/>
-                            <constraint firstItem="16P-eb-UhV" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="kZj-Vy-CZz"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="M4f-ZN-mWw" secondAttribute="bottom" constant="20" id="u0x-KE-V0r"/>
-                            <constraint firstItem="M4f-ZN-mWw" firstAttribute="width" secondItem="M4f-ZN-mWw" secondAttribute="height" multiplier="1.618:1" id="yXY-EY-AzL"/>
-                            <constraint firstItem="M4f-ZN-mWw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zvh-oq-GU9"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Zyb-wS-XrA"/>
                     <connections>
                         <outlet property="btnHistory" destination="JCQ-wy-Ixa" id="De9-hn-dRe"/>
-                        <outlet property="btnRandomPlace" destination="M4f-ZN-mWw" id="B1p-ba-qL6"/>
                         <outlet property="btnStart" destination="16P-eb-UhV" id="uVz-tO-tA8"/>
                         <outlet property="lblTitle" destination="hc4-Dq-4Im" id="ZA4-yU-EhP"/>
                     </connections>
@@ -99,6 +92,142 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-17.39130434782609" y="114.50892857142857"/>
+        </scene>
+        <!--Search View Controller-->
+        <scene sceneID="jMe-Rx-ggO">
+            <objects>
+                <viewController storyboardIdentifier="SearchViewController" id="maN-kE-WRY" customClass="SearchViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NvH-T8-xMX">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVy-67-30r">
+                                <rect key="frame" x="186" y="438" width="30" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="OQW-Q4-5ga"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cwi-BI-hSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8" y="873"/>
+        </scene>
+        <!--More View Controller-->
+        <scene sceneID="HLi-qs-bzd">
+            <objects>
+                <viewController storyboardIdentifier="MoreViewController" id="gXN-fv-1zX" customClass="MoreViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2UF-0D-ma0">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="더보기" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xz-ik-yLr">
+                                <rect key="frame" x="186" y="438" width="45" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wcA-4k-QuK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SbJ-Ur-ZKP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17" y="1598"/>
+        </scene>
+        <!--Mode View Controller-->
+        <scene sceneID="Xad-cW-qTa">
+            <objects>
+                <viewController storyboardIdentifier="ModeViewController" id="eof-M6-NFi" customClass="ModeViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gXp-bB-2Md">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="2zf-Xz-Wc2">
+                                <rect key="frame" x="63" y="357.5" width="288" height="181"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="adH-nq-JO8">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="86.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKK-FF-bU2">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="86.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="kCt-K5-tBZ"/>
+                                                    <constraint firstAttribute="width" secondItem="dKK-FF-bU2" secondAttribute="height" multiplier="1.618:1" id="o8r-Xs-Fey"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MAy-x8-EDC">
+                                                <rect key="frame" x="148" y="0.0" width="140" height="86.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="OXG-yw-WyG"/>
+                                                    <constraint firstAttribute="width" secondItem="MAy-x8-EDC" secondAttribute="height" multiplier="1.618:1" id="Qop-iz-HeE"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dKK-FF-bU2" firstAttribute="width" secondItem="dKK-FF-bU2" secondAttribute="height" multiplier="1.618:1" id="28W-hh-fU7"/>
+                                            <constraint firstItem="MAy-x8-EDC" firstAttribute="width" secondItem="MAy-x8-EDC" secondAttribute="height" multiplier="1.618:1" id="bxy-ec-iwl"/>
+                                            <constraint firstItem="MAy-x8-EDC" firstAttribute="width" secondItem="MAy-x8-EDC" secondAttribute="height" multiplier="1.618:1" id="nP1-wl-R6X"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="J1v-97-sc8">
+                                        <rect key="frame" x="0.0" y="94.5" width="288" height="86.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zfK-b1-eVf">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="86.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="ReY-CC-3gf"/>
+                                                    <constraint firstAttribute="width" secondItem="zfK-b1-eVf" secondAttribute="height" multiplier="1.618:1" id="U8I-Oq-kOQ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f90-BB-xud">
+                                                <rect key="frame" x="148" y="0.0" width="140" height="86.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="f90-BB-xud" secondAttribute="height" multiplier="1.618:1" id="1UZ-t8-TKZ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="WfK-bB-opO"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="Button"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zfK-b1-eVf" firstAttribute="width" secondItem="zfK-b1-eVf" secondAttribute="height" multiplier="1.618:1" id="5pY-Xq-dxK"/>
+                                            <constraint firstItem="f90-BB-xud" firstAttribute="width" secondItem="f90-BB-xud" secondAttribute="height" multiplier="1.618:1" id="a6I-ie-e0M"/>
+                                            <constraint firstItem="f90-BB-xud" firstAttribute="width" secondItem="f90-BB-xud" secondAttribute="height" multiplier="1.618:1" id="cG1-mA-cKq"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="qEv-cr-HAV"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2zf-Xz-Wc2" firstAttribute="centerY" secondItem="gXp-bB-2Md" secondAttribute="centerY" id="Cb0-yH-vQT"/>
+                            <constraint firstItem="2zf-Xz-Wc2" firstAttribute="centerX" secondItem="gXp-bB-2Md" secondAttribute="centerX" id="PxE-UA-Eye"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnGoInsert" destination="dKK-FF-bU2" id="HrI-wP-33q"/>
+                        <outlet property="btnGoMore" destination="f90-BB-xud" id="DKp-ZF-eHj"/>
+                        <outlet property="btnGoRandom" destination="MAy-x8-EDC" id="wcV-0w-2a3"/>
+                        <outlet property="btnGoSearch" destination="zfK-b1-eVf" id="JNO-zO-X9g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OqL-88-K5F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="757.97101449275374" y="114.50892857142857"/>
         </scene>
         <!--Insert View Controller-->
         <scene sceneID="T12-Y6-ARm">
@@ -132,7 +261,7 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InsertCell" id="OaJ-dx-1Ik" customClass="InsertCell" customModule="GollaBab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OaJ-dx-1Ik" id="7rd-7I-tCB">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -176,7 +305,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56c-sw-UJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17.39130434782609" y="847.76785714285711"/>
+            <point key="canvasLocation" x="-17" y="2387"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="WNI-zD-Lcm">
@@ -268,7 +397,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUR-PE-Oxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="786.95652173913049" y="847.76785714285711"/>
+            <point key="canvasLocation" x="787" y="2387"/>
         </scene>
         <!--Save Alert View Controller-->
         <scene sceneID="ZAb-O2-Gku">
@@ -353,7 +482,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgP-b6-hWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1544.9275362318842" y="847.76785714285711"/>
+            <point key="canvasLocation" x="1545" y="2387"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="uy3-3X-Ib2">
@@ -369,7 +498,7 @@
                                 <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="7kZ-Gr-1jc" customClass="HistoryCell" customModule="GollaBab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7kZ-Gr-1jc" id="hB6-1f-yGp">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
@@ -394,7 +523,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAP-pe-2b2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="1568"/>
+            <point key="canvasLocation" x="-17" y="3106"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="OBU-8C-RoP">
@@ -439,7 +568,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7N-nw-PXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="2223"/>
+            <point key="canvasLocation" x="-17" y="3761"/>
         </scene>
         <!--History Detail View Controller-->
         <scene sceneID="oDl-cb-C5i">
@@ -455,7 +584,7 @@
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="pei-nn-KSI" customClass="HistoryDetailCell" customModule="GollaBab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="24.5" width="374" height="43.5"/>
+                                        <rect key="frame" x="0.0" y="44.5" width="374" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pei-nn-KSI" id="UDK-OE-840">
                                             <rect key="frame" x="0.0" y="0.0" width="374" height="43.5"/>
@@ -504,7 +633,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOh-ae-agv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="757.97101449275374" y="1567.6339285714284"/>
+            <point key="canvasLocation" x="758" y="3106"/>
         </scene>
         <!--Delete Alert View Controller-->
         <scene sceneID="sbP-QR-eta">
@@ -572,7 +701,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbh-99-PYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="1568"/>
+            <point key="canvasLocation" x="1545" y="3106"/>
         </scene>
     </scenes>
     <resources>
