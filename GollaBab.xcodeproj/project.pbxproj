@@ -293,6 +293,8 @@
 		82606AA62723FC0400F411C9 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA52723FC0400F411C9 /* ModeViewController.swift */; };
 		82606AA8272400D800F411C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA7272400D800F411C9 /* SearchViewController.swift */; };
 		82606AAA272400E000F411C9 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA9272400E000F411C9 /* MoreViewController.swift */; };
+		82606AAD27240BEE00F411C9 /* MoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AAB27240BEE00F411C9 /* MoreCell.swift */; };
+		82606AAE27240BEE00F411C9 /* MoreCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82606AAC27240BEE00F411C9 /* MoreCell.xib */; };
 		82693C5626DD1BC7006334B6 /* HistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82693C5426DD1BC7006334B6 /* HistoryCell.swift */; };
 		82693C5726DD1BC7006334B6 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82693C5526DD1BC7006334B6 /* HistoryCell.xib */; };
 		826AE2DE26DFD548008833A9 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826AE2DD26DFD548008833A9 /* HistoryDetailViewController.swift */; };
@@ -624,6 +626,8 @@
 		82606AA52723FC0400F411C9 /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
 		82606AA7272400D800F411C9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		82606AA9272400E000F411C9 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		82606AAB27240BEE00F411C9 /* MoreCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreCell.swift; sourceTree = "<group>"; };
+		82606AAC27240BEE00F411C9 /* MoreCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MoreCell.xib; sourceTree = "<group>"; };
 		82693C5426DD1BC7006334B6 /* HistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryCell.swift; sourceTree = "<group>"; };
 		82693C5526DD1BC7006334B6 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		826AE2DD26DFD548008833A9 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
@@ -1162,6 +1166,8 @@
 		BDC3312A26B8331600FE8293 /* CustomCell */ = {
 			isa = PBXGroup;
 			children = (
+				82606AAB27240BEE00F411C9 /* MoreCell.swift */,
+				82606AAC27240BEE00F411C9 /* MoreCell.xib */,
 				BDC3312B26B8332500FE8293 /* InsertCell.swift */,
 				BDC3312C26B8332500FE8293 /* InsertCell.xib */,
 				82693C5426DD1BC7006334B6 /* HistoryCell.swift */,
@@ -1461,6 +1467,7 @@
 				8201097E26EF88A500739119 /* interface_m_t_map_bounds_rect.js in Resources */,
 				8201090826EF88A500739119 /* all_8.html in Resources */,
 				8201099426EF88A500739119 /* resize.js in Resources */,
+				82606AAE27240BEE00F411C9 /* MoreCell.xib in Resources */,
 				8201091326EF88A500739119 /* all_b.html in Resources */,
 				820108DF26EF88A500739119 /* _m_t_map_location_marker_item_8h.html in Resources */,
 				8201090626EF88A500739119 /* variables_3.js in Resources */,
@@ -1574,6 +1581,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82606AAD27240BEE00F411C9 /* MoreCell.swift in Sources */,
 				82721F2426CBE123005AD346 /* HistoryViewModel.swift in Sources */,
 				820109B226FCA71A00739119 /* KakaoMapManager.swift in Sources */,
 				820109BA271A9E2700739119 /* LocationManager.swift in Sources */,
