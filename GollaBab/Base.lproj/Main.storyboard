@@ -101,17 +101,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="검색" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bVy-67-30r">
-                                <rect key="frame" x="186" y="438" width="30" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fem-7s-37x">
+                                <rect key="frame" x="20" y="94" width="374" height="34"/>
+                                <color key="backgroundColor" red="0.99322372670000003" green="0.98344236610000002" blue="0.96852892639999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx5-TV-Wc3">
+                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="WLL-hC-waP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OQW-Q4-5ga"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Lx5-TV-Wc3" firstAttribute="width" secondItem="Lx5-TV-Wc3" secondAttribute="height" multiplier="1.618:1" id="2GG-yg-BaX"/>
+                            <constraint firstItem="Fem-7s-37x" firstAttribute="top" secondItem="OQW-Q4-5ga" secondAttribute="top" constant="50" id="3jT-7Y-2KI"/>
+                            <constraint firstItem="OQW-Q4-5ga" firstAttribute="bottom" secondItem="Lx5-TV-Wc3" secondAttribute="bottom" constant="20" id="8gv-i8-7gN"/>
+                            <constraint firstItem="Lx5-TV-Wc3" firstAttribute="centerX" secondItem="NvH-T8-xMX" secondAttribute="centerX" id="FFq-w3-U4a"/>
+                            <constraint firstItem="Fem-7s-37x" firstAttribute="leading" secondItem="OQW-Q4-5ga" secondAttribute="leading" constant="20" id="Qd5-2j-v8F"/>
+                            <constraint firstItem="OQW-Q4-5ga" firstAttribute="trailing" secondItem="Fem-7s-37x" secondAttribute="trailing" constant="20" id="oSE-jA-xdb"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="btnSearch" destination="Lx5-TV-Wc3" id="cQ2-qk-F2Y"/>
+                        <outlet property="textField" destination="Fem-7s-37x" id="pNP-ri-Wm4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cwi-BI-hSc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
