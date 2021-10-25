@@ -299,6 +299,8 @@
 		82693C5726DD1BC7006334B6 /* HistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82693C5526DD1BC7006334B6 /* HistoryCell.xib */; };
 		826AE2DE26DFD548008833A9 /* HistoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826AE2DD26DFD548008833A9 /* HistoryDetailViewController.swift */; };
 		826AE2E026DFDDA7008833A9 /* HistoryDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826AE2DF26DFDDA7008833A9 /* HistoryDetailViewModel.swift */; };
+		826DA7812726E28D001ACCAD /* SetSearchRangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826DA7802726E28D001ACCAD /* SetSearchRangeViewController.swift */; };
+		826DA7832726E2DE001ACCAD /* MoreViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 826DA7822726E2DE001ACCAD /* MoreViewModel.swift */; };
 		8270D4DD26E1176800C45A85 /* HistoryDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270D4DB26E1176800C45A85 /* HistoryDetailCell.swift */; };
 		8270D4DE26E1176800C45A85 /* HistoryDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8270D4DC26E1176800C45A85 /* HistoryDetailCell.xib */; };
 		8270D4E126E1231300C45A85 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8270D4E026E1231300C45A85 /* HeaderView.swift */; };
@@ -632,6 +634,8 @@
 		82693C5526DD1BC7006334B6 /* HistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryCell.xib; sourceTree = "<group>"; };
 		826AE2DD26DFD548008833A9 /* HistoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewController.swift; sourceTree = "<group>"; };
 		826AE2DF26DFDDA7008833A9 /* HistoryDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailViewModel.swift; sourceTree = "<group>"; };
+		826DA7802726E28D001ACCAD /* SetSearchRangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetSearchRangeViewController.swift; sourceTree = "<group>"; };
+		826DA7822726E2DE001ACCAD /* MoreViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewModel.swift; sourceTree = "<group>"; };
 		8270D4DB26E1176800C45A85 /* HistoryDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryDetailCell.swift; sourceTree = "<group>"; };
 		8270D4DC26E1176800C45A85 /* HistoryDetailCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HistoryDetailCell.xib; sourceTree = "<group>"; };
 		8270D4E026E1231300C45A85 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
@@ -1131,6 +1135,7 @@
 				BD779E4126A99D8F00DBA126 /* ItemViewModel.swift */,
 				82721F2326CBE123005AD346 /* HistoryViewModel.swift */,
 				826AE2DF26DFDDA7008833A9 /* HistoryDetailViewModel.swift */,
+				826DA7822726E2DE001ACCAD /* MoreViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1148,6 +1153,7 @@
 				820109AF26EF8D8400739119 /* MapViewController.swift */,
 				82606AA7272400D800F411C9 /* SearchViewController.swift */,
 				82606AA9272400E000F411C9 /* MoreViewController.swift */,
+				826DA7802726E28D001ACCAD /* SetSearchRangeViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1598,6 +1604,7 @@
 				BD60271126C16437004F32B7 /* SaveAlertViewController.swift in Sources */,
 				BD8D90DD26A425410016EDCA /* BaseViewController.swift in Sources */,
 				820109B026EF8D8400739119 /* MapViewController.swift in Sources */,
+				826DA7812726E28D001ACCAD /* SetSearchRangeViewController.swift in Sources */,
 				904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */,
 				82721F2E26CBE795005AD346 /* History+CoreDataClass.swift in Sources */,
 				8270D4E126E1231300C45A85 /* HeaderView.swift in Sources */,
@@ -1610,6 +1617,7 @@
 				8270D4DD26E1176800C45A85 /* HistoryDetailCell.swift in Sources */,
 				82721F2D26CBE795005AD346 /* History+CoreDataProperties.swift in Sources */,
 				820109B426FCA7A800739119 /* PlaceCell.swift in Sources */,
+				826DA7832726E2DE001ACCAD /* MoreViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
