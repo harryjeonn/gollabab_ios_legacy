@@ -32,11 +32,16 @@ class KakaoMapManager {
     var arrResult = [Place]()
     
     func rxGetPlace(query: String, lat: String, lon: String) -> Observable<[Place]?> {
+        var range = UserDefaults.standard.float(forKey: "searchRange")
+        if range == 0 {
+            range = 300
+        }
+        
         let param: [String : Any] = [
             "query" : query,
             "x" : lon,
             "y" : lat,
-            "radius" : 300
+            "radius" : range
         ]
         
         return RxAlamofire

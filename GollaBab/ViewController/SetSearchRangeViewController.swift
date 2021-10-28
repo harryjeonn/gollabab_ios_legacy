@@ -61,7 +61,7 @@ class SetSearchRangeViewController: BaseViewController {
     private func setupTextField() {
         range = userDefault.float(forKey: "searchRange")
         if range == 0 {
-            range = 1000
+            range = 300
         }
         textField.text = "\(range)"
         
