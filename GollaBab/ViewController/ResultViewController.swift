@@ -104,6 +104,7 @@ class ResultViewController: BaseViewController {
         
         btnSave.rx.tap
             .bind {
+                HistoryViewModel.shared.items = self.items
                 HistoryViewModel.shared.result = self.lblResult.text
                 
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SaveAlertViewController") as? SaveAlertViewController  else { return }
