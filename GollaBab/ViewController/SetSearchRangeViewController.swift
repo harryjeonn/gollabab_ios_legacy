@@ -55,7 +55,6 @@ class SetSearchRangeViewController: BaseViewController {
         
         lblSuccess.font = UIFont(name: "EliceDigitalBaeumOTF", size: 15)
         lblSuccess.textColor = .whiteColor
-        lblSuccess.text = "저장되었습니다"
     }
     
     private func setupTextField() {
@@ -74,6 +73,9 @@ class SetSearchRangeViewController: BaseViewController {
     }
     
     private func setupSlider() {
+        slider.minimumValue = 0
+        slider.maximumValue = 1000
+        
         slider.rx.value
             .subscribe(onNext: { value in
                 self.updateValue()
@@ -111,8 +113,14 @@ class SetSearchRangeViewController: BaseViewController {
         
         btnSave.rx.tap
             .bind {
-                self.userDefault.set(self.range, forKey: "searchRange")
-                print("save range")
+                guard let text = self.textField.text,
+                      let value = Int(text) else { return }
+                if value > 1000 {
+                    self.lblSuccess.text = "1000m 이하로 설정해주세요"
+                } else {
+                    self.userDefault.set(self.range, forKey: "searchRange")
+                    self.lblSuccess.text = "저장되었습니다"
+                }
                 self.showAnimation()
             }.disposed(by: disposeBag)
     }
