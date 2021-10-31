@@ -329,6 +329,10 @@
 		BD859751272E6F9500B49E45 /* OpenSourceCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD85974F272E6F9500B49E45 /* OpenSourceCell.xib */; };
 		BD859753272E70D500B49E45 /* OpenSourceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD859752272E70D500B49E45 /* OpenSourceViewModel.swift */; };
 		BD859755272E738600B49E45 /* OpenSourceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD859754272E738600B49E45 /* OpenSourceDetailViewController.swift */; };
+		BD859757272E7FBE00B49E45 /* HelperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD859756272E7FBE00B49E45 /* HelperViewController.swift */; };
+		BD85975E272E80E500B49E45 /* HelperCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD85975C272E80E500B49E45 /* HelperCell.swift */; };
+		BD85975F272E80E500B49E45 /* HelperCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD85975D272E80E500B49E45 /* HelperCell.xib */; };
+		BD859761272E826900B49E45 /* HelperViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD859760272E826900B49E45 /* HelperViewModel.swift */; };
 		BD8D90D826A420C50016EDCA /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90D726A420C50016EDCA /* InsertViewController.swift */; };
 		BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */; };
 		BD8D90DD26A425410016EDCA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90DC26A425410016EDCA /* BaseViewController.swift */; };
@@ -676,6 +680,10 @@
 		BD85974F272E6F9500B49E45 /* OpenSourceCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OpenSourceCell.xib; sourceTree = "<group>"; };
 		BD859752272E70D500B49E45 /* OpenSourceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceViewModel.swift; sourceTree = "<group>"; };
 		BD859754272E738600B49E45 /* OpenSourceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenSourceDetailViewController.swift; sourceTree = "<group>"; };
+		BD859756272E7FBE00B49E45 /* HelperViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewController.swift; sourceTree = "<group>"; };
+		BD85975C272E80E500B49E45 /* HelperCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperCell.swift; sourceTree = "<group>"; };
+		BD85975D272E80E500B49E45 /* HelperCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelperCell.xib; sourceTree = "<group>"; };
+		BD859760272E826900B49E45 /* HelperViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViewModel.swift; sourceTree = "<group>"; };
 		BD8D90D726A420C50016EDCA /* InsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 		BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		BD8D90DC26A425410016EDCA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -1156,6 +1164,7 @@
 				826DA7822726E2DE001ACCAD /* MoreViewModel.swift */,
 				BD85974A272E693A00B49E45 /* PaymentViewModel.swift */,
 				BD859752272E70D500B49E45 /* OpenSourceViewModel.swift */,
+				BD859760272E826900B49E45 /* HelperViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1177,6 +1186,7 @@
 				BD859744272E619800B49E45 /* PaymentViewController.swift */,
 				BD85974C272E6D4700B49E45 /* OpenSourceViewController.swift */,
 				BD859754272E738600B49E45 /* OpenSourceDetailViewController.swift */,
+				BD859756272E7FBE00B49E45 /* HelperViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1208,6 +1218,8 @@
 				BD859747272E66A700B49E45 /* PaymentCell.xib */,
 				BD85974E272E6F9500B49E45 /* OpenSourceCell.swift */,
 				BD85974F272E6F9500B49E45 /* OpenSourceCell.xib */,
+				BD85975C272E80E500B49E45 /* HelperCell.swift */,
+				BD85975D272E80E500B49E45 /* HelperCell.xib */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -1399,6 +1411,7 @@
 				820108CE26EF88A500739119 /* index.html in Resources */,
 				820108E326EF88A500739119 /* nav_g.png in Resources */,
 				8201096026EF88A500739119 /* all_a.html in Resources */,
+				BD85975F272E80E500B49E45 /* HelperCell.xib in Resources */,
 				8201097D26EF88A500739119 /* interface_m_t_map_p_o_i_item-members.html in Resources */,
 				820108F026EF88A500739119 /* files.html in Resources */,
 				820108F726EF88A500739119 /* _m_t_map_camera_update_8h.html in Resources */,
@@ -1648,7 +1661,10 @@
 				BDB3C4E2272BEC2E00BEAE2A /* History+CoreDataProperties.swift in Sources */,
 				826AE2E026DFDDA7008833A9 /* HistoryDetailViewModel.swift in Sources */,
 				82606AAA272400E000F411C9 /* MoreViewController.swift in Sources */,
+				BD85975E272E80E500B49E45 /* HelperCell.swift in Sources */,
 				826AE2DE26DFD548008833A9 /* HistoryDetailViewController.swift in Sources */,
+				BD859761272E826900B49E45 /* HelperViewModel.swift in Sources */,
+				BD859757272E7FBE00B49E45 /* HelperViewController.swift in Sources */,
 				82693C5626DD1BC7006334B6 /* HistoryCell.swift in Sources */,
 				BD54CA2A26B53EB8001696B5 /* ResultViewController.swift in Sources */,
 				8270D4DD26E1176800C45A85 /* HistoryDetailCell.swift in Sources */,

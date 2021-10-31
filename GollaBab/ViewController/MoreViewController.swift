@@ -75,7 +75,8 @@ class MoreViewController: BaseViewController {
             print("tap appReview")
         case .helper:
             // 도움말 페이지로 이동
-            print("tap helper")
+            guard let helperVC = self.storyboard?.instantiateViewController(withIdentifier: "HelperViewController") as? HelperViewController else { return }
+            vc = helperVC
         }
         guard let vc = vc else { return }
         self.navigationController?.pushViewController(vc, animated: true)

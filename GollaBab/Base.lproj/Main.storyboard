@@ -299,7 +299,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWh-DQ-Qjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="2343"/>
+            <point key="canvasLocation" x="1480" y="1598"/>
         </scene>
         <!--Open Source View Controller-->
         <scene sceneID="4ws-vR-pS0">
@@ -330,7 +330,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J3q-6N-cyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="3066"/>
+            <point key="canvasLocation" x="2288" y="1598"/>
+        </scene>
+        <!--Helper View Controller-->
+        <scene sceneID="RQb-aV-4q4">
+            <objects>
+                <viewController storyboardIdentifier="HelperViewController" id="sUl-An-heo" customClass="HelperViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="wm5-Mq-uEr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="9dw-53-oWf">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oJP-gl-x3k"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="9dw-53-oWf" firstAttribute="top" secondItem="oJP-gl-x3k" secondAttribute="top" constant="20" id="6JY-gi-TuQ"/>
+                            <constraint firstItem="oJP-gl-x3k" firstAttribute="trailing" secondItem="9dw-53-oWf" secondAttribute="trailing" constant="20" id="H3q-ma-f1R"/>
+                            <constraint firstItem="9dw-53-oWf" firstAttribute="leading" secondItem="oJP-gl-x3k" secondAttribute="leading" constant="20" id="XSf-Wa-DGY"/>
+                            <constraint firstItem="oJP-gl-x3k" firstAttribute="bottom" secondItem="9dw-53-oWf" secondAttribute="bottom" constant="20" id="llQ-dO-iUA"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="9dw-53-oWf" id="D2I-6V-7z8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HR3-QN-4I5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3081" y="1598"/>
         </scene>
         <!--Open Source Detail View Controller-->
         <scene sceneID="7qD-Pl-CJA">
@@ -364,7 +394,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="leo-nN-rej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1541" y="3066"/>
+            <point key="canvasLocation" x="2288" y="2309"/>
         </scene>
         <!--Mode View Controller-->
         <scene sceneID="Xad-cW-qTa">
@@ -530,7 +560,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56c-sw-UJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="3745"/>
+            <point key="canvasLocation" x="-17" y="3074"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="WNI-zD-Lcm">
@@ -622,7 +652,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUR-PE-Oxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="3745"/>
+            <point key="canvasLocation" x="759" y="3074"/>
         </scene>
         <!--Save Alert View Controller-->
         <scene sceneID="ZAb-O2-Gku">
@@ -707,7 +737,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgP-b6-hWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1541" y="3745"/>
+            <point key="canvasLocation" x="1546" y="3074"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="uy3-3X-Ib2">
@@ -748,7 +778,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAP-pe-2b2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="4464"/>
+            <point key="canvasLocation" x="-17" y="3794"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="OBU-8C-RoP">
@@ -793,7 +823,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7N-nw-PXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-23" y="5118"/>
+            <point key="canvasLocation" x="-17" y="4447"/>
         </scene>
         <!--History Detail View Controller-->
         <scene sceneID="oDl-cb-C5i">
@@ -858,7 +888,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOh-ae-agv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="754" y="4464"/>
+            <point key="canvasLocation" x="759" y="3794"/>
         </scene>
         <!--Delete Alert View Controller-->
         <scene sceneID="sbP-QR-eta">
@@ -926,7 +956,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbh-99-PYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1538" y="4464"/>
+            <point key="canvasLocation" x="1543" y="3794"/>
         </scene>
     </scenes>
     <resources>
