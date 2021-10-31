@@ -1,13 +1,13 @@
 //
-//  MoreCell.swift
+//  OpenSourceCell.swift
 //  GollaBab
 //
-//  Created by 전현성 on 2021/10/23.
+//  Created by 전현성 on 2021/10/31.
 //
 
 import UIKit
 
-class MoreCell: UITableViewCell {
+class OpenSourceCell: UITableViewCell {
     @IBOutlet var lblTitle: UILabel!
     @IBOutlet var button: UIButton!
     

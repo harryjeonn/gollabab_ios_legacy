@@ -62,16 +62,14 @@ class MoreViewController: BaseViewController {
         var vc: UIViewController?
         switch type {
         case .searchRange:
-            print("tap search range")
             guard let searchRangeVC = self.storyboard?.instantiateViewController(withIdentifier: "SetSearchRangeViewController") as? SetSearchRangeViewController else { return }
             vc = searchRangeVC
         case .inAppPayment:
-            print("tap inAppPayment")
             guard let paymentVC = self.storyboard?.instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController else { return }
             vc = paymentVC
         case .openSource:
-            // 오픈소스 페이지로 이동
-            print("tap openSource")
+            guard let openSourceVC = self.storyboard?.instantiateViewController(withIdentifier: "OpenSourceViewController") as? OpenSourceViewController else { return }
+            vc = openSourceVC
         case .appReview:
             // 앱 리뷰 링크로 이동
             print("tap appReview")

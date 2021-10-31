@@ -299,7 +299,72 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tWh-DQ-Qjm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1561" y="1598"/>
+            <point key="canvasLocation" x="758" y="2343"/>
+        </scene>
+        <!--Open Source View Controller-->
+        <scene sceneID="4ws-vR-pS0">
+            <objects>
+                <viewController storyboardIdentifier="OpenSourceViewController" id="qhZ-r0-E4v" customClass="OpenSourceViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gZ3-1o-EHg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NgB-RE-Axt">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Noc-w7-Keg"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Noc-w7-Keg" firstAttribute="bottom" secondItem="NgB-RE-Axt" secondAttribute="bottom" constant="20" id="OyH-fq-I4d"/>
+                            <constraint firstItem="NgB-RE-Axt" firstAttribute="leading" secondItem="Noc-w7-Keg" secondAttribute="leading" constant="20" id="cCD-Y4-kdA"/>
+                            <constraint firstItem="Noc-w7-Keg" firstAttribute="trailing" secondItem="NgB-RE-Axt" secondAttribute="trailing" constant="20" id="hE4-T2-Du0"/>
+                            <constraint firstItem="NgB-RE-Axt" firstAttribute="top" secondItem="Noc-w7-Keg" secondAttribute="top" constant="20" id="piR-Nx-kHg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="NgB-RE-Axt" id="uCZ-CC-W6C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="J3q-6N-cyD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="754" y="3066"/>
+        </scene>
+        <!--Open Source Detail View Controller-->
+        <scene sceneID="7qD-Pl-CJA">
+            <objects>
+                <viewController storyboardIdentifier="OpenSourceDetailViewController" id="14F-J0-FxL" customClass="OpenSourceDetailViewController" customModule="GollaBab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="v4e-EQ-QKB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="dzH-t9-CNe">
+                                <rect key="frame" x="20" y="64" width="374" height="778"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3fE-wd-014"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="dzH-t9-CNe" firstAttribute="top" secondItem="3fE-wd-014" secondAttribute="top" constant="20" id="C4n-V8-awj"/>
+                            <constraint firstItem="3fE-wd-014" firstAttribute="bottom" secondItem="dzH-t9-CNe" secondAttribute="bottom" constant="20" id="Tax-LK-rNH"/>
+                            <constraint firstItem="dzH-t9-CNe" firstAttribute="leading" secondItem="3fE-wd-014" secondAttribute="leading" constant="20" id="baj-cy-20B"/>
+                            <constraint firstItem="3fE-wd-014" firstAttribute="trailing" secondItem="dzH-t9-CNe" secondAttribute="trailing" constant="20" id="uzO-Ik-1Fg"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="dzH-t9-CNe" id="uPL-TT-fLq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="leo-nN-rej" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1541" y="3066"/>
         </scene>
         <!--Mode View Controller-->
         <scene sceneID="Xad-cW-qTa">
@@ -465,7 +530,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="56c-sw-UJZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="2387"/>
+            <point key="canvasLocation" x="-23" y="3745"/>
         </scene>
         <!--Result View Controller-->
         <scene sceneID="WNI-zD-Lcm">
@@ -557,7 +622,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PUR-PE-Oxk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="787" y="2387"/>
+            <point key="canvasLocation" x="754" y="3745"/>
         </scene>
         <!--Save Alert View Controller-->
         <scene sceneID="ZAb-O2-Gku">
@@ -642,7 +707,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tgP-b6-hWX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="2387"/>
+            <point key="canvasLocation" x="1541" y="3745"/>
         </scene>
         <!--History View Controller-->
         <scene sceneID="uy3-3X-Ib2">
@@ -683,7 +748,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oAP-pe-2b2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="3106"/>
+            <point key="canvasLocation" x="-23" y="4464"/>
         </scene>
         <!--Map View Controller-->
         <scene sceneID="OBU-8C-RoP">
@@ -728,7 +793,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7N-nw-PXu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-17" y="3761"/>
+            <point key="canvasLocation" x="-23" y="5118"/>
         </scene>
         <!--History Detail View Controller-->
         <scene sceneID="oDl-cb-C5i">
@@ -793,7 +858,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GOh-ae-agv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="758" y="3106"/>
+            <point key="canvasLocation" x="754" y="4464"/>
         </scene>
         <!--Delete Alert View Controller-->
         <scene sceneID="sbP-QR-eta">
@@ -861,13 +926,16 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lbh-99-PYF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1545" y="3106"/>
+            <point key="canvasLocation" x="1538" y="4464"/>
         </scene>
     </scenes>
     <resources>
         <image name="btn_my_location" width="24" height="24"/>
         <image name="btn_plus" width="24" height="24"/>
         <image name="trash" catalog="system" width="121" height="128"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
