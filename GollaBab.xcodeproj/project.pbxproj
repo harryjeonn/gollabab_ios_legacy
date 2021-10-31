@@ -308,8 +308,6 @@
 		82721F1A26CBD6A9005AD346 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82721F1826CBD6A9005AD346 /* History.xcdatamodeld */; };
 		82721F2026CBD754005AD346 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F1F26CBD754005AD346 /* CoreDataManager.swift */; };
 		82721F2426CBE123005AD346 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F2326CBE123005AD346 /* HistoryViewModel.swift */; };
-		82721F2D26CBE795005AD346 /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F2B26CBE794005AD346 /* History+CoreDataProperties.swift */; };
-		82721F2E26CBE795005AD346 /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F2C26CBE794005AD346 /* History+CoreDataClass.swift */; };
 		904A70D1269C5409006F960B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D0269C5409006F960B /* AppDelegate.swift */; };
 		904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D2269C5409006F960B /* SceneDelegate.swift */; };
 		904A70D5269C5409006F960B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D4269C5409006F960B /* MainViewController.swift */; };
@@ -322,9 +320,15 @@
 		BD54CA2A26B53EB8001696B5 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD54CA2926B53EB8001696B5 /* ResultViewController.swift */; };
 		BD60271126C16437004F32B7 /* SaveAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD60271026C16437004F32B7 /* SaveAlertViewController.swift */; };
 		BD779E4226A99D8F00DBA126 /* ItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD779E4126A99D8F00DBA126 /* ItemViewModel.swift */; };
+		BD859745272E619800B49E45 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD859744272E619800B49E45 /* PaymentViewController.swift */; };
+		BD859748272E66A700B49E45 /* PaymentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD859746272E66A700B49E45 /* PaymentCell.swift */; };
+		BD859749272E66A700B49E45 /* PaymentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD859747272E66A700B49E45 /* PaymentCell.xib */; };
+		BD85974B272E693A00B49E45 /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD85974A272E693A00B49E45 /* PaymentViewModel.swift */; };
 		BD8D90D826A420C50016EDCA /* InsertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90D726A420C50016EDCA /* InsertViewController.swift */; };
 		BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */; };
 		BD8D90DD26A425410016EDCA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8D90DC26A425410016EDCA /* BaseViewController.swift */; };
+		BDB3C4E1272BEC2E00BEAE2A /* History+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB3C4DF272BEC2E00BEAE2A /* History+CoreDataClass.swift */; };
+		BDB3C4E2272BEC2E00BEAE2A /* History+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB3C4E0272BEC2E00BEAE2A /* History+CoreDataProperties.swift */; };
 		BDC3312D26B8332500FE8293 /* InsertCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDC3312B26B8332500FE8293 /* InsertCell.swift */; };
 		BDC3312E26B8332500FE8293 /* InsertCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDC3312C26B8332500FE8293 /* InsertCell.xib */; };
 		C727A89D4C1C3D58100B233E /* Pods_GollaBab.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5492910C27904AF2628FD528 /* Pods_GollaBab.framework */; };
@@ -643,8 +647,6 @@
 		82721F1926CBD6A9005AD346 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		82721F1F26CBD754005AD346 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		82721F2326CBE123005AD346 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
-		82721F2B26CBE794005AD346 /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "History+CoreDataProperties.swift"; path = "/Users/jeonhyeonseong/development/GollaBab_iOS/GollaBab/Common/CoreData/History+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
-		82721F2C26CBE794005AD346 /* History+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "History+CoreDataClass.swift"; path = "/Users/jeonhyeonseong/development/GollaBab_iOS/GollaBab/Common/CoreData/History+CoreDataClass.swift"; sourceTree = "<absolute>"; };
 		83569943A4BED83189842DEF /* Pods-GollaBab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GollaBab.release.xcconfig"; path = "Target Support Files/Pods-GollaBab/Pods-GollaBab.release.xcconfig"; sourceTree = "<group>"; };
 		904A70CD269C5409006F960B /* GollaBab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GollaBab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		904A70D0269C5409006F960B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -660,9 +662,15 @@
 		BD54CA2926B53EB8001696B5 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		BD60271026C16437004F32B7 /* SaveAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveAlertViewController.swift; sourceTree = "<group>"; };
 		BD779E4126A99D8F00DBA126 /* ItemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemViewModel.swift; sourceTree = "<group>"; };
+		BD859744272E619800B49E45 /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		BD859746272E66A700B49E45 /* PaymentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCell.swift; sourceTree = "<group>"; };
+		BD859747272E66A700B49E45 /* PaymentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PaymentCell.xib; sourceTree = "<group>"; };
+		BD85974A272E693A00B49E45 /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		BD8D90D726A420C50016EDCA /* InsertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertViewController.swift; sourceTree = "<group>"; };
 		BD8D90DA26A424B40016EDCA /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		BD8D90DC26A425410016EDCA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BDB3C4DF272BEC2E00BEAE2A /* History+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BDB3C4E0272BEC2E00BEAE2A /* History+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "History+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BDC3312B26B8332500FE8293 /* InsertCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertCell.swift; sourceTree = "<group>"; };
 		BDC3312C26B8332500FE8293 /* InsertCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InsertCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -1059,8 +1067,8 @@
 		82721F1726CBD69B005AD346 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				82721F2C26CBE794005AD346 /* History+CoreDataClass.swift */,
-				82721F2B26CBE794005AD346 /* History+CoreDataProperties.swift */,
+				BDB3C4DF272BEC2E00BEAE2A /* History+CoreDataClass.swift */,
+				BDB3C4E0272BEC2E00BEAE2A /* History+CoreDataProperties.swift */,
 				82721F1826CBD6A9005AD346 /* History.xcdatamodeld */,
 				82721F1F26CBD754005AD346 /* CoreDataManager.swift */,
 			);
@@ -1136,6 +1144,7 @@
 				82721F2326CBE123005AD346 /* HistoryViewModel.swift */,
 				826AE2DF26DFDDA7008833A9 /* HistoryDetailViewModel.swift */,
 				826DA7822726E2DE001ACCAD /* MoreViewModel.swift */,
+				BD85974A272E693A00B49E45 /* PaymentViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1154,6 +1163,7 @@
 				82606AA7272400D800F411C9 /* SearchViewController.swift */,
 				82606AA9272400E000F411C9 /* MoreViewController.swift */,
 				826DA7802726E28D001ACCAD /* SetSearchRangeViewController.swift */,
+				BD859744272E619800B49E45 /* PaymentViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1181,6 +1191,8 @@
 				8270D4DB26E1176800C45A85 /* HistoryDetailCell.swift */,
 				8270D4DC26E1176800C45A85 /* HistoryDetailCell.xib */,
 				820109B326FCA7A800739119 /* PlaceCell.swift */,
+				BD859746272E66A700B49E45 /* PaymentCell.swift */,
+				BD859747272E66A700B49E45 /* PaymentCell.xib */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -1437,6 +1449,7 @@
 				820109AB26EF88A500739119 /* jquery.js in Resources */,
 				8201096E26EF88A500739119 /* nomatches.html in Resources */,
 				8201095A26EF88A500739119 /* functions_4.html in Resources */,
+				BD859749272E66A700B49E45 /* PaymentCell.xib in Resources */,
 				8201098C26EF88A500739119 /* interface_m_t_map_point.js in Resources */,
 				8201096926EF88A500739119 /* functions_b.html in Resources */,
 				8201093026EF88A500739119 /* all_12.js in Resources */,
@@ -1593,29 +1606,32 @@
 				820109BA271A9E2700739119 /* LocationManager.swift in Sources */,
 				82606AA8272400D800F411C9 /* SearchViewController.swift in Sources */,
 				82606AA62723FC0400F411C9 /* ModeViewController.swift in Sources */,
+				BD859748272E66A700B49E45 /* PaymentCell.swift in Sources */,
 				BDC3312D26B8332500FE8293 /* InsertCell.swift in Sources */,
 				904A70D5269C5409006F960B /* MainViewController.swift in Sources */,
 				BD779E4226A99D8F00DBA126 /* ItemViewModel.swift in Sources */,
 				82721F2026CBD754005AD346 /* CoreDataManager.swift in Sources */,
+				BD85974B272E693A00B49E45 /* PaymentViewModel.swift in Sources */,
 				904A70D1269C5409006F960B /* AppDelegate.swift in Sources */,
 				904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */,
+				BDB3C4E1272BEC2E00BEAE2A /* History+CoreDataClass.swift in Sources */,
 				BD8D90DB26A424B40016EDCA /* HistoryViewController.swift in Sources */,
 				BD8D90D826A420C50016EDCA /* InsertViewController.swift in Sources */,
 				BD60271126C16437004F32B7 /* SaveAlertViewController.swift in Sources */,
 				BD8D90DD26A425410016EDCA /* BaseViewController.swift in Sources */,
 				820109B026EF8D8400739119 /* MapViewController.swift in Sources */,
 				826DA7812726E28D001ACCAD /* SetSearchRangeViewController.swift in Sources */,
+				BD859745272E619800B49E45 /* PaymentViewController.swift in Sources */,
 				904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */,
-				82721F2E26CBE795005AD346 /* History+CoreDataClass.swift in Sources */,
 				8270D4E126E1231300C45A85 /* HeaderView.swift in Sources */,
 				82721F1A26CBD6A9005AD346 /* History.xcdatamodeld in Sources */,
+				BDB3C4E2272BEC2E00BEAE2A /* History+CoreDataProperties.swift in Sources */,
 				826AE2E026DFDDA7008833A9 /* HistoryDetailViewModel.swift in Sources */,
 				82606AAA272400E000F411C9 /* MoreViewController.swift in Sources */,
 				826AE2DE26DFD548008833A9 /* HistoryDetailViewController.swift in Sources */,
 				82693C5626DD1BC7006334B6 /* HistoryCell.swift in Sources */,
 				BD54CA2A26B53EB8001696B5 /* ResultViewController.swift in Sources */,
 				8270D4DD26E1176800C45A85 /* HistoryDetailCell.swift in Sources */,
-				82721F2D26CBE795005AD346 /* History+CoreDataProperties.swift in Sources */,
 				820109B426FCA7A800739119 /* PlaceCell.swift in Sources */,
 				826DA7832726E2DE001ACCAD /* MoreViewModel.swift in Sources */,
 			);
