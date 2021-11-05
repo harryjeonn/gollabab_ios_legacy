@@ -13,4 +13,5 @@ target 'GollaBab' do
     pod 'Alamofire', '~> 5.4'
     pod 'RxAlamofire'
 
+    pod 'Google-Mobile-Ads-SDK'
 end
