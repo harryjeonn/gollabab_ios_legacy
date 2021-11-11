@@ -58,7 +58,7 @@ class MoreViewModel {
     func loadMoreList() {
         var moreList = [SectionOfMore]()
         
-        moreList.append(SectionOfMore(header: "", items: [.searchRange, .inAppPayment, .openSource, .appReview, .helper]))
+        moreList.append(SectionOfMore(header: "", items: [.searchRange/*, .inAppPayment*/, .openSource/*, .appReview*/, .helper]))
         
         moreItems.accept(moreList)
     }
