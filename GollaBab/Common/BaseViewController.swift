@@ -31,6 +31,7 @@ class BaseViewController: UIViewController {
     private func setupNaviBar() {
         guard let titleFont: UIFont = UIFont(name: "EliceDigitalBaeumOTF-Bd", size: 15) else { return }
         navigationController?.navigationBar.tintColor = .themeColor
+        navigationController?.navigationBar.barTintColor = .bgColor
         navigationController?.navigationBar.titleTextAttributes = [
             NSAttributedString.Key.font : titleFont,
             NSAttributedString.Key.foregroundColor : UIColor.themeColor
@@ -49,7 +50,7 @@ class BaseViewController: UIViewController {
         bannerView.backgroundColor = .clear
         // 실제 광고 : ca-app-pub-6497545219748270/9648511964
         // 테스트 광고 : ca-app-pub-3940256099942544/6300978111
-        bannerView.adUnitID = "ca-app-pub-6497545219748270/9648511964"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/6300978111"
         bannerView.rootViewController = vc
         bannerView.load(GADRequest())
         bannerView.delegate = self

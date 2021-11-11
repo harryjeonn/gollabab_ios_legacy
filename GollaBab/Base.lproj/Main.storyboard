@@ -48,7 +48,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="XjQ-vc-9if">
-                                <rect key="frame" x="137" y="657" width="140" height="185"/>
+                                <rect key="frame" x="137" y="627" width="140" height="185"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="16P-eb-UhV">
                                         <rect key="frame" x="0.0" y="0.0" width="140" height="86.5"/>
@@ -78,7 +78,7 @@
                         <constraints>
                             <constraint firstItem="XjQ-vc-9if" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0np-zM-13i"/>
                             <constraint firstItem="hc4-Dq-4Im" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5vB-S5-eeY"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XjQ-vc-9if" secondAttribute="bottom" constant="20" id="A1B-O9-HVy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="XjQ-vc-9if" secondAttribute="bottom" constant="50" id="A1B-O9-HVy"/>
                             <constraint firstItem="hc4-Dq-4Im" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="120" id="Vgl-Th-Uhv"/>
                         </constraints>
                     </view>
@@ -108,7 +108,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lx5-TV-Wc3">
-                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
+                                <rect key="frame" x="137" y="725.5" width="140" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="WLL-hC-waP"/>
                                 </constraints>
@@ -121,7 +121,7 @@
                         <constraints>
                             <constraint firstItem="Lx5-TV-Wc3" firstAttribute="width" secondItem="Lx5-TV-Wc3" secondAttribute="height" multiplier="1.618:1" id="2GG-yg-BaX"/>
                             <constraint firstItem="Fem-7s-37x" firstAttribute="top" secondItem="OQW-Q4-5ga" secondAttribute="top" constant="50" id="3jT-7Y-2KI"/>
-                            <constraint firstItem="OQW-Q4-5ga" firstAttribute="bottom" secondItem="Lx5-TV-Wc3" secondAttribute="bottom" constant="20" id="8gv-i8-7gN"/>
+                            <constraint firstItem="OQW-Q4-5ga" firstAttribute="bottom" secondItem="Lx5-TV-Wc3" secondAttribute="bottom" constant="50" id="8gv-i8-7gN"/>
                             <constraint firstItem="Lx5-TV-Wc3" firstAttribute="centerX" secondItem="NvH-T8-xMX" secondAttribute="centerX" id="FFq-w3-U4a"/>
                             <constraint firstItem="Fem-7s-37x" firstAttribute="leading" secondItem="OQW-Q4-5ga" secondAttribute="leading" constant="20" id="Qd5-2j-v8F"/>
                             <constraint firstItem="OQW-Q4-5ga" firstAttribute="trailing" secondItem="Fem-7s-37x" secondAttribute="trailing" constant="20" id="oSE-jA-xdb"/>
@@ -199,7 +199,7 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bz8-CN-9dA">
-                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
+                                <rect key="frame" x="137" y="725.5" width="140" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="dAJ-96-FEO"/>
                                 </constraints>
@@ -244,7 +244,7 @@
                             <constraint firstItem="IbH-YA-n6R" firstAttribute="centerY" secondItem="zVm-T6-S2R" secondAttribute="centerY" id="c35-Ai-9mJ"/>
                             <constraint firstItem="Bz8-CN-9dA" firstAttribute="centerX" secondItem="3Wk-fF-hvz" secondAttribute="centerX" id="k3I-De-N38"/>
                             <constraint firstItem="Bz8-CN-9dA" firstAttribute="width" secondItem="Bz8-CN-9dA" secondAttribute="height" multiplier="1.618:1" id="nfC-fZ-7wu"/>
-                            <constraint firstItem="1Q7-Jw-O6P" firstAttribute="bottom" secondItem="Bz8-CN-9dA" secondAttribute="bottom" constant="20" id="uog-ej-UpQ"/>
+                            <constraint firstItem="1Q7-Jw-O6P" firstAttribute="bottom" secondItem="Bz8-CN-9dA" secondAttribute="bottom" constant="50" id="uog-ej-UpQ"/>
                             <constraint firstItem="aho-6q-QGa" firstAttribute="centerX" secondItem="3Wk-fF-hvz" secondAttribute="centerX" id="zV7-U4-huN"/>
                         </constraints>
                     </view>
@@ -511,7 +511,7 @@
                                 <state key="normal" image="btn_plus"/>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="tmX-V6-61L">
-                                <rect key="frame" x="20" y="124" width="374" height="611.5"/>
+                                <rect key="frame" x="20" y="124" width="374" height="581.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -526,7 +526,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wdc-YJ-Spn">
-                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
+                                <rect key="frame" x="137" y="725.5" width="140" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="Wdc-YJ-Spn" secondAttribute="height" multiplier="1.618:1" id="4Iy-iN-GKJ"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="Tqd-6m-hV4"/>
@@ -541,7 +541,7 @@
                             <constraint firstItem="Wdc-YJ-Spn" firstAttribute="centerX" secondItem="Wyo-v0-U5A" secondAttribute="centerX" id="274-NS-EYz"/>
                             <constraint firstItem="Wdc-YJ-Spn" firstAttribute="top" secondItem="tmX-V6-61L" secondAttribute="bottom" constant="20" id="NBg-zc-1Gh"/>
                             <constraint firstItem="iW7-Hb-slj" firstAttribute="trailing" secondItem="tmX-V6-61L" secondAttribute="trailing" constant="20" id="Qhf-qE-lXY"/>
-                            <constraint firstItem="iW7-Hb-slj" firstAttribute="bottom" secondItem="Wdc-YJ-Spn" secondAttribute="bottom" constant="20" id="RJL-xP-SvK"/>
+                            <constraint firstItem="iW7-Hb-slj" firstAttribute="bottom" secondItem="Wdc-YJ-Spn" secondAttribute="bottom" constant="50" id="RJL-xP-SvK"/>
                             <constraint firstItem="tmX-V6-61L" firstAttribute="leading" secondItem="iW7-Hb-slj" secondAttribute="leading" constant="20" id="X5Z-Zf-Q61"/>
                             <constraint firstItem="iW7-Hb-slj" firstAttribute="trailing" secondItem="H3F-KU-f0S" secondAttribute="trailing" constant="20" id="Yt8-g0-eHj"/>
                             <constraint firstItem="H3F-KU-f0S" firstAttribute="leading" secondItem="BEv-3c-7nP" secondAttribute="trailing" constant="8" symbolic="YES" id="ahk-cT-pXv"/>
@@ -580,63 +580,71 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="y16-fz-ZD0">
-                                <rect key="frame" x="137" y="329.5" width="140" height="512.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="y16-fz-ZD0">
+                                <rect key="frame" x="57" y="357.5" width="300" height="181"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyC-X4-qDK">
-                                        <rect key="frame" x="0.0" y="0.0" width="140" height="86.5"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rty-WU-o1D">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="86.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yyC-X4-qDK">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="86.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="140" id="WO2-vY-x9C"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="홈"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbr-Ic-5dl">
+                                                <rect key="frame" x="160" y="0.0" width="140" height="86.5"/>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="저장"/>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="yyC-X4-qDK" secondAttribute="height" multiplier="1.618:1" id="5JJ-JV-e2V"/>
-                                            <constraint firstAttribute="width" constant="140" id="WO2-vY-x9C"/>
+                                            <constraint firstItem="yyC-X4-qDK" firstAttribute="width" secondItem="yyC-X4-qDK" secondAttribute="height" multiplier="1.618:1" id="HAI-a7-90A"/>
+                                            <constraint firstItem="Qbr-Ic-5dl" firstAttribute="width" secondItem="Qbr-Ic-5dl" secondAttribute="height" multiplier="1.618:1" id="V9L-Ku-szL"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
-                                        <state key="normal" title="홈"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj7-uo-Omv">
-                                        <rect key="frame" x="0.0" y="106.5" width="140" height="86.5"/>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tFb-1M-SRY">
+                                        <rect key="frame" x="0.0" y="94.5" width="300" height="86.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQc-IY-Om4">
+                                                <rect key="frame" x="0.0" y="0.0" width="140" height="86.5"/>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="주변 식당"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-25-Glx">
+                                                <rect key="frame" x="160" y="0.0" width="140" height="86.5"/>
+                                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                                <state key="normal" title="다시하기"/>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="width" secondItem="Pj7-uo-Omv" secondAttribute="height" multiplier="1.618:1" id="Xjl-mP-6Jz"/>
+                                            <constraint firstItem="BTU-25-Glx" firstAttribute="width" secondItem="BTU-25-Glx" secondAttribute="height" multiplier="1.618:1" id="DQg-Ml-GzM"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
-                                        <state key="normal" title="중지"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qbr-Ic-5dl">
-                                        <rect key="frame" x="0.0" y="213" width="140" height="86.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="Qbr-Ic-5dl" secondAttribute="height" multiplier="1.618:1" id="Fmj-WY-ttx"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
-                                        <state key="normal" title="저장"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQc-IY-Om4">
-                                        <rect key="frame" x="0.0" y="319.5" width="140" height="86.5"/>
-                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
-                                        <state key="normal" title="주변 식당"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BTU-25-Glx">
-                                        <rect key="frame" x="0.0" y="426" width="140" height="86.5"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="BTU-25-Glx" secondAttribute="height" multiplier="1.618:1" id="iFd-xI-pkz"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
-                                        <state key="normal" title="다시하기"/>
-                                    </button>
+                                    </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="Qbr-Ic-5dl" firstAttribute="width" secondItem="Qbr-Ic-5dl" secondAttribute="height" multiplier="1.618:1" id="PMl-6X-PwA"/>
-                                    <constraint firstAttribute="width" constant="140" id="tx3-3p-feb"/>
-                                    <constraint firstItem="BTU-25-Glx" firstAttribute="width" secondItem="BTU-25-Glx" secondAttribute="height" multiplier="1.618:1" id="wZP-go-vgh"/>
-                                    <constraint firstItem="yyC-X4-qDK" firstAttribute="width" secondItem="yyC-X4-qDK" secondAttribute="height" multiplier="1.618:1" id="z6Z-qU-UI0"/>
-                                </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pj7-uo-Omv">
+                                <rect key="frame" x="137" y="725.5" width="140" height="86.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pj7-uo-Omv" secondAttribute="height" multiplier="1.618:1" id="Xjl-mP-6Jz"/>
+                                    <constraint firstAttribute="width" constant="140" id="e74-4j-ZpK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
+                                <state key="normal" title="중지"/>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cdA-mX-72b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="y16-fz-ZD0" firstAttribute="centerY" secondItem="tcq-nI-kQu" secondAttribute="centerY" id="91d-DB-9v8"/>
                             <constraint firstItem="y16-fz-ZD0" firstAttribute="centerX" secondItem="tcq-nI-kQu" secondAttribute="centerX" id="E7v-By-MP7"/>
-                            <constraint firstItem="cdA-mX-72b" firstAttribute="bottom" secondItem="y16-fz-ZD0" secondAttribute="bottom" constant="20" id="Pyv-hi-rQE"/>
+                            <constraint firstItem="cdA-mX-72b" firstAttribute="bottom" secondItem="Pj7-uo-Omv" secondAttribute="bottom" constant="50" id="MWf-En-gpP"/>
                             <constraint firstItem="caE-Js-gWM" firstAttribute="leading" secondItem="cdA-mX-72b" secondAttribute="leading" constant="20" id="WOZ-Rs-YFz"/>
+                            <constraint firstItem="Pj7-uo-Omv" firstAttribute="centerX" secondItem="tcq-nI-kQu" secondAttribute="centerX" id="X53-Rm-Pc0"/>
                             <constraint firstItem="caE-Js-gWM" firstAttribute="top" secondItem="cdA-mX-72b" secondAttribute="top" constant="100" id="XwD-ZC-7hd"/>
+                            <constraint firstItem="y16-fz-ZD0" firstAttribute="centerX" secondItem="tcq-nI-kQu" secondAttribute="centerX" id="dFi-rx-RVQ"/>
                             <constraint firstItem="cdA-mX-72b" firstAttribute="trailing" secondItem="caE-Js-gWM" secondAttribute="trailing" constant="20" id="pp7-Vf-fpS"/>
                         </constraints>
                     </view>
@@ -834,7 +842,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7o7-jG-YpJ">
-                                <rect key="frame" x="20" y="64" width="374" height="671.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="682.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -849,7 +857,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kaw-Ki-PGU">
-                                <rect key="frame" x="137" y="755.5" width="140" height="86.5"/>
+                                <rect key="frame" x="137" y="766.5" width="140" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="F3I-5L-tEG"/>
                                 </constraints>
@@ -871,7 +879,7 @@
                         <constraints>
                             <constraint firstItem="jRi-sY-AJP" firstAttribute="trailing" secondItem="7o7-jG-YpJ" secondAttribute="trailing" constant="20" id="71y-tg-LSV"/>
                             <constraint firstItem="7o7-jG-YpJ" firstAttribute="leading" secondItem="jRi-sY-AJP" secondAttribute="leading" constant="20" id="PTM-Pe-X3H"/>
-                            <constraint firstItem="jRi-sY-AJP" firstAttribute="bottom" secondItem="Kaw-Ki-PGU" secondAttribute="bottom" constant="20" id="YfH-le-7gH"/>
+                            <constraint firstItem="jRi-sY-AJP" firstAttribute="bottom" secondItem="Kaw-Ki-PGU" secondAttribute="bottom" constant="9" id="YfH-le-7gH"/>
                             <constraint firstItem="Kaw-Ki-PGU" firstAttribute="top" secondItem="7o7-jG-YpJ" secondAttribute="bottom" constant="20" id="aRr-18-eAq"/>
                             <constraint firstItem="3C7-wE-zu7" firstAttribute="top" secondItem="7o7-jG-YpJ" secondAttribute="top" id="ehW-q6-x5G"/>
                             <constraint firstItem="7o7-jG-YpJ" firstAttribute="top" secondItem="jRi-sY-AJP" secondAttribute="top" constant="20" id="jNb-Pf-Qp3"/>

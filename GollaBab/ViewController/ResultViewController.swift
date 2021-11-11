@@ -48,12 +48,26 @@ class ResultViewController: BaseViewController {
         
         lblResult.backgroundColor = .clear
         
-        stackView.subviews.forEach { view in
-            guard let btn = view as? UIButton else { return }
-            btn.backgroundColor = .themeColor
-            btn.layer.cornerRadius = 10
-            btn.setTitleColor(.whiteColor, for: .normal)
-        }
+        btnGoHome.backgroundColor = .themeColor
+        btnGoHome.layer.cornerRadius = 10
+        btnGoHome.setTitleColor(.whiteColor, for: .normal)
+        
+        btnSave.backgroundColor = .themeColor
+        btnSave.layer.cornerRadius = 10
+        btnSave.setTitleColor(.whiteColor, for: .normal)
+        
+        btnStop.backgroundColor = .themeColor
+        btnStop.layer.cornerRadius = 10
+        btnStop.setTitleColor(.whiteColor, for: .normal)
+        
+        btnRetry.backgroundColor = .themeColor
+        btnRetry.layer.cornerRadius = 10
+        btnRetry.setTitleColor(.whiteColor, for: .normal)
+        
+        btnShowPlace.backgroundColor = .themeColor
+        btnShowPlace.layer.cornerRadius = 10
+        btnShowPlace.setTitleColor(.whiteColor, for: .normal)
+        
     }
     
     func setupItems() {
