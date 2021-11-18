@@ -14,7 +14,9 @@ class BaseViewController: UIViewController {
         super.viewDidLoad()
         setupNaviBar()
         setupBackgroundColor()
-        addBannerView()
+        if UserDefaults.standard.bool(forKey: "easterEgg") != true {
+            addBannerView()
+        }
         LocationManager.shared.getLocation()
     }
     
