@@ -71,10 +71,10 @@ class MoreViewController: BaseViewController {
             guard let openSourceVC = self.storyboard?.instantiateViewController(withIdentifier: "OpenSourceViewController") as? OpenSourceViewController else { return }
             vc = openSourceVC
         case .appReview:
-            // 앱 리뷰 링크로 이동
-            print("tap appReview")
+            if let url = URL(string: "itms-apps://itunes.apple.com/app/1594831024?action=write-review") {
+                UIApplication.shared.open(url, options: [:])
+            }
         case .helper:
-            // 도움말 페이지로 이동
             guard let helperVC = self.storyboard?.instantiateViewController(withIdentifier: "HelperViewController") as? HelperViewController else { return }
             vc = helperVC
         }
