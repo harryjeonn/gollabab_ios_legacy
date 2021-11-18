@@ -1,0 +1,99 @@
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "16P-eb-UhV"; */
+"16P-eb-UhV.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "Categoty"; ObjectID = "8vm-mq-VRB"; */
+"8vm-mq-VRB.text" = "Categoty";
+
+/* Class = "UITextField"; placeholder = "항목을 입력해주세요."; ObjectID = "BEv-3c-7nP"; */
+"BEv-3c-7nP.placeholder" = "항목을 입력해주세요.";
+
+/* Class = "UIButton"; normalTitle = "다시하기"; ObjectID = "BTU-25-Glx"; */
+"BTU-25-Glx.normalTitle" = "다시하기";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Bz8-CN-9dA"; */
+"Bz8-CN-9dA.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "저장"; ObjectID = "EUs-gV-Z0u"; */
+"EUs-gV-Z0u.normalTitle" = "저장";
+
+/* Class = "UITextField"; placeholder = "이름을 입력해주세요."; ObjectID = "HtX-8n-Dom"; */
+"HtX-8n-Dom.placeholder" = "이름을 입력해주세요.";
+
+/* Class = "UILabel"; text = "m"; ObjectID = "IbH-YA-n6R"; */
+"IbH-YA-n6R.text" = "m";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "JCQ-wy-Ixa"; */
+"JCQ-wy-Ixa.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "취소"; ObjectID = "JDu-HQ-I1M"; */
+"JDu-HQ-I1M.normalTitle" = "취소";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Kaw-Ki-PGU"; */
+"Kaw-Ki-PGU.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Lx5-TV-Wc3"; */
+"Lx5-TV-Wc3.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "MAy-x8-EDC"; */
+"MAy-x8-EDC.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "주변 식당"; ObjectID = "OQc-IY-Om4"; */
+"OQc-IY-Om4.normalTitle" = "주변 식당";
+
+/* Class = "UILabel"; text = "저장되었습니다."; ObjectID = "Per-vT-scb"; */
+"Per-vT-scb.text" = "저장되었습니다.";
+
+/* Class = "UIButton"; normalTitle = "중지"; ObjectID = "Pj7-uo-Omv"; */
+"Pj7-uo-Omv.normalTitle" = "중지";
+
+/* Class = "UIButton"; normalTitle = "확인"; ObjectID = "Pnv-7D-HH1"; */
+"Pnv-7D-HH1.normalTitle" = "확인";
+
+/* Class = "UIButton"; normalTitle = "저장"; ObjectID = "Qbr-Ic-5dl"; */
+"Qbr-Ic-5dl.normalTitle" = "저장";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "Wdc-YJ-Spn"; */
+"Wdc-YJ-Spn.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "dKK-FF-bU2"; */
+"dKK-FF-bU2.normalTitle" = "Button";
+
+/* Class = "UIButton"; normalTitle = "취소"; ObjectID = "dSw-3n-jmL"; */
+"dSw-3n-jmL.normalTitle" = "취소";
+
+/* Class = "UITextView"; text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."; ObjectID = "dzH-t9-CNe"; */
+"dzH-t9-CNe.text" = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "f90-BB-xud"; */
+"f90-BB-xud.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "숨겨진 기능을 찾으셨어요!"; ObjectID = "gZO-Kg-nM5"; */
+"gZO-Kg-nM5.text" = "숨겨진 기능을 찾으셨어요!";
+
+/* Class = "UILabel"; text = "골라밥"; ObjectID = "hc4-Dq-4Im"; */
+"hc4-Dq-4Im.text" = "골라밥";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "kB9-TH-LEt"; */
+"kB9-TH-LEt.normalTitle" = "Button";
+
+/* Class = "UILabel"; text = "투표기록을 삭제하시겠습니까?"; ObjectID = "oMW-go-nwX"; */
+"oMW-go-nwX.text" = "투표기록을 삭제하시겠습니까?";
+
+/* Class = "UILabel"; text = "잠시 광고가 제거됩니다 :) 소문내진 말아주세요 🤫"; ObjectID = "vBL-c7-SrJ"; */
+"vBL-c7-SrJ.text" = "잠시 광고가 제거됩니다 :) 소문내진 말아주세요 🤫";
+
+/* Class = "UIButton"; normalTitle = "삭제"; ObjectID = "yeh-pR-D5L"; */
+"yeh-pR-D5L.normalTitle" = "삭제";
+
+/* Class = "UIButton"; normalTitle = "홈"; ObjectID = "yyC-X4-qDK"; */
+"yyC-X4-qDK.normalTitle" = "홈";
+
+/* Class = "UITextField"; placeholder = "0000"; ObjectID = "zVm-T6-S2R"; */
+"zVm-T6-S2R.placeholder" = "0000";
+
+/* Class = "UILabel"; text = "투표 이름"; ObjectID = "za8-wU-GnB"; */
+"za8-wU-GnB.text" = "투표 이름";
+
+/* Class = "UIButton"; normalTitle = "Button"; ObjectID = "zfK-b1-eVf"; */
+"zfK-b1-eVf.normalTitle" = "Button";
