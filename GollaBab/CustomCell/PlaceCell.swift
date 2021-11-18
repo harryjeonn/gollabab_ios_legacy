@@ -44,6 +44,15 @@ class PlaceCell: UITableViewCell {
         return lblDistance
     }()
     
+    let lblCategory: UILabel = {
+       let lblCategory = UILabel()
+        lblCategory.textColor = .themeColor
+        lblCategory.font = UIFont(name: "EliceDigitalBaeumOTF", size: 12)
+        lblCategory.textColor = .lightGray
+        
+        return lblCategory
+    }()
+    
     override func awakeFromNib() {
         super.awakeFromNib()
     }
@@ -67,6 +76,7 @@ class PlaceCell: UITableViewCell {
         contentView.addSubview(lblAddressName)
         contentView.addSubview(lblPhone)
         contentView.addSubview(lblDistance)
+        contentView.addSubview(lblCategory)
         
         img.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -93,7 +103,7 @@ class PlaceCell: UITableViewCell {
         
         lblPhone.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
-            lblPhone.topAnchor.constraint(equalTo: lblAddressName.bottomAnchor, constant: 8),
+            lblPhone.topAnchor.constraint(equalTo: lblCategory.bottomAnchor, constant: 8),
             lblPhone.leadingAnchor.constraint(equalTo: img.trailingAnchor, constant: 15),
             lblPhone.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8)
         ])
@@ -101,7 +111,12 @@ class PlaceCell: UITableViewCell {
         lblDistance.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             lblDistance.topAnchor.constraint(equalTo: lblPlaceName.bottomAnchor, constant: 8)
-//            lblDistance.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 8)
+        ])
+        
+        lblCategory.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            lblCategory.topAnchor.constraint(equalTo: lblAddressName.bottomAnchor, constant: 8),
+            lblCategory.leadingAnchor.constraint(equalTo: img.trailingAnchor, constant: 15)
         ])
     }
 }

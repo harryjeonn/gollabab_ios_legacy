@@ -15,9 +15,16 @@ class ItemViewModel {
     var eventItems = BehaviorRelay<[String]>(value: [])
     var items = PublishSubject<[String]>()
     
+    var randomEventItems = BehaviorRelay<[Place]>(value: [])
+    var randomItems = PublishSubject<[Place]>()
+    
     func rxInit() {
         items.subscribe(onNext: { items in
             self.eventItems.accept(items)
+        }).disposed(by: disposeBag)
+        
+        randomItems.subscribe(onNext: { items in
+            self.randomEventItems.accept(items)
         }).disposed(by: disposeBag)
     }
 }

@@ -45,6 +45,7 @@ class MapViewController: BaseViewController {
     }()
     
     var items = BehaviorRelay<[Place]>(value: [])
+    
     private let tableView: UITableView = {
         let tableview = UITableView()
         return tableview
@@ -159,6 +160,7 @@ class MapViewController: BaseViewController {
     private func rxTableView() {
         tableView.backgroundColor = .bgColor
         tableView.register(PlaceCell.self, forCellReuseIdentifier: "cell")
+        tableView.rowHeight = 120
         
         items
             .asObservable()
@@ -168,6 +170,7 @@ class MapViewController: BaseViewController {
                 cell.lblPlaceName.text = item.placeName
                 cell.lblAddressName.text = item.addressName
                 cell.lblDistance.text = "\(item.distance)m"
+                cell.lblCategory.text = item.categoryName
                 if item.phone == "" {
                     cell.lblPhone.text = "전화번호가 없어요🥲"
                 } else {

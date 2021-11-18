@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uLf-UC-qGr">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uLf-UC-qGr">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -634,17 +634,26 @@
                                 <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                 <state key="normal" title="중지"/>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categoty" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8vm-mq-VRB">
+                                <rect key="frame" x="172" y="214" width="70" height="123.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="cdA-mX-72b"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="y16-fz-ZD0" firstAttribute="centerY" secondItem="tcq-nI-kQu" secondAttribute="centerY" id="91d-DB-9v8"/>
                             <constraint firstItem="y16-fz-ZD0" firstAttribute="centerX" secondItem="tcq-nI-kQu" secondAttribute="centerX" id="E7v-By-MP7"/>
+                            <constraint firstItem="8vm-mq-VRB" firstAttribute="centerX" secondItem="tcq-nI-kQu" secondAttribute="centerX" id="EVb-gN-4gx"/>
                             <constraint firstItem="cdA-mX-72b" firstAttribute="bottom" secondItem="Pj7-uo-Omv" secondAttribute="bottom" constant="50" id="MWf-En-gpP"/>
                             <constraint firstItem="caE-Js-gWM" firstAttribute="leading" secondItem="cdA-mX-72b" secondAttribute="leading" constant="20" id="WOZ-Rs-YFz"/>
                             <constraint firstItem="Pj7-uo-Omv" firstAttribute="centerX" secondItem="tcq-nI-kQu" secondAttribute="centerX" id="X53-Rm-Pc0"/>
                             <constraint firstItem="caE-Js-gWM" firstAttribute="top" secondItem="cdA-mX-72b" secondAttribute="top" constant="100" id="XwD-ZC-7hd"/>
+                            <constraint firstItem="y16-fz-ZD0" firstAttribute="top" secondItem="8vm-mq-VRB" secondAttribute="bottom" constant="20" id="Z54-Vw-HBD"/>
                             <constraint firstItem="y16-fz-ZD0" firstAttribute="centerX" secondItem="tcq-nI-kQu" secondAttribute="centerX" id="dFi-rx-RVQ"/>
+                            <constraint firstItem="8vm-mq-VRB" firstAttribute="top" secondItem="caE-Js-gWM" secondAttribute="bottom" constant="30" id="o6B-9l-NH1"/>
                             <constraint firstItem="cdA-mX-72b" firstAttribute="trailing" secondItem="caE-Js-gWM" secondAttribute="trailing" constant="20" id="pp7-Vf-fpS"/>
                         </constraints>
                     </view>
@@ -654,6 +663,7 @@
                         <outlet property="btnSave" destination="Qbr-Ic-5dl" id="0jX-iA-ERg"/>
                         <outlet property="btnShowPlace" destination="OQc-IY-Om4" id="tGf-dY-iEV"/>
                         <outlet property="btnStop" destination="Pj7-uo-Omv" id="exf-nK-vOd"/>
+                        <outlet property="lblCategory" destination="8vm-mq-VRB" id="VG6-sk-GI4"/>
                         <outlet property="lblResult" destination="caE-Js-gWM" id="BnE-FT-kg3"/>
                         <outlet property="stackView" destination="y16-fz-ZD0" id="l4W-QX-nx8"/>
                     </connections>

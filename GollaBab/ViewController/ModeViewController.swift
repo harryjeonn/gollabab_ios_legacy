@@ -18,7 +18,7 @@ class ModeViewController: BaseViewController {
     
     private let disposeBag = DisposeBag()
     
-    private var placeItems = [String]()
+    private var placeItems = [Place]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -63,7 +63,7 @@ class ModeViewController: BaseViewController {
         
         btnGoRandom.rx.tap
             .bind {
-                ItemViewModel.shared.eventItems.accept(self.placeItems)
+                ItemViewModel.shared.randomEventItems.accept(self.placeItems)
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? ResultViewController else { return }
                 vc.isRandom = true
                 vc.setupItems()
@@ -92,7 +92,7 @@ class ModeViewController: BaseViewController {
                 })
                 .subscribe(onNext: { data in
                     data.forEach { data in
-                        self.placeItems.append(data.placeName)
+                        self.placeItems.append(data)
                     }
                 }).disposed(by: disposeBag)
         }
