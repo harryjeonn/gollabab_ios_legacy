@@ -72,6 +72,7 @@ class ResultViewController: BaseViewController {
         lblResult.textColor = .themeColor
         lblResult.font = UIFont(name: "EliceDigitalBaeumOTF", size: 17)
         
+        lblCategory.text = ""
         lblCategory.textColor = .themeColor
         lblCategory.font = UIFont(name: "EliceDigitalBaeumOTF", size: 14)
         
