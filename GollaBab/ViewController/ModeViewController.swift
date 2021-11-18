@@ -85,8 +85,8 @@ class ModeViewController: BaseViewController {
     
     private func getPlaceList() {
         if let coord = LocationManager.shared.myLocation {
-            let query = "식당"
-            KakaoMapManager.shared.rxGetPlace(query: query, lat: "\(coord.latitude)", lon: "\(coord.longitude)")
+            let code = "FD6"
+            KakaoMapManager.shared.rxGetPlace(mandatoryParam: code, lat: "\(coord.latitude)", lon: "\(coord.longitude)", type: .category)
                 .map({ (items) -> [Place] in
                     return items!.sorted(by: { $0.distance < $1.distance })
                 })

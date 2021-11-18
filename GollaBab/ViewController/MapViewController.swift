@@ -79,7 +79,7 @@ class MapViewController: BaseViewController {
     private func getPlaceList() {
         if let coord = LocationManager.shared.myLocation,
            let query = query {
-            KakaoMapManager.shared.rxGetPlace(query: query, lat: "\(coord.latitude)", lon: "\(coord.longitude)")
+            KakaoMapManager.shared.rxGetPlace(mandatoryParam: query, lat: "\(coord.latitude)", lon: "\(coord.longitude)", type: .keyword)
                 .map({ (items) -> [Place] in
                     var place = [Place]()
                     if let sortedItems = items?.sorted(by: { $0.distance < $1.distance }) {
