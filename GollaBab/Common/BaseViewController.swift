@@ -47,6 +47,9 @@ class BaseViewController: UIViewController {
     
     private func addBannerView() {
         guard let vc = topViewController() else { return }
+        if vc is MapViewController {
+            return
+        }
         let adSize = GADAdSizeFromCGSize(CGSize(width: vc.view.frame.width, height: 50))
         
         let bannerView = GADBannerView(adSize: adSize)
