@@ -290,6 +290,7 @@
 		820109B626FCAD5D00739119 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8201077926EF887700739119 /* libxml2.tbd */; };
 		820109B726FCAD6400739119 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8201077826EF886D00739119 /* libc++.tbd */; };
 		820109BA271A9E2700739119 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820109B9271A9E2700739119 /* LocationManager.swift */; };
+		8232DDBF2746A4B700E7D84F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8232DDBE2746A4B600E7D84F /* GoogleService-Info.plist */; };
 		82606AA62723FC0400F411C9 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA52723FC0400F411C9 /* ModeViewController.swift */; };
 		82606AA8272400D800F411C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA7272400D800F411C9 /* SearchViewController.swift */; };
 		82606AAA272400E000F411C9 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA9272400E000F411C9 /* MoreViewController.swift */; };
@@ -638,6 +639,7 @@
 		820109B126FCA71A00739119 /* KakaoMapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoMapManager.swift; sourceTree = "<group>"; };
 		820109B326FCA7A800739119 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		820109B9271A9E2700739119 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		8232DDBE2746A4B600E7D84F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		82606AA52723FC0400F411C9 /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
 		82606AA7272400D800F411C9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		82606AA9272400E000F411C9 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
@@ -1126,6 +1128,7 @@
 				904A70D9269C540A006F960B /* Assets.xcassets */,
 				904A70DB269C540A006F960B /* LaunchScreen.storyboard */,
 				904A70DE269C540A006F960B /* Info.plist */,
+				8232DDBE2746A4B600E7D84F /* GoogleService-Info.plist */,
 			);
 			path = GollaBab;
 			sourceTree = "<group>";
@@ -1487,6 +1490,7 @@
 				8201097226EF88A500739119 /* all_7.html in Resources */,
 				8201095126EF88A500739119 /* properties_a.html in Resources */,
 				820108DC26EF88A500739119 /* struct_m_t_map_point_geo.js in Resources */,
+				8232DDBF2746A4B700E7D84F /* GoogleService-Info.plist in Resources */,
 				820108BE26EF88A500739119 /* _m_t_map_reverse_geo_coder_8h_source.html in Resources */,
 				820108A826EF88A500739119 /* copyright.png in Resources */,
 				820108A426EF88A500739119 /* detail_button.png in Resources */,
