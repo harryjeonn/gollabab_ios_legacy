@@ -14,6 +14,7 @@ enum ButtonShowType {
     case result
     case retry
     case random
+    case empty
 }
 
 class ResultViewController: BaseViewController {
@@ -36,6 +37,7 @@ class ResultViewController: BaseViewController {
         setupItems()
         setupTapEvent()
         startAnimation()
+        checkItems()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -43,10 +45,20 @@ class ResultViewController: BaseViewController {
         self.title = "결과"
     }
     
+    private func checkItems() {
+        if items.isEmpty == true {
+            timer.invalidate()
+            changeButton(.empty)
+            lblResult.text = "투표할 항목이 없어요🥲"
+        }
+    }
+    
     private func setupUI() {
         changeButton(.animation)
         
         lblResult.backgroundColor = .clear
+        lblResult.textColor = .themeColor
+        lblResult.font = UIFont(name: "EliceDigitalBaeumOTF", size: 17)
         
         btnGoHome.backgroundColor = .themeColor
         btnGoHome.layer.cornerRadius = 10
@@ -98,6 +110,12 @@ class ResultViewController: BaseViewController {
             btnStop.isHidden = true
             btnSave.isHidden = false
             btnRetry.isHidden = false
+            btnGoHome.isHidden = false
+            btnShowPlace.isHidden = true
+        case .empty:
+            btnStop.isHidden = true
+            btnSave.isHidden = true
+            btnRetry.isHidden = true
             btnGoHome.isHidden = false
             btnShowPlace.isHidden = true
         }
