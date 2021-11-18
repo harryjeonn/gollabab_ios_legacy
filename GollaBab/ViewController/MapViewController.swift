@@ -50,6 +50,22 @@ class MapViewController: BaseViewController {
         return tableview
     }()
     
+    private let emptyView: UIView = {
+        let view = UIView()
+        view.backgroundColor = .bgColor
+        
+        return view
+    }()
+    
+    private let lblEmptyTitle: UILabel = {
+        let label = UILabel()
+        label.text = "검색결과가 없습니다🥲"
+        label.font = UIFont(name: "EliceDigitalBaeumOTF", size: 14)
+        label.textColor = .themeColor
+        
+        return label
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "주변 식당"
@@ -81,6 +97,7 @@ class MapViewController: BaseViewController {
     }
     
     private func initView() {
+        emptyView.isHidden = !arrPlace.isEmpty
         setLayout()
         showBottomSheet(atState: .mini)
         panGesture()
@@ -93,6 +110,8 @@ class MapViewController: BaseViewController {
         mapView.addSubview(bottomSheetView)
         view.addSubview(dragIndicatorView)
         bottomSheetView.addSubview(tableView)
+        bottomSheetView.addSubview(emptyView)
+        emptyView.addSubview(lblEmptyTitle)
         
         bottomSheetView.translatesAutoresizingMaskIntoConstraints = false
         let topConstant = view.safeAreaInsets.bottom + view.safeAreaLayoutGuide.layoutFrame.height
@@ -118,6 +137,20 @@ class MapViewController: BaseViewController {
             tableView.leadingAnchor.constraint(equalTo: bottomSheetView.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: bottomSheetView.trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomSheetView.bottomAnchor)
+        ])
+        
+        emptyView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            emptyView.topAnchor.constraint(equalTo: bottomSheetView.topAnchor, constant: 40),
+            emptyView.leadingAnchor.constraint(equalTo: bottomSheetView.leadingAnchor),
+            emptyView.trailingAnchor.constraint(equalTo: bottomSheetView.trailingAnchor),
+            emptyView.bottomAnchor.constraint(equalTo: bottomSheetView.bottomAnchor)
+        ])
+        
+        lblEmptyTitle.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            lblEmptyTitle.centerYAnchor.constraint(equalTo: emptyView.centerYAnchor),
+            lblEmptyTitle.centerXAnchor.constraint(equalTo: emptyView.centerXAnchor)
         ])
     }
     
