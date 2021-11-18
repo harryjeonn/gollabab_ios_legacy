@@ -15,6 +15,7 @@ class BaseViewController: UIViewController {
         setupNaviBar()
         setupBackgroundColor()
         addBannerView()
+        LocationManager.shared.getLocation()
     }
     
     override func viewWillAppear(_ animated: Bool) {

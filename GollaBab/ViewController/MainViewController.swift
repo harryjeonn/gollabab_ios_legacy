@@ -17,11 +17,14 @@ class MainViewController: BaseViewController {
     private let disposeBag = DisposeBag()
     
     override func viewDidLoad() {
-        super.viewDidLoad()        
+        super.viewDidLoad()
         setUI()
         setTapEvent()
         CoreDataManager.shared.showDetail()
-        LocationManager.shared.getLocation()
+        LocationManager.shared.checkPermission()
+        if UserDefaults.standard.bool(forKey: "launchedBefore") == false {
+            UserDefaults.standard.set(true, forKey: "launchedBefore")
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

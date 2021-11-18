@@ -71,6 +71,7 @@ class MapViewController: BaseViewController {
         self.title = "주변 식당"
         setBtn()
         LocationManager.shared.getLocation()
+        LocationManager.shared.checkPermission()
         getPlaceList()
         rxTableView()
     }
