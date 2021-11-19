@@ -161,7 +161,12 @@ class ResultViewController: BaseViewController {
         
         btnSave.rx.tap
             .bind {
-                HistoryViewModel.shared.items = self.items
+                if self.isRandom ?? false {
+                    HistoryViewModel.shared.items = self.randomTitles()
+                } else {
+                    HistoryViewModel.shared.items = self.items
+                }
+                
                 HistoryViewModel.shared.result = self.lblResult.text
                 
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SaveAlertViewController") as? SaveAlertViewController  else { return }
@@ -191,6 +196,15 @@ class ResultViewController: BaseViewController {
         } else {
             self.items.removeAll(where: { $0 == self.lblResult.text })
         }
+    }
+    
+    private func randomTitles() -> [String] {
+        var titleItems = [String]()
+        self.randomItems.forEach { place in
+            titleItems.append(place.placeName)
+        }
+        
+        return titleItems
     }
     
     //MARK: - Animation
