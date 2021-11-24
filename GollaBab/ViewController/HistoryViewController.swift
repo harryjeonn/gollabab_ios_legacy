@@ -12,23 +12,33 @@ import RxDataSources
 
 class HistoryViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet var emptyView: UIView!
+    @IBOutlet var lblEmpty: UILabel!
     
     private let disposeBag = DisposeBag()
     private let name = PublishSubject<String>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
         setupTableView()
+        setupUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = "지난 결과"
+        tableView.isHidden = HistoryViewModel.shared.history.value.isEmpty
     }
     
     private func setupUI() {
         tableView.backgroundColor = .bgColor
+        emptyView.backgroundColor = .bgColor
+        
+        lblEmpty.font = UIFont(name: "EliceDigitalBaeumOTF", size: 16)
+        lblEmpty.text = "저장된 항목이 없습니다."
+        lblEmpty.textColor = .themeColor
+        
+        tableView.isHidden = HistoryViewModel.shared.history.value.isEmpty
     }
     
     private func setupTableView() {

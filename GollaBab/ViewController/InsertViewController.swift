@@ -14,6 +14,8 @@ class InsertViewController: BaseViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnPlus: UIButton!
     @IBOutlet weak var btnStart: UIButton!
+    @IBOutlet var emptyView: UIView!
+    @IBOutlet var lblEmpty: UILabel!
     
     private let disposeBag = DisposeBag()
     
@@ -21,11 +23,12 @@ class InsertViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUI()
         setupTextField()
         setupTableView()
         setupTapEvent()
         ItemViewModel.shared.rxInit()
+        setUI()
+        emptyView.isHidden = !ItemViewModel.shared.eventItems.value.isEmpty
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -53,6 +56,7 @@ class InsertViewController: BaseViewController {
             .subscribe(onNext: { item in
                 self.items.remove(at: item.row)
                 ItemViewModel.shared.items.onNext(self.items)
+                self.emptyView.isHidden = !ItemViewModel.shared.eventItems.value.isEmpty
             }).disposed(by: disposeBag)
     }
     
@@ -70,6 +74,7 @@ class InsertViewController: BaseViewController {
             items.insert(text, at: 0)
             ItemViewModel.shared.items.onNext(items)
         }
+        emptyView.isHidden = !ItemViewModel.shared.eventItems.value.isEmpty
         self.textField.text = nil
     }
     
@@ -103,5 +108,11 @@ class InsertViewController: BaseViewController {
         tableView.tintColor = .themeColor
         
         textField.textColor = .themeColor
+        
+        emptyView.backgroundColor = .bgColor
+        
+        lblEmpty.font = UIFont(name: "EliceDigitalBaeumOTF", size: 16)
+        lblEmpty.text = "항목을 입력해주세요."
+        lblEmpty.textColor = .themeColor
     }
 }
