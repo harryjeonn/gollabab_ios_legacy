@@ -17,7 +17,8 @@ class CoreDataManager {
     
     private let disposeBag = DisposeBag()
     
-    let modelName = "History"
+    let HistoryModelName = "History"
+    let searchHistoryModelName = "SearchHistory"
     
     var isSuccess = BehaviorSubject<Bool>(value: false)
     var deleteRow = PublishSubject<Int>()
@@ -25,6 +26,7 @@ class CoreDataManager {
     var selectItem = BehaviorSubject<[String]>(value: [])
     var selectResult = BehaviorSubject<String>(value: "")
     
+    // MARK: - History
     func saveHistory() {
         let now = Date()
         let dateFormatter = DateFormatter()
@@ -34,7 +36,7 @@ class CoreDataManager {
         let historyData = HistoryViewModel.shared
         
         guard let context = context else { return }
-        let history: History = NSEntityDescription.insertNewObject(forEntityName: modelName, into: context) as! History
+        let history: History = NSEntityDescription.insertNewObject(forEntityName: HistoryModelName, into: context) as! History
         
         history.date = date
         guard let title = historyData.title,
@@ -99,5 +101,54 @@ class CoreDataManager {
                 print(error.localizedDescription)
             }
         }).disposed(by: disposeBag)
+    }
+    
+    // MARK: - Search History
+    func saveSearchHistory(item: String?, date: Date?) {        
+        guard let context = context else { return }
+        let searchHistory: SearchHistory = NSEntityDescription.insertNewObject(forEntityName: searchHistoryModelName, into: context) as! SearchHistory
+        
+        searchHistory.title = item
+        searchHistory.date = date
+        do {
+            try context.save()
+            print("save Search History")
+        } catch let err as NSError {
+            print("error: \(err.userInfo)")
+        }
+    }
+    
+    func loadSearchHistory() -> [SearchHistory] {
+        var searchHistory = [SearchHistory]()
+        do {
+            let fetchRequest = SearchHistory.fetchRequest()
+            let sortDate = NSSortDescriptor.init(key: "date", ascending: true)
+            fetchRequest.sortDescriptors = [sortDate]
+            let res = try context?.fetch(fetchRequest) as! [SearchHistory]
+            searchHistory = res
+            print("load searchHistory")
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return searchHistory
+    }
+    
+    func deleteSearchHistory(_ section: Int) {
+        
+    }
+    
+    func deleteAllSearchHistory() {
+        guard let context = context else { return }
+        let fetchRequest: NSFetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: searchHistoryModelName)
+        let deleteReq: NSBatchDeleteRequest = NSBatchDeleteRequest.init(fetchRequest: fetchRequest)
+        
+        do {
+            let deleteRes = try context.execute(deleteReq)
+            try context.save()
+            print("delete result : \(deleteRes)")
+        } catch let error as NSError {
+            print("delete err : \(error), \(error.userInfo)")
+        }
     }
 }

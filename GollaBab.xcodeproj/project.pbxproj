@@ -290,6 +290,8 @@
 		820109B626FCAD5D00739119 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8201077926EF887700739119 /* libxml2.tbd */; };
 		820109B726FCAD6400739119 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8201077826EF886D00739119 /* libc++.tbd */; };
 		820109BA271A9E2700739119 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820109B9271A9E2700739119 /* LocationManager.swift */; };
+		821B37A92753768C00EEEB49 /* SearchHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B37A82753768C00EEEB49 /* SearchHistory+CoreDataProperties.swift */; };
+		821B37AA2753768C00EEEB49 /* SearchHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 821B37A72753768C00EEEB49 /* SearchHistory+CoreDataClass.swift */; };
 		8232DDBF2746A4B700E7D84F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 8232DDBE2746A4B600E7D84F /* GoogleService-Info.plist */; };
 		82606AA62723FC0400F411C9 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA52723FC0400F411C9 /* ModeViewController.swift */; };
 		82606AA8272400D800F411C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA7272400D800F411C9 /* SearchViewController.swift */; };
@@ -309,6 +311,9 @@
 		82721F1A26CBD6A9005AD346 /* History.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 82721F1826CBD6A9005AD346 /* History.xcdatamodeld */; };
 		82721F2026CBD754005AD346 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F1F26CBD754005AD346 /* CoreDataManager.swift */; };
 		82721F2426CBE123005AD346 /* HistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82721F2326CBE123005AD346 /* HistoryViewModel.swift */; };
+		82CE8624274E79B0002FD322 /* SearchHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE8623274E79B0002FD322 /* SearchHistoryViewModel.swift */; };
+		82CE8627274E79E6002FD322 /* SearchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE8625274E79E6002FD322 /* SearchHistoryCell.swift */; };
+		82CE8628274E79E6002FD322 /* SearchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CE8626274E79E6002FD322 /* SearchHistoryCell.xib */; };
 		904A70D1269C5409006F960B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D0269C5409006F960B /* AppDelegate.swift */; };
 		904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D2269C5409006F960B /* SceneDelegate.swift */; };
 		904A70D5269C5409006F960B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D4269C5409006F960B /* MainViewController.swift */; };
@@ -639,6 +644,8 @@
 		820109B126FCA71A00739119 /* KakaoMapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoMapManager.swift; sourceTree = "<group>"; };
 		820109B326FCA7A800739119 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		820109B9271A9E2700739119 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		821B37A72753768C00EEEB49 /* SearchHistory+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SearchHistory+CoreDataClass.swift"; path = "/Users/jeonhyeonseong/development/GollaBab_iOS/GollaBab/Common/CoreData/SearchHistory+CoreDataClass.swift"; sourceTree = "<absolute>"; };
+		821B37A82753768C00EEEB49 /* SearchHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "SearchHistory+CoreDataProperties.swift"; path = "/Users/jeonhyeonseong/development/GollaBab_iOS/GollaBab/Common/CoreData/SearchHistory+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		8232DDBE2746A4B600E7D84F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		8232DDC02746A6AD00E7D84F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		8232DDC12746A6AD00E7D84F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
@@ -660,6 +667,9 @@
 		82721F1926CBD6A9005AD346 /* History.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = History.xcdatamodel; sourceTree = "<group>"; };
 		82721F1F26CBD754005AD346 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		82721F2326CBE123005AD346 /* HistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewModel.swift; sourceTree = "<group>"; };
+		82CE8623274E79B0002FD322 /* SearchHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryViewModel.swift; sourceTree = "<group>"; };
+		82CE8625274E79E6002FD322 /* SearchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCell.swift; sourceTree = "<group>"; };
+		82CE8626274E79E6002FD322 /* SearchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryCell.xib; sourceTree = "<group>"; };
 		83569943A4BED83189842DEF /* Pods-GollaBab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GollaBab.release.xcconfig"; path = "Target Support Files/Pods-GollaBab/Pods-GollaBab.release.xcconfig"; sourceTree = "<group>"; };
 		904A70CD269C5409006F960B /* GollaBab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GollaBab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		904A70D0269C5409006F960B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -1091,6 +1101,8 @@
 			children = (
 				BDB3C4DF272BEC2E00BEAE2A /* History+CoreDataClass.swift */,
 				BDB3C4E0272BEC2E00BEAE2A /* History+CoreDataProperties.swift */,
+				821B37A72753768C00EEEB49 /* SearchHistory+CoreDataClass.swift */,
+				821B37A82753768C00EEEB49 /* SearchHistory+CoreDataProperties.swift */,
 				82721F1826CBD6A9005AD346 /* History.xcdatamodeld */,
 				82721F1F26CBD754005AD346 /* CoreDataManager.swift */,
 			);
@@ -1170,6 +1182,7 @@
 				BD85974A272E693A00B49E45 /* PaymentViewModel.swift */,
 				BD859752272E70D500B49E45 /* OpenSourceViewModel.swift */,
 				BD859760272E826900B49E45 /* HelperViewModel.swift */,
+				82CE8623274E79B0002FD322 /* SearchHistoryViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -1225,6 +1238,8 @@
 				BD85974F272E6F9500B49E45 /* OpenSourceCell.xib */,
 				BD85975C272E80E500B49E45 /* HelperCell.swift */,
 				BD85975D272E80E500B49E45 /* HelperCell.xib */,
+				82CE8625274E79E6002FD322 /* SearchHistoryCell.swift */,
+				82CE8626274E79E6002FD322 /* SearchHistoryCell.xib */,
 			);
 			path = CustomCell;
 			sourceTree = "<group>";
@@ -1549,6 +1564,7 @@
 				904A70E7269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf in Resources */,
 				820109AA26EF88A500739119 /* interface_m_t_map_point-members.html in Resources */,
 				8201093526EF88A500739119 /* properties_8.html in Resources */,
+				82CE8628274E79E6002FD322 /* SearchHistoryCell.xib in Resources */,
 				8201095626EF88A500739119 /* all_0.js in Resources */,
 				820108CF26EF88A500739119 /* functions.html in Resources */,
 				8201095F26EF88A500739119 /* all_4.js in Resources */,
@@ -1638,6 +1654,7 @@
 				BD85974D272E6D4700B49E45 /* OpenSourceViewController.swift in Sources */,
 				82606AAD27240BEE00F411C9 /* MoreCell.swift in Sources */,
 				82721F2426CBE123005AD346 /* HistoryViewModel.swift in Sources */,
+				82CE8624274E79B0002FD322 /* SearchHistoryViewModel.swift in Sources */,
 				820109B226FCA71A00739119 /* KakaoMapManager.swift in Sources */,
 				820109BA271A9E2700739119 /* LocationManager.swift in Sources */,
 				82606AA8272400D800F411C9 /* SearchViewController.swift in Sources */,
@@ -1662,9 +1679,12 @@
 				826DA7812726E28D001ACCAD /* SetSearchRangeViewController.swift in Sources */,
 				BD859745272E619800B49E45 /* PaymentViewController.swift in Sources */,
 				904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */,
+				821B37A92753768C00EEEB49 /* SearchHistory+CoreDataProperties.swift in Sources */,
 				8270D4E126E1231300C45A85 /* HeaderView.swift in Sources */,
+				821B37AA2753768C00EEEB49 /* SearchHistory+CoreDataClass.swift in Sources */,
 				82721F1A26CBD6A9005AD346 /* History.xcdatamodeld in Sources */,
 				BDB3C4E2272BEC2E00BEAE2A /* History+CoreDataProperties.swift in Sources */,
+				82CE8627274E79E6002FD322 /* SearchHistoryCell.swift in Sources */,
 				826AE2E026DFDDA7008833A9 /* HistoryDetailViewModel.swift in Sources */,
 				82606AAA272400E000F411C9 /* MoreViewController.swift in Sources */,
 				BD85975E272E80E500B49E45 /* HelperCell.swift in Sources */,

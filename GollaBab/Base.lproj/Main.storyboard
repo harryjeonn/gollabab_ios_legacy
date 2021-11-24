@@ -158,20 +158,30 @@
                                 <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OYN-sI-pYJ">
+                                <rect key="frame" x="20" y="148" width="374" height="557.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OQW-Q4-5ga"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="OYN-sI-pYJ" firstAttribute="top" secondItem="Fem-7s-37x" secondAttribute="bottom" constant="20" id="1dw-WN-D9X"/>
                             <constraint firstItem="Lx5-TV-Wc3" firstAttribute="width" secondItem="Lx5-TV-Wc3" secondAttribute="height" multiplier="1.618:1" id="2GG-yg-BaX"/>
                             <constraint firstItem="Fem-7s-37x" firstAttribute="top" secondItem="OQW-Q4-5ga" secondAttribute="top" constant="50" id="3jT-7Y-2KI"/>
                             <constraint firstItem="OQW-Q4-5ga" firstAttribute="bottom" secondItem="Lx5-TV-Wc3" secondAttribute="bottom" constant="50" id="8gv-i8-7gN"/>
+                            <constraint firstItem="OQW-Q4-5ga" firstAttribute="trailing" secondItem="OYN-sI-pYJ" secondAttribute="trailing" constant="20" id="CXa-Yo-Ev4"/>
                             <constraint firstItem="Lx5-TV-Wc3" firstAttribute="centerX" secondItem="NvH-T8-xMX" secondAttribute="centerX" id="FFq-w3-U4a"/>
                             <constraint firstItem="Fem-7s-37x" firstAttribute="leading" secondItem="OQW-Q4-5ga" secondAttribute="leading" constant="20" id="Qd5-2j-v8F"/>
+                            <constraint firstItem="OYN-sI-pYJ" firstAttribute="leading" secondItem="OQW-Q4-5ga" secondAttribute="leading" constant="20" id="iMy-ND-TZS"/>
                             <constraint firstItem="OQW-Q4-5ga" firstAttribute="trailing" secondItem="Fem-7s-37x" secondAttribute="trailing" constant="20" id="oSE-jA-xdb"/>
+                            <constraint firstItem="Lx5-TV-Wc3" firstAttribute="top" secondItem="OYN-sI-pYJ" secondAttribute="bottom" constant="20" id="scq-Qe-O5N"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnSearch" destination="Lx5-TV-Wc3" id="cQ2-qk-F2Y"/>
+                        <outlet property="tableView" destination="OYN-sI-pYJ" id="8qe-9d-b2e"/>
                         <outlet property="textField" destination="Fem-7s-37x" id="pNP-ri-Wm4"/>
                     </connections>
                 </viewController>
