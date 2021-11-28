@@ -14,6 +14,7 @@ class SearchViewController: BaseViewController {
     @IBOutlet var textField: UITextField!
     @IBOutlet var btnSearch: UIButton!
     @IBOutlet var tableView: UITableView!
+    @IBOutlet var clearView: UIView!
     
     private var disposeBag = DisposeBag()
     
@@ -45,13 +46,24 @@ class SearchViewController: BaseViewController {
         textField.placeholder = "검색할 키워드를 입력해주세요."
         
         tableView.backgroundColor = .bgColor
+        
+        clearView.backgroundColor = .clear
+        clearView.isHidden = true
     }
     
     private func setupTextField() {
         textField.rx
-            .controlEvent([.editingDidEndOnExit])
+            .controlEvent([.editingDidEnd, .editingDidEndOnExit])
             .subscribe(onNext: { _ in
-                
+                print("hoxvi exit")
+                self.clearView.isHidden = true
+            }).disposed(by: disposeBag)
+        
+        textField.rx
+            .controlEvent([.editingDidBegin])
+            .subscribe(onNext: { _ in
+                print("hoxvi begin")
+                self.clearView.isHidden = false
             }).disposed(by: disposeBag)
     }
     
@@ -82,7 +94,7 @@ class SearchViewController: BaseViewController {
     
     private func setupTapEvent() {
         let tap = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
-        view.addGestureRecognizer(tap)
+        clearView.addGestureRecognizer(tap)
         tap.cancelsTouchesInView = false
         
         btnSearch.rx.tap
