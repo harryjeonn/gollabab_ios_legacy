@@ -154,7 +154,7 @@ class CoreDataManager {
         do {
             let deleteRes = try context.execute(deleteReq)
             try context.save()
-            print("delete result : \(deleteRes)")
+            print("delete all history")
         } catch let error as NSError {
             print("delete err : \(error), \(error.userInfo)")
         }

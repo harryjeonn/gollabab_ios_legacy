@@ -65,14 +65,12 @@ class SearchViewController: BaseViewController {
         textField.rx
             .controlEvent([.editingDidEnd, .editingDidEndOnExit])
             .subscribe(onNext: { _ in
-                print("hoxvi exit")
                 self.clearView.isHidden = true
             }).disposed(by: disposeBag)
         
         textField.rx
             .controlEvent([.editingDidBegin])
             .subscribe(onNext: { _ in
-                print("hoxvi begin")
                 self.clearView.isHidden = false
             }).disposed(by: disposeBag)
     }

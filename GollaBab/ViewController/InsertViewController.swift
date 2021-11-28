@@ -90,7 +90,6 @@ class InsertViewController: BaseViewController {
         btnStart.rx.tap
             .bind {
                 if !self.items.isEmpty {
-                    print("Tap start")
                     HistoryViewModel.shared.items = self.items
                     guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? ResultViewController else { return }
                     self.navigationController?.pushViewController(vc, animated: true)
