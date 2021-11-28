@@ -135,7 +135,15 @@ class CoreDataManager {
     }
     
     func deleteSearchHistory(_ section: Int) {
-        
+        let searchHistory = loadSearchHistory().reversed()[section] as NSManagedObject
+        context?.delete(searchHistory)
+        do {
+            try context?.save()
+            SearchHistoryViewModel.shared.loadSearchHistory()
+            print("delete history")
+        } catch {
+            print(error.localizedDescription)
+        }
     }
     
     func deleteAllSearchHistory() {

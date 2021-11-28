@@ -81,6 +81,10 @@ class SearchViewController: BaseViewController {
             return cell
         }
         
+        dataSource.canEditRowAtIndexPath = { dataSource, indexPath in
+            return true
+        }
+        
         SearchHistoryViewModel.shared.searchHistory
             .bind(to: tableView.rx.items(dataSource: dataSource))
             .disposed(by: disposeBag)
@@ -89,6 +93,12 @@ class SearchViewController: BaseViewController {
             .modelSelected(SearchHistoryItem.self)
             .subscribe(onNext: { model in
                 self.textField.text = model.title
+            }).disposed(by: disposeBag)
+        
+        tableView.rx
+            .itemDeleted
+            .subscribe(onNext: { indexPath in
+                CoreDataManager.shared.deleteSearchHistory(indexPath.row)
             }).disposed(by: disposeBag)
     }
     
