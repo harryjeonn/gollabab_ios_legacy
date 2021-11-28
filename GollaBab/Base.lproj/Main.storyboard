@@ -158,6 +158,22 @@
                                 <fontDescription key="fontDescription" name="EliceDigitalBaeumOTF" family="Elice DigitalBaeum OTF" pointSize="15"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ObB-Sg-agk">
+                                <rect key="frame" x="20" y="148" width="374" height="557.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jxJ-SR-i7e">
+                                        <rect key="frame" x="166" y="268" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="jxJ-SR-i7e" firstAttribute="centerX" secondItem="ObB-Sg-agk" secondAttribute="centerX" id="1en-Ij-QYZ"/>
+                                    <constraint firstItem="jxJ-SR-i7e" firstAttribute="centerY" secondItem="ObB-Sg-agk" secondAttribute="centerY" id="kol-Ht-NNZ"/>
+                                </constraints>
+                            </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="OYN-sI-pYJ">
                                 <rect key="frame" x="20" y="148" width="374" height="557.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -175,6 +191,7 @@
                             <constraint firstItem="Lx5-TV-Wc3" firstAttribute="width" secondItem="Lx5-TV-Wc3" secondAttribute="height" multiplier="1.618:1" id="2GG-yg-BaX"/>
                             <constraint firstItem="Fem-7s-37x" firstAttribute="top" secondItem="OQW-Q4-5ga" secondAttribute="top" constant="50" id="3jT-7Y-2KI"/>
                             <constraint firstItem="OQW-Q4-5ga" firstAttribute="bottom" secondItem="Lx5-TV-Wc3" secondAttribute="bottom" constant="50" id="8gv-i8-7gN"/>
+                            <constraint firstItem="ObB-Sg-agk" firstAttribute="top" secondItem="OYN-sI-pYJ" secondAttribute="top" id="CW7-0L-wmS"/>
                             <constraint firstItem="OQW-Q4-5ga" firstAttribute="trailing" secondItem="OYN-sI-pYJ" secondAttribute="trailing" constant="20" id="CXa-Yo-Ev4"/>
                             <constraint firstItem="Lx5-TV-Wc3" firstAttribute="centerX" secondItem="NvH-T8-xMX" secondAttribute="centerX" id="FFq-w3-U4a"/>
                             <constraint firstItem="Eny-TN-A0G" firstAttribute="top" secondItem="NvH-T8-xMX" secondAttribute="top" id="McV-qA-bDv"/>
@@ -185,11 +202,16 @@
                             <constraint firstItem="OQW-Q4-5ga" firstAttribute="trailing" secondItem="Fem-7s-37x" secondAttribute="trailing" constant="20" id="oSE-jA-xdb"/>
                             <constraint firstItem="Lx5-TV-Wc3" firstAttribute="top" secondItem="OYN-sI-pYJ" secondAttribute="bottom" constant="20" id="scq-Qe-O5N"/>
                             <constraint firstItem="Eny-TN-A0G" firstAttribute="leading" secondItem="OQW-Q4-5ga" secondAttribute="leading" id="tYk-NA-QGk"/>
+                            <constraint firstItem="ObB-Sg-agk" firstAttribute="bottom" secondItem="OYN-sI-pYJ" secondAttribute="bottom" id="vHM-cG-zlV"/>
+                            <constraint firstItem="ObB-Sg-agk" firstAttribute="leading" secondItem="OYN-sI-pYJ" secondAttribute="leading" id="y3N-nZ-46b"/>
+                            <constraint firstItem="ObB-Sg-agk" firstAttribute="trailing" secondItem="OYN-sI-pYJ" secondAttribute="trailing" id="yQz-7m-4UM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnSearch" destination="Lx5-TV-Wc3" id="cQ2-qk-F2Y"/>
                         <outlet property="clearView" destination="Eny-TN-A0G" id="CvA-Xf-HPz"/>
+                        <outlet property="emptyView" destination="ObB-Sg-agk" id="4CR-98-gLA"/>
+                        <outlet property="lblEmpty" destination="jxJ-SR-i7e" id="b6L-j4-AEs"/>
                         <outlet property="tableView" destination="OYN-sI-pYJ" id="8qe-9d-b2e"/>
                         <outlet property="textField" destination="Fem-7s-37x" id="pNP-ri-Wm4"/>
                     </connections>

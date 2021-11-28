@@ -15,6 +15,8 @@ class SearchViewController: BaseViewController {
     @IBOutlet var btnSearch: UIButton!
     @IBOutlet var tableView: UITableView!
     @IBOutlet var clearView: UIView!
+    @IBOutlet var emptyView: UIView!
+    @IBOutlet var lblEmpty: UILabel!
     
     private var disposeBag = DisposeBag()
     
@@ -33,6 +35,7 @@ class SearchViewController: BaseViewController {
         self.title = "검색"
         textField.text = nil
         SearchHistoryViewModel.shared.loadSearchHistory()
+        checkEmpty()
     }
     
     private func setupUI() {
@@ -49,6 +52,13 @@ class SearchViewController: BaseViewController {
         
         clearView.backgroundColor = .clear
         clearView.isHidden = true
+        
+        emptyView.backgroundColor = .bgColor
+        
+        lblEmpty.text = "최근 검색기록이 없습니다."
+        lblEmpty.font = UIFont(name: "EliceDigitalBaeumOTF", size: 14)
+        lblEmpty.textColor = .themeColor
+        
     }
     
     private func setupTextField() {
@@ -99,6 +109,7 @@ class SearchViewController: BaseViewController {
             .itemDeleted
             .subscribe(onNext: { indexPath in
                 CoreDataManager.shared.deleteSearchHistory(indexPath.row)
+                self.checkEmpty()
             }).disposed(by: disposeBag)
     }
     
@@ -121,6 +132,11 @@ class SearchViewController: BaseViewController {
         guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapViewController") as? MapViewController else { return }
         vc.query = self.textField.text
         self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    private func checkEmpty() {
+        let history = CoreDataManager.shared.loadSearchHistory()
+        tableView.isHidden = history.isEmpty
     }
 }
 
