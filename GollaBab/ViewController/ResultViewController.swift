@@ -170,6 +170,7 @@ class ResultViewController: BaseViewController {
                 HistoryViewModel.shared.result = self.lblResult.text
                 
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SaveAlertViewController") as? SaveAlertViewController  else { return }
+                vc.alertType = .vote
                 let alert = UIAlertController(title: nil, message: nil, preferredStyle: .alert)
                 alert.setValue(vc, forKey: "contentViewController")
                 self.present(alert, animated: true)

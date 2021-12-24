@@ -13,6 +13,7 @@ class MainViewController: BaseViewController {
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var btnStart: UIButton!
     @IBOutlet weak var btnHistory: UIButton!
+    @IBOutlet var btnCalendar: UIButton!
     @IBOutlet var btnEasterEgg: UIButton!
     @IBOutlet var easterEggView: UIView!
     @IBOutlet var easterEggTitle: UILabel!
@@ -49,6 +50,11 @@ class MainViewController: BaseViewController {
         btnHistory.setTitleColor(.whiteColor, for: .normal)
         btnHistory.layer.cornerRadius = 10
         
+        btnCalendar.backgroundColor = .themeColor
+        btnCalendar.setTitle("먹계부", for: .normal)
+        btnCalendar.setTitleColor(.whiteColor, for: .normal)
+        btnCalendar.layer.cornerRadius = 10
+        
         btnEasterEgg.setTitle("", for: .normal)
         btnEasterEgg.backgroundColor = .clear
         
@@ -71,6 +77,12 @@ class MainViewController: BaseViewController {
         btnHistory.rx.tap
             .bind {
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "HistoryViewController") as? HistoryViewController else { return }
+                self.navigationController?.pushViewController(vc, animated: true)
+            }.disposed(by: disposeBag)
+        
+        btnCalendar.rx.tap
+            .bind {
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CalendarViewController") as? CalendarViewController else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
         

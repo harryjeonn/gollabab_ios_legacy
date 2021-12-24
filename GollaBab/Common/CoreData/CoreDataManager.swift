@@ -19,6 +19,7 @@ class CoreDataManager {
     
     let HistoryModelName = "History"
     let searchHistoryModelName = "SearchHistory"
+    let calendarDataModelName = "CalendarData"
     
     var isSuccess = BehaviorSubject<Bool>(value: false)
     var deleteRow = PublishSubject<Int>()
@@ -157,6 +158,70 @@ class CoreDataManager {
             print("delete all history")
         } catch let error as NSError {
             print("delete err : \(error), \(error.userInfo)")
+        }
+    }
+    
+    // MARK: - Calendar Data
+    func saveCalendarData(date: Date, title: String, memo: String? = "") {
+        guard let context = context else { return }
+        let calendarData: CalendarData = NSEntityDescription.insertNewObject(forEntityName: calendarDataModelName, into: context) as! CalendarData
+        
+        calendarData.date = date
+        calendarData.title = title
+        calendarData.memo = memo
+        
+        do {
+            try context.save()
+            print("save calendar data")
+            isSuccess.onNext(true)
+        } catch let err as NSError {
+            print("error: \(err.userInfo)")
+            isSuccess.onNext(false)
+        }
+    }
+    
+    func loadAllCalendarData() -> [CalendarData] {
+        var calendarData = [CalendarData]()
+        
+        do {
+            let fetchRequest = CalendarData.fetchRequest()
+            let res = try context?.fetch(fetchRequest) as! [CalendarData]
+            calendarData = res
+            print("load all calendar data")
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return calendarData
+    }
+    
+    func loadCalendarData(_ todayDate: Date) -> [CalendarData] {
+        var calendarData = [CalendarData]()
+        
+        do {
+            let fetchRequest = CalendarData.fetchRequest()
+            let predicate = NSPredicate(format: "date == %@", todayDate as NSDate)
+            fetchRequest.predicate = predicate
+            let res = try context?.fetch(fetchRequest) as! [CalendarData]
+            calendarData = res
+            print("load calendar data")
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        return calendarData
+    }
+    
+    func deleteCalendarData(index: Int, date: Date) {
+        let calendarData = loadCalendarData(date)[index] as NSManagedObject
+        context?.delete(calendarData)
+        do {
+            try context?.save()
+            CalendarViewModel.shared.loadCalendarData(date)
+            isSuccess.onNext(true)
+            print("delete calendar data")
+        } catch {
+            print(error.localizedDescription)
         }
     }
 }
