@@ -1082,7 +1082,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="7o7-jG-YpJ">
-                                <rect key="frame" x="20" y="64" width="374" height="682.5"/>
+                                <rect key="frame" x="20" y="64" width="374" height="641.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
@@ -1097,7 +1097,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kaw-Ki-PGU">
-                                <rect key="frame" x="137" y="766.5" width="140" height="86.5"/>
+                                <rect key="frame" x="137" y="725.5" width="140" height="86.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="F3I-5L-tEG"/>
                                 </constraints>
@@ -1119,7 +1119,7 @@
                         <constraints>
                             <constraint firstItem="jRi-sY-AJP" firstAttribute="trailing" secondItem="7o7-jG-YpJ" secondAttribute="trailing" constant="20" id="71y-tg-LSV"/>
                             <constraint firstItem="7o7-jG-YpJ" firstAttribute="leading" secondItem="jRi-sY-AJP" secondAttribute="leading" constant="20" id="PTM-Pe-X3H"/>
-                            <constraint firstItem="jRi-sY-AJP" firstAttribute="bottom" secondItem="Kaw-Ki-PGU" secondAttribute="bottom" constant="9" id="YfH-le-7gH"/>
+                            <constraint firstItem="jRi-sY-AJP" firstAttribute="bottom" secondItem="Kaw-Ki-PGU" secondAttribute="bottom" constant="50" id="YfH-le-7gH"/>
                             <constraint firstItem="Kaw-Ki-PGU" firstAttribute="top" secondItem="7o7-jG-YpJ" secondAttribute="bottom" constant="20" id="aRr-18-eAq"/>
                             <constraint firstItem="3C7-wE-zu7" firstAttribute="top" secondItem="7o7-jG-YpJ" secondAttribute="top" id="ehW-q6-x5G"/>
                             <constraint firstItem="7o7-jG-YpJ" firstAttribute="top" secondItem="jRi-sY-AJP" secondAttribute="top" constant="20" id="jNb-Pf-Qp3"/>
