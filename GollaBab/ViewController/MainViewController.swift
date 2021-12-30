@@ -8,6 +8,8 @@
 import UIKit
 import RxSwift
 import RxCocoa
+import GoogleMobileAds
+import Alamofire
 
 class MainViewController: BaseViewController {
     @IBOutlet weak var lblTitle: UILabel!
@@ -20,6 +22,8 @@ class MainViewController: BaseViewController {
     @IBOutlet var easterEggDesc: UILabel!
     
     private let disposeBag = DisposeBag()
+    
+    private var interstitial: GADInterstitialAd?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,6 +39,17 @@ class MainViewController: BaseViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBar.isHidden = true
+        loadInterstitial()
+    }
+    
+    private func checkResultCount() {
+        guard let resultCount = UserDefaults.standard.value(forKey: "resultCount") as? Int else { return }
+        print("resultCount = \(resultCount)")
+        if resultCount % 10 == 0 {
+            print("show admob")
+            UserDefaults.standard.set(resultCount + 1, forKey: "resultCount")
+            showInterstitial()
+        }
     }
     
     private func setUI() {
@@ -113,5 +128,46 @@ class MainViewController: BaseViewController {
             self.easterEggView.isHidden = true
         })
     }
+    
+    // MARK: - 전면 광고
+    private func loadInterstitial() {
+        // 테스트 ID = ca-app-pub-3940256099942544/4411468910
+        // 실제 ID = ca-app-pub-6497545219748270/9414609028
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-6497545219748270/9414609028", request: request) { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            interstitial = ad
+            interstitial?.fullScreenContentDelegate = self
+            checkResultCount()
+        }
+    }
+    
+    private func showInterstitial() {
+        if let interstitial = interstitial {
+            interstitial.present(fromRootViewController: self)
+        } else {
+            print("Ad wasn`t ready")
+        }
+    }
 }
 
+extension MainViewController: GADFullScreenContentDelegate {
+    /// Tells the delegate that the ad failed to present full screen content.
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+        print("Ad did fail to present full screen content.")
+    }
+    
+    /// Tells the delegate that the ad presented full screen content.
+    func adDidPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did present full screen content.")
+    }
+    
+    /// Tells the delegate that the ad dismissed full screen content.
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
+        loadInterstitial()
+    }
+}

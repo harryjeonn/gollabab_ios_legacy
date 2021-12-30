@@ -45,6 +45,7 @@ class ResultViewController: BaseViewController {
         } else {
             HistoryViewModel.shared.items = self.items
         }
+        updateCount()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -211,6 +212,15 @@ class ResultViewController: BaseViewController {
         }
         
         return titleItems
+    }
+    
+    private func updateCount() {
+        if let count = UserDefaults.standard.value(forKey: "resultCount") as? Int {
+            UserDefaults.standard.set(count + 1, forKey: "resultCount")
+        } else {
+            UserDefaults.standard.set(1, forKey: "resultCount")
+        }
+        print("result count = \(UserDefaults.standard.value(forKey: "resultCount"))")
     }
     
     //MARK: - Animation
