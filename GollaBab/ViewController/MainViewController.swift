@@ -46,7 +46,7 @@ class MainViewController: BaseViewController {
         btnStart.layer.cornerRadius = 10
         
         btnHistory.backgroundColor = .themeColor
-        btnHistory.setTitle("지난 투표", for: .normal)
+        btnHistory.setTitle("저장한 투표", for: .normal)
         btnHistory.setTitleColor(.whiteColor, for: .normal)
         btnHistory.layer.cornerRadius = 10
         
