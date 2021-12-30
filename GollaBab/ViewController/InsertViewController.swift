@@ -111,7 +111,7 @@ class InsertViewController: BaseViewController {
         emptyView.backgroundColor = .bgColor
         
         lblEmpty.font = UIFont(name: "EliceDigitalBaeumOTF", size: 16)
-        lblEmpty.text = "항목을 입력해주세요."
+        lblEmpty.text = "투표할 항목을 입력해주세요."
         lblEmpty.textColor = .themeColor
     }
 }
