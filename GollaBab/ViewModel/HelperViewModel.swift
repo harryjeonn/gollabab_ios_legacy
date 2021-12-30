@@ -60,11 +60,11 @@ enum HelperType {
         case .directly:
             return "직접 투표할 내용을 입력하여 무작위로 투표해요."
         case .random:
-            return "주변 식당을 무작위로 투표해요"
+            return "주변 식당을 무작위로 투표해요."
         case .search:
             return "검색할 키워드를 입력한 후 주변 검색을 시작해요."
         case .history:
-            return "저장한 투표를 볼 수 있어요.\n리스트 항목을 터치하면 상세화면으로 들어가요."
+            return "저장한 투표를 볼 수 있어요.\n리스트 항목을 터치하면 상세화면으로 이동해요."
         case .map:
             return "검색결과가 지도에 표시돼요.\n말풍선을 터치하면 해당 장소의 정보가 사파리로 열려요."
         case .searchRange:
