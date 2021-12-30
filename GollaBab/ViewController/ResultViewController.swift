@@ -27,7 +27,7 @@ class ResultViewController: BaseViewController {
     @IBOutlet weak var btnRetry: UIButton!
     @IBOutlet var btnShowPlace: UIButton!
     
-    private let disposeBag = DisposeBag()
+    private var disposeBag = DisposeBag()
     private var items = [String]()
     private var randomItems = [Place]()
     private var timer: Timer!
@@ -37,14 +37,25 @@ class ResultViewController: BaseViewController {
         super.viewDidLoad()
         setupUI()
         setupItems()
-        setupTapEvent()
         startAnimation()
         checkItems()
+        
+        if self.isRandom ?? false {
+            HistoryViewModel.shared.items = self.randomTitles()
+        } else {
+            HistoryViewModel.shared.items = self.items
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.title = "결과"
+        setupTapEvent()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        disposeBag = DisposeBag()
     }
     
     private func checkItems() {
@@ -161,12 +172,6 @@ class ResultViewController: BaseViewController {
         
         btnSave.rx.tap
             .bind {
-                if self.isRandom ?? false {
-                    HistoryViewModel.shared.items = self.randomTitles()
-                } else {
-                    HistoryViewModel.shared.items = self.items
-                }
-                
                 HistoryViewModel.shared.result = self.lblResult.text
                 
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "SaveAlertViewController") as? SaveAlertViewController  else { return }

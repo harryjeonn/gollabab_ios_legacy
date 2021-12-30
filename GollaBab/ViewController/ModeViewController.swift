@@ -66,7 +66,6 @@ class ModeViewController: BaseViewController {
                 ItemViewModel.shared.randomEventItems.accept(self.placeItems)
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? ResultViewController else { return }
                 vc.isRandom = true
-                vc.setupItems()
                 self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
         
@@ -91,6 +90,7 @@ class ModeViewController: BaseViewController {
                     return items!.sorted(by: { $0.distance < $1.distance })
                 })
                 .subscribe(onNext: { data in
+                    self.placeItems.removeAll()
                     data.forEach { data in
                         self.placeItems.append(data)
                     }
