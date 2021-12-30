@@ -9,6 +9,7 @@ import UIKit
 import RxSwift
 import RxCocoa
 import RxDataSources
+import SafariServices
 
 class MapViewController: BaseViewController {
     @IBOutlet var contentsView: UIView!
@@ -330,7 +331,8 @@ extension MapViewController: MTMapViewDelegate {
         arrPlace.forEach { place in
             if poiItem.itemName == place.placeName {
                 if let url = URL(string: place.placeUrl) {
-                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
+                    let safariViewController = SFSafariViewController(url: url)
+                    present(safariViewController, animated: true, completion: nil)
                 }
             }
         }
