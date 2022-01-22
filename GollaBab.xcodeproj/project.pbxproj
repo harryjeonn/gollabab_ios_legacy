@@ -311,6 +311,7 @@
 		82CE8624274E79B0002FD322 /* SearchHistoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE8623274E79B0002FD322 /* SearchHistoryViewModel.swift */; };
 		82CE8627274E79E6002FD322 /* SearchHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CE8625274E79E6002FD322 /* SearchHistoryCell.swift */; };
 		82CE8628274E79E6002FD322 /* SearchHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 82CE8626274E79E6002FD322 /* SearchHistoryCell.xib */; };
+		82FE8B4B279BCFAD009B04BC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 82FE8B4A279BCFAD009B04BC /* GoogleService-Info.plist */; };
 		904A70D1269C5409006F960B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D0269C5409006F960B /* AppDelegate.swift */; };
 		904A70D3269C5409006F960B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D2269C5409006F960B /* SceneDelegate.swift */; };
 		904A70D5269C5409006F960B /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70D4269C5409006F960B /* MainViewController.swift */; };
@@ -320,7 +321,6 @@
 		904A70E7269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */; };
 		904A70E8269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */; };
 		904A70EA269C5BD8006F960B /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 904A70E9269C5BD8006F960B /* UIColor+Extension.swift */; };
-		BD38AB62277599A200E3DEA4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BD38AB61277599A200E3DEA4 /* GoogleService-Info.plist */; };
 		BD38AB65277599B900E3DEA4 /* SearchHistory+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38AB63277599B900E3DEA4 /* SearchHistory+CoreDataProperties.swift */; };
 		BD38AB66277599B900E3DEA4 /* SearchHistory+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38AB64277599B900E3DEA4 /* SearchHistory+CoreDataClass.swift */; };
 		BD38AB682775A02900E3DEA4 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD38AB672775A02900E3DEA4 /* CalendarViewController.swift */; };
@@ -673,6 +673,7 @@
 		82CE8623274E79B0002FD322 /* SearchHistoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryViewModel.swift; sourceTree = "<group>"; };
 		82CE8625274E79E6002FD322 /* SearchHistoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchHistoryCell.swift; sourceTree = "<group>"; };
 		82CE8626274E79E6002FD322 /* SearchHistoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchHistoryCell.xib; sourceTree = "<group>"; };
+		82FE8B4A279BCFAD009B04BC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		83569943A4BED83189842DEF /* Pods-GollaBab.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GollaBab.release.xcconfig"; path = "Target Support Files/Pods-GollaBab/Pods-GollaBab.release.xcconfig"; sourceTree = "<group>"; };
 		904A70CD269C5409006F960B /* GollaBab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GollaBab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		904A70D0269C5409006F960B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -685,7 +686,6 @@
 		904A70E5269C58D5006F960B /* EliceDigitalBaeumOTF_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Bold.otf; sourceTree = "<group>"; };
 		904A70E6269C58D5006F960B /* EliceDigitalBaeumOTF_Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = EliceDigitalBaeumOTF_Regular.otf; sourceTree = "<group>"; };
 		904A70E9269C5BD8006F960B /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
-		BD38AB61277599A200E3DEA4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD38AB63277599B900E3DEA4 /* SearchHistory+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchHistory+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BD38AB64277599B900E3DEA4 /* SearchHistory+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SearchHistory+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BD38AB672775A02900E3DEA4 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
@@ -1156,7 +1156,7 @@
 				904A70D9269C540A006F960B /* Assets.xcassets */,
 				904A70DB269C540A006F960B /* LaunchScreen.storyboard */,
 				904A70DE269C540A006F960B /* Info.plist */,
-				BD38AB61277599A200E3DEA4 /* GoogleService-Info.plist */,
+				82FE8B4A279BCFAD009B04BC /* GoogleService-Info.plist */,
 			);
 			path = GollaBab;
 			sourceTree = "<group>";
@@ -1546,6 +1546,7 @@
 				820108D926EF88A500739119 /* annotated.html in Resources */,
 				8201098926EF88A500739119 /* tab_h.png in Resources */,
 				820108E126EF88A500739119 /* interface_m_t_map_camera_update-members.html in Resources */,
+				82FE8B4B279BCFAD009B04BC /* GoogleService-Info.plist in Resources */,
 				8201096C26EF88A500739119 /* mag_sel.png in Resources */,
 				8201099126EF88A500739119 /* menudata.js in Resources */,
 				8201094226EF88A500739119 /* defines_0.js in Resources */,
@@ -1611,7 +1612,6 @@
 				8201095726EF88A500739119 /* functions_b.js in Resources */,
 				8201091F26EF88A500739119 /* all_e.html in Resources */,
 				8201094826EF88A500739119 /* properties_6.html in Resources */,
-				BD38AB62277599A200E3DEA4 /* GoogleService-Info.plist in Resources */,
 				820108E526EF88A500739119 /* tabs.css in Resources */,
 				8201090B26EF88A500739119 /* typedefs_0.html in Resources */,
 				820108A526EF88A500739119 /* map_pin_custom@3x.png in Resources */,
