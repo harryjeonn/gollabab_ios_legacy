@@ -290,6 +290,7 @@
 		820109B626FCAD5D00739119 /* libxml2.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8201077926EF887700739119 /* libxml2.tbd */; };
 		820109B726FCAD6400739119 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8201077826EF886D00739119 /* libc++.tbd */; };
 		820109BA271A9E2700739119 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820109B9271A9E2700739119 /* LocationManager.swift */; };
+		82268D1C279BD49100F48AC9 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82268D1B279BD49100F48AC9 /* CategoryViewController.swift */; };
 		82606AA62723FC0400F411C9 /* ModeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA52723FC0400F411C9 /* ModeViewController.swift */; };
 		82606AA8272400D800F411C9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA7272400D800F411C9 /* SearchViewController.swift */; };
 		82606AAA272400E000F411C9 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82606AA9272400E000F411C9 /* MoreViewController.swift */; };
@@ -650,6 +651,7 @@
 		820109B126FCA71A00739119 /* KakaoMapManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KakaoMapManager.swift; sourceTree = "<group>"; };
 		820109B326FCA7A800739119 /* PlaceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		820109B9271A9E2700739119 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		82268D1B279BD49100F48AC9 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		8232DDC02746A6AD00E7D84F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/Main.strings; sourceTree = "<group>"; };
 		8232DDC12746A6AD00E7D84F /* ko */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ko; path = ko.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		82606AA52723FC0400F411C9 /* ModeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeViewController.swift; sourceTree = "<group>"; };
@@ -1221,6 +1223,7 @@
 				BD859754272E738600B49E45 /* OpenSourceDetailViewController.swift */,
 				BD859756272E7FBE00B49E45 /* HelperViewController.swift */,
 				BD38AB672775A02900E3DEA4 /* CalendarViewController.swift */,
+				82268D1B279BD49100F48AC9 /* CategoryViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -1689,6 +1692,7 @@
 				904A70D5269C5409006F960B /* MainViewController.swift in Sources */,
 				BD859755272E738600B49E45 /* OpenSourceDetailViewController.swift in Sources */,
 				BD779E4226A99D8F00DBA126 /* ItemViewModel.swift in Sources */,
+				82268D1C279BD49100F48AC9 /* CategoryViewController.swift in Sources */,
 				82721F2026CBD754005AD346 /* CoreDataManager.swift in Sources */,
 				BD85974B272E693A00B49E45 /* PaymentViewModel.swift in Sources */,
 				904A70D1269C5409006F960B /* AppDelegate.swift in Sources */,

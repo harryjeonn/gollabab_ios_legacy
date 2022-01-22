@@ -28,7 +28,6 @@ class ModeViewController: BaseViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        getPlaceList()
         self.title = "모드"
     }
     
@@ -63,9 +62,7 @@ class ModeViewController: BaseViewController {
         
         btnGoRandom.rx.tap
             .bind {
-                ItemViewModel.shared.randomEventItems.accept(self.placeItems)
-                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "Result") as? ResultViewController else { return }
-                vc.isRandom = true
+                guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "CategoryViewController") as? CategoryViewController else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
         
@@ -80,21 +77,5 @@ class ModeViewController: BaseViewController {
                 guard let vc = self.storyboard?.instantiateViewController(withIdentifier: "MoreViewController") as? MoreViewController else { return }
                 self.navigationController?.pushViewController(vc, animated: true)
             }.disposed(by: disposeBag)
-    }
-    
-    private func getPlaceList() {
-        if let coord = LocationManager.shared.myLocation {
-            let code = "FD6"
-            KakaoMapManager.shared.rxGetPlace(mandatoryParam: code, lat: "\(coord.latitude)", lon: "\(coord.longitude)", type: .category)
-                .map({ (items) -> [Place] in
-                    return items!.sorted(by: { $0.distance < $1.distance })
-                })
-                .subscribe(onNext: { data in
-                    self.placeItems.removeAll()
-                    data.forEach { data in
-                        self.placeItems.append(data)
-                    }
-                }).disposed(by: disposeBag)
-        }
     }
 }
