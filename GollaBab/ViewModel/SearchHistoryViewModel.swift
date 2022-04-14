@@ -39,7 +39,7 @@ class SearchHistoryViewModel {
     var title: String?
     
     func loadSearchHistory() {
-        let searchHistory = CoreDataManager.shared.loadSearchHistory()
+        let searchHistory = CoreDataManager.shared.loadSearchHistory().reversed()
         var data = [SectionOfSearchHistoryData]()
         var items = [SearchHistoryItem]()
         
@@ -53,7 +53,7 @@ class SearchHistoryViewModel {
                 if items.contains(where: { $0.title == title }) {
                     items.removeAll(where: { $0.title == title })
                 }
-                items.insert(SearchHistoryItem(title: title, date: date), at: 0)
+                items.append(SearchHistoryItem(title: title, date: date))
             }
         }
         
